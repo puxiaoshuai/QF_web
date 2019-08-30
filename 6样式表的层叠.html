@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>样式表的层叠</title>
+     <style>
+      a{
+          margin-right: 10px;
+          border-right:solid 1px rgb(15, 15, 15);
+          padding:0 15px  
+          /* pading  1,2,3,4 从上开始，上右下左，   0 15  表示  上下为0，左右为 15px */
+      }
+      a:hover{
+          color: blue
+      }
+
+     </style>
+</head>
+<body>
+    <p>设置分隔线的有效方式,增加边框，保留右边的</p>
+    <p>行内样式大于 内部样式，大于  外部样式</p>
+        <div class="nav" style="text-align: center;background-color: #fff;height: 80px;line-height: 80px">
+                <a href="">首页</a>
+                <a href="">关于主页</a>
+                <a href="">产品世界</a>
+                <a href="">新闻中心</a>
+                <a href="">网络事件</a>
+                <a href="">联系我们</a>
+                <a href="">关于我们</a>
+                <a href="" style="border-right: none">网络新闻</a>
+                
+             </div>
+
+</body>
+</html>
