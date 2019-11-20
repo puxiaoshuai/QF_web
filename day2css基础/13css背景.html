@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS背景</title>
+    <style>
+       #box1{
+           width: 800px;
+           height: 800px;
+           background-color: chocolate;
+           /* 背景图片 */
+           background-image: url(images/1.jpg);
+           /* 背景平铺样式 */
+           background-repeat: no-repeat;
+           /* 背景位置重点 */
+           /* 右下角 */
+           /* background-position: right bottom; */
+           /* 左边垂直居中 */
+           /* background-position: left; */
+           /* 这是坐标系位置，   x  40 px   y轴  0px */
+           /* 精确单位可以和数据混用 */
+           background-position: 40px 0px;
+       }
+    </style>
+</head>
+<body>
+    <h3>背景颜色  background-color</h3>
+    <div id="box1"></div>
+    <h3>背景图片 background-image</h3>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     div{
+         color: palegoldenrod
+     }
+     div{
+         color: red;
+     }
+     .box2{
+         color: red;
+     }
+
+    </style>
+</head>
+<body>
+    <h3>层叠性</h3>
+    <p>就近原则,样式不冲突的依然有效</p>
+    <div>长江前浪推后浪</div>
+    <h3>继承性</h3>
+     <div class="box2">
+         <p>子承父业</p>
+         <p>text- ,font-, line-  ,color ,这些是可以继承的</p>
+         <p>龙生龙，凤生凤，老鼠的儿子会打洞</p>
+     </div>
+    <h3>优先级（重点）</h3>
+     <div class="box3">
+         <h3>css  先看要修的的元素是否被选中，没选中权重就是0，选中的话，就看选中的权重 </h3>
+     </div>
+    
+</body>
+</html>

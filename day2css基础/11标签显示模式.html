@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签显示模式</title>
+    <style>
+     span{
+         width: 100px;
+         height: 100px;
+         background-color: blueviolet;
+         /* span行内元素转成块级元素 */
+         display: block; 
+     }
+     div{
+        
+         
+         background-color: aquamarine;
+         /* 把div块级元素，转换成行内元素 */
+         display: inline;
+     }
+    </style>
+</head>
+<body>
+     <h3>块状元素的特点 block-level</h3>
+     <ul>
+         <li>霸道自己独占一行</li>
+         <li>宽高，外边距，内边距都是可以设置的 </li>
+         <li>宽度默认是容器的100%</li>
+         <li>是一个容器及孩子，里面可以放行内元素</li>
+     </ul>
+     <h3>行内元素 a ,strong ,b, i,span  等 inline-level</h3>
+      <ul>
+          <li>相邻行内元素在一行上，一行可以显示多个元素</li>
+
+          <li>宽高直接设置是无效的</li>
+          <li>默认宽度是本身内容的宽度</li>
+          <li>行内元素只能容纳文本或其他行内元素</li>
+      </ul>
+      注意:链接里面不能再放链接
+      特殊情况 a里面可以放块级元素，但是需要把a转换成块级模式
+      <h3>行内块级元素 inline-block</h3>
+      <ul>
+          <li>相邻行内元素在一行上，一行可以显示多个元素</li>
+          <li>默认宽度是本身内容的宽度</li>
+          <li>高度，行高，外边距，内边距是可以控制的</li>
+      </ul>
+      <h3>显示模式的转换 display</h3>
+       <span>我是span</span>
+       <div>我是块级元素</div>
+</body>
+</html>

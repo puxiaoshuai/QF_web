@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子布局的稳定性</title>
+    <style>
+        * {
+			margin: 0;
+			padding: 0;
+		}
+     .new{
+           width: 298px;
+           height: 198px;
+           border: 1px solid #ccc;
+           margin: 0 auto;
+           margin-top: 100px;
+           background-image: url("../images/line.jpg");
+           /* 一个盒子给了盒子会撑大 */
+           padding: 15px;
+     }
+     .topbox h2{
+         font-size: 18px;
+         padding: 5px 0;
+         border-bottom: 1px solid #4e4e4e;
+         margin-bottom: 10px;
+     }
+     li{
+    
+      list-style: none;
+     }
+     .boootombox ul li {
+         height: 30px;
+         line-height: 30px;
+         background-image: url('../images/arr.jpg');
+         background-repeat: no-repeat;
+         background-position: 5px center;
+         border-bottom: 1px dashed #ccc;
+     }
+     .boootombox ul li a {
+        text-decoration: none;
+         color: rgb(68, 68, 68);
+         line-height: 30px;
+         font-size: 12px;
+         padding-left: 20px;
+        
+     }
+     .boootombox ul li a:hover{
+        text-decoration: underline;
+     }
+    </style>
+</head>
+<body>
+    <p>- 学习完盒子模型，内边距和外边距，什么情况下用内边距，什么情况下用外边距？
+
+            - 大部分情况下是可以混用的。  就是说，你用内边距也可以，用外边距也可以。 你觉得哪个方便，就用哪个。
+          
+          我们根据稳定性来分，建议如下：
+          
+          按照 优先使用  宽度 （width）  其次 使用内边距（padding）    再次  外边距（margin）。   
+        
+          ```
+            width >  padding  >   margin   
+          ```
+          
+          - 原因：
+            - margin 会有外边距合并 还有 ie6下面margin 加倍的bug（讨厌）所以最后使用。
+            - padding  会影响盒子大小， 需要进行加减计算（麻烦） 其次使用。
+            - width   没有问题（嗨皮）我们经常使用宽度剩余法 高度剩余法来做。</p>
+
+
+            <div class="new">
+                 <div class="topbox">
+                     <h2>最新文章/News</h2>
+                 </div>   
+                 <div class="boootombox">
+                       <ul>
+                            <li><a href="#">北京招聘网页设计，平面设计，php</a></li>
+                            <li><a href="#">体验javascript的魅力</a></li>
+                            <li><a href="#">jquery世界来临</a></li>
+                            <li><a href="#">网页设计师的梦想</a></li>
+                            <li><a href="#">jquery中的链式编程是什么</a></li>
+                
+                       </ul>         
+                 </div>
+            </div>
+</body>
+</html>

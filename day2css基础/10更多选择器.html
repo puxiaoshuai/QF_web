@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更多的选择器</title>
+    <style>
+     /* 后代选择器，子子孙孙 */
+     .nav a{
+         color: red
+     }
+     /* 儿子选择器 */
+     div >strong{
+         color: aqua
+     }
+     p.red{
+        color:red
+    }
+    </style>
+   
+</head>
+<body>
+    <h4>复合选择器</h4>
+     <p>基础选择器和复合选择器，基础选择器不能满足要求了，就需要使用复合选择器，复合选择器是使用两个或者多个基础选择器，通过不同的方式组合而成的</p>
+     <h4>1.后代选择器 重点 子子孙孙  写法   父 子  中间空格隔开</h4>
+      <div class="nav">
+          <a href="#">体育</a>
+           <div>
+               <a href="#">孙子</a>
+           </div>
+          <a href="#">新闻</a>
+          <a href="#">热点</a>
+      </div>
+      <a href="#">外部链接</a>
+      <a href="#">外部链接</a>
+      <a href="#">外部链接</a>
+      <h4>2.子元素选择器 儿子  写法  父>儿</h4>
+       <div>
+           <strong>儿子</strong>
+           <strong>儿子</strong>
+           <strong>儿子</strong>
+       </div>
+       <div>
+           <p>
+               <strong>孙子</strong>
+               <strong>孙子</strong>
+               <strong>孙子</strong>
+           </p>
+       </div>
+       <h4>3.交集选择器 既是 什么又是又是什么  p.one  </h4>
+        <p class="red">红色</p>
+        <p class="red">红色</p>
+        <div class="red">红色</div>
+        <div class="red">红色</div>
+        <p>蓝色</p>
+        <p>蓝色</p>
+        <h4>4.并集选择器 重点</h4>
+         <div>写法  p, span 就是并集选择器 ，使用逗号来进行分割 </div>
+        <h5>伪类连接选择器 lvha 顺序不能乱</h5>
+</body>
+</html>
