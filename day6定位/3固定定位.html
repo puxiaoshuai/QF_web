@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定定位</title>
+    <style>
+    body{
+        height: 1500px;
+    }
+    .box{
+        width: 310px;
+        height: 300px;
+        margin-top: 20px;
+        background-color:chocolate;
+        position: relative;
+    
+    }
+    .box img{
+        position: fixed;
+        right: 0;
+        bottom: 0px;
+    }
+
+    </style>
+</head>
+<body>
+    <p>完全脱标.不占位置，</p>
+    <p>只认浏览器可视窗口</p>
+    <div class="box">
+        <img src="./images/adv.jpg" alt="" width="100px">
+    </div>
+</body>
+</html>

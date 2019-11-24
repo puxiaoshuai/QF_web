@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mask {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+
+        }
+
+        .box a:hover .mask {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="">
+            <div class="mask">
+
+            </div>
+            <img width="200px" height="200px" src="./iamges/taobao.jpg" alt="">
+        </a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .a,.b,.c{
+         position:absolute;
+         width: 200px;
+         height: 200px;
+         background-color:chocolate;
+     }
+     .a{
+        background-color:rgb(0, 60, 116);
+     }
+
+     .b{
+         top: 20px;
+         left: 20px;
+        background-color:peru;
+        z-index: 1;
+     }
+     .c{
+        top: 40px;
+         left: 40px;
+        background-color:palegoldenrod;
+     }
+    </style>
+</head>
+<body>
+     <div>
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+     </div>
+     <ul>
+         <li>属性值:越大越在上面</li>
+         <li>如果属性值相同，按书写的顺序</li>
+         <li>数字后面不能加单位</li>
+     </ul>
+      <h3>注意:z-index 只能应用于相对定位，绝对定位，固定定位元素</h3>
+      <h3>其他标准流，浮动，静态定位无效</h3>
+</body>
+</html>

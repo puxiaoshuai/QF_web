@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+       
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color:cadetblue;
+        
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* 给magin-top ,导致父类也下来了*/
+            margin-top: 40px;
+            /* 给孩纸浮动，flaot:left:  */
+            float: left;
+            /* 绝对定位，也不会出现外边距合并问题 */
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <p>绝对定位和浮动，不会出现外边距合并问题</p>
+</body>
+</html>

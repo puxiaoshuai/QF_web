@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户界面样式</title>
+    <style>
+    textarea{
+        width: 200px;
+        height: 100px;
+        outline: none
+    }
+    .img1{
+        border: 1px solid rgb(175, 84, 84)
+    }
+    </style>
+</head>
+<body>
+     <p>鼠标样式</p>
+     <ul>
+         <li style="cursor: default">我是小白</li>
+         <li style="cursor: pointer">我是小手</li>
+         <li style="cursor: move">我是移动</li>
+         <li style="cursor: text">我是文本</li>
+         <li style="cursor: not-allowed">禁止</li>
+     </ul>
+     <p>轮廓线  style="outline: 0"取消轮廓线</p>
+     <!-- style="outline: 0"取消轮廓线 -->
+     <input  style="outline: 0" type="text">
+     <p>防止拖拽文本域 resize：none</p>
+     <textarea  style="resize:  none">请留言</textarea>
+     <p>垂直居中，vertical-algin   只在行内元素和行内块</p>
+     <p>清除图片底测空白缝隙,原因是基线对齐，导致的问题，只要不是基线对齐就行了，或者转化成block</p>
+     <div class="img1">
+         <img style="vertical-align: bottom" src="./iamges/taobao.jpg" alt="">
+     </div>
+     <p>强制一行显示</p>
+     <div style="width: 100px;height: 50px;background-color: saddlebrown;white-space: nowrap;">
+      我是内容呢，你好哈或或或或或</div>
+      <p>溢出显示省略号</p>
+       <ul>
+           <li>3步走。强制一行 white-space:nowrap; </li>
+           <li>超出隐藏 overflow: hidden; </li>
+           <li>文本折叠 text-overflow: ellipsis;</li>
+       </ul>
+     <div style="width: 100px;height: 50px;background-color: saddlebrown;
+     white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+      我是内容呢，你好哈或或或或或</div>
+</body>
+</html>
