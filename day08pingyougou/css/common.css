@@ -1,0 +1,85 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/* 字体 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?hfhyhj');
+    src: url('../fonts/icomoon.eot?hfhyhj#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?hfhyhj') format('truetype'),
+        url('../fonts/icomoon.woff?hfhyhj') format('woff'),
+        url('../fonts/icomoon.svg?hfhyhj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+input{
+	outline: 0
+}
+i{
+    font-family: 'icomoon';
+    font-size: 12px;
+}
+
+/*版心*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 头部开始 */
+.shortcut{
+	height: 31px;
+	background-color: #f1f1f1;
+	line-height: 31px;
+}
+.shortcut li{
+	float: left;
+}
+.style-red{
+  color: #c81623;	
+}
+.shortcut .spacer{
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 0 12px;
+	margin-top: 9px;
+}
+/* 头部结束 */
+/* logo栏目开始 */
+.logoheader{
+	height: 104px;
+	
+	position: relative;
+	
+}
+.logoheader img {
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+}
+.logoheader .center_input{
+	position: absolute;
+	width: 538px;
+	height: 56px;
+	background-color: #c81623;
+	left: 50%;
+	margin-left: -269px;
+	top: 50%;
+	margin-top: -28px;
+	
+}
+.logoheader .caricon{
+	height: 36px;
+	width: 138px;
+	background-color: #c81623;
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+	right: 36px;
+}
+/* logo栏目header 结束 */
