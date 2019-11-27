@@ -1,0 +1,163 @@
+/* banner开始 */
+.main{
+    width: 980px;
+    height: 455px;
+    margin-left: 219px;
+    margin-top: 10px;
+   
+}
+.banner{
+    position: relative;
+    width: 720px;
+    height: 100%;
+    background-color: aqua;
+}
+.newflash{
+    width: 250px;
+    height: 100%;
+   
+}
+.arrow-left,.arrow-right
+{
+    position: absolute;
+    top:  50%;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 24px;
+    color: white;
+
+}
+.arrow-right
+{
+    
+    right: 0;
+   
+
+}
+.news{
+   
+    height: 163px;
+
+    border: 1px solid #cccccc
+}
+
+.newflash .title{
+    height: 34px;
+    border-bottom: 1px solid #cccccc;
+}
+.newflash .news h3{
+    height: 34px;
+    line-height: 34px;
+    margin-left: 12px;
+    float: left;
+}
+.newflash .news p{
+    height: 34px;
+    line-height: 34px;
+    float: right;
+    margin-right: 12px;
+   
+}
+.newflash .news li{
+    float: left;
+    margin-left: 12px;
+    margin-top: 6px;
+    font-size: 12px;
+}
+.lifeservice{
+    
+    height: 210px;
+    
+    margin-bottom: 6px;
+     border:1px  solid #cccccc ;
+    border-top: 0px;
+    border-right: 0px;
+    
+}
+.lifeservice li{
+    float: left;
+    width: 61px;
+    height: 69px;
+   
+    border:1px  solid #cccccc ;
+    border-top: 0px;
+    border-left: 0px;    
+}
+.lifeservice li a{
+    display: block;
+    height: 100%;
+    /* 做的过程中块状元素有外边距合并问题，使用这个解决 */
+    overflow: hidden;
+}
+.service_icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 10px auto;
+
+    background-image: url("../img/icons.png" ) ;
+    background-repeat: no-repeat;
+  
+   
+}
+/* 这样写是不生效的，上面的权重原来写的是 .lifeservice li .service_icon的权重比较大，下面的就没有效果了 */
+/* .service_icon_huafei{
+    background-position: -17px -17px;
+} */
+.service_icon_huafei{
+    background-position: -17px -17px;
+}
+.service_ico_feiji {
+	width: 26px;
+	background-position: -78px -16px;
+}
+.lifeservice  li p{
+   text-align: center
+}
+
+.bargin{
+    height: 78px;
+    background: url('../upload/bargain.jpg')
+}
+/* banher行结束 */
+/* 推荐栏目开始 */
+.tuijian{
+   
+    height: 164px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.tuijian li{
+    float: left;
+}
+.tuijian .img_hot{
+    width: 206px;
+    height: 164px;
+    text-align: center;
+    background-color: #cccccc;
+}
+.tuijian .img_hot img{
+   margin-top: 28px;
+}
+.tuijian .img_hot h3{
+    margin-top: 12px;
+    font-size: 17px;
+    color: white;
+ }
+ .tuijian .img_hot1{
+    width: 247px;
+    height: 164px; 
+    
+    background-color: #ebebeb;
+    border-right: 1px solid #cccccc;
+
+
+}
+.tuijian .img_hot1 img{
+    
+    width: 100%;
+ }
+/* 推荐栏目结束 */
