@@ -142,3 +142,126 @@ i{
 
 }
 /* logo栏目header 结束 */
+/* 商品分类heser开始 */
+.shop_header{
+	height: 48px;
+	border-bottom: 2px solid #b1191a;
+}
+.shop_header .dorpdown{
+	height: 100%;
+	
+	
+}
+.shop_header .dorpdown .dt{
+	height: 48px;
+	width: 210px;
+	background-color:#B1191A;
+	font-size: 16px;
+	color: white;
+	line-height: 48px;
+	text-align: center;	
+}
+.shop_header .dorpdown .dd{
+	height: 465px;
+	width: 210px;
+	background-color: #C81623;
+	margin-top: 2px;
+}
+.menu_item{
+	height: 31px;
+	line-height: 31px;
+	padding: 0 10px;
+}
+.menu_item:hover{
+	background-color: #fff;
+}
+.menu_item:hover a{
+	color: #c81623;
+}
+.menu_item a{
+	font-size: 14px;
+	color: white;
+}
+.menu_item i{
+	float: right;
+	
+	font-size: 16px;
+}
+.navitems{
+	margin-left: 10px;
+}
+.navitems li{
+	float: left;
+}
+.navitems li a{
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+	padding: 0  25px;
+}
+
+/* 商品分类header结束 */
+/* 底部footer开始 */
+.footer{
+	height: 380px;
+	background: #F5F5F5;
+	padding-top: 30px;
+}
+.server{
+	height: 79px;
+
+	border-bottom: 1px solid #b3b3b3;
+}
+.server li{
+	float: left;
+	width: 240px;
+	height: 79px;
+
+}
+.server_icon_zheng{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-left: 35px;
+	/* 通过信息面板来找 F8 */
+	background:url("../img/icons.png") no-repeat -253px -3px;
+}
+.server_tv_title{
+	float: left;
+	margin-left: 10px;
+}
+.server_tv_title h5{
+	font-size: 14px;
+}
+.help{
+	height: 187px;
+
+	border-bottom: 1px solid #b3b3b3;
+}
+.help li{
+	float: left;
+	width: 165px;
+	height: 187px;
+	padding-left: 35px;
+}
+.help dt{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #3f3f3f;
+}
+.help dd{
+	
+	margin-bottom: 2px;
+	font-size: 12px;
+	color: #3f3f3f;
+}
+.about_us{
+	padding-top: 22px;
+	text-align: center
+}
+.links{
+	margin: 15px 0 15px 0;
+}
+/* 底部footer结束 */
