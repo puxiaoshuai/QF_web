@@ -20,7 +20,7 @@ vscode 提交到git  在第三个图标下，输入内容 使用ctrl+enter 暂�
 Js-css-html formatter 每次保存自动格式化
 auto rename tag  自动重命名匹配
 Css peel 追踪到样式
-ctrl+alt+i   头部作者注释
+
 ![image.png](https://upload-images.jianshu.io/upload_images/4908477-cb2f1ad5751a862e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 <style>

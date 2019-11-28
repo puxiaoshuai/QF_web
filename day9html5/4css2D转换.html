@@ -9,14 +9,38 @@
     <style>
         .box {
             width: 200px;
+            margin-left: 200px;
+            margin-top: 200px;
             height: 200px;
             background-color: chocolate;
+            /* 移动 */
+            /* transform: translate(50px, 50px) */
+            /* transform: translate(50%, 50%) 盒子 x,y移动自己宽高一般的位置*/
+            /* 旋转  deg要写  多少度 */
+            /* 默认是中心点转换 */
+            /* transform: rotate(-30deg) */
+            /* transform-origin 以哪个点旋转 */
+            /* transform-origin: 400px 400px; */
+            /* transform-origin: left bottom;
+            transform: rotate(-30deg); */
+            /* 缩放-放大  scale  1,1 就是宽高的1倍，相当于原大小*/
+            /* transform: scale(2, 2) 宽高倍数一样时，scale(2) */
+            /*  缩放-缩小 */
+            /* transform: scale(0.5, 0.5) */
+            /* 缩放的优势，不影响其他的盒子，而且可以设置缩放的中心点 */
+        }
+        
+        .box:hover {
+            transform: scale(2, 2);
         }
     </style>
 </head>
 
 <body>
     <div class="box"></div>
+    <p>
+        注释看源代码注释看源代码注释看源代码
+    </p>
 </body>
 
 </html>
