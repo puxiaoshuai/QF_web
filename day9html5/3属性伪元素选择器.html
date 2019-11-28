@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type="button"] {
+            color: chocolate
+        }
+        /* 父类下的第一个 */
+        
+        ul li:first-child {
+            background-color: blueviolet;
+        }
+        /* 选择最后一个 */
+        
+        ul li:last-child {
+            background-color: chocolate;
+        }
+        /* 选择第n个 */
+        
+        ul li:nth-child(2) {
+            background-color: blanchedalmond;
+        }
+        /* 下面是选不出来spann下的，所有需要使用同类填写 */
+        
+        .box1 span:nth-child(1) {
+            background-color: chartreuse;
+        }
+        /* 选择span类型下的第一个 */
+        
+        .box1 span:first-of-type {
+            background-color: blue;
+        }
+        /* 选择span类型下的最后一个type */
+        
+        .box1 span:last-of-type {
+            background-color: aquamarine;
+        }
+        /* span类型下的第n个 */
+        
+        .box1 span:nth-of-type(2) {
+            background-color: rgb(255, 179, 0);
+        }
+        
+        .a {
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+        /* 在元素钱插入内容 */
+        
+        .a::before {
+            content: "我是"
+        }
+        
+        .a::after {
+            content: "小猪 佩奇"
+        }
+    </style>
+</head>
+
+
+<body>
+    <p>属性选择器</p>
+    <input type="search" name="diyi" id="1" value="xxx">
+    <input type="button" name="diyi" id="5" value="xxx">
+    <input type="search" name="diyi" id="3" value="xxx">
+    <input type="search" name="diyi" id="4" value="xxx">
+    <br>
+    <code>
+   
+    input[type=search] {
+      color: skyblue;
+    }
+     以什么开头
+    
+    span[class^=black] {
+      color: lightgreen;
+    }
+    以什么结尾
+    span[class$=black] {
+      color: lightsalmon;
+    }
+    所有的
+    span[class*=black] {
+      color: lightseagreen;
+    }
+    </code>
+    <h3>类选择器，属性选择器，伪类选择器 权重为10</h3>
+    <p>结构伪类选择器</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <h3>nth-child(n)常见用法看readme.md文件</h3>
+    <div class="box1">
+
+        <p>我是p</p>
+        <span>我是span</span>
+        <span>我是span1</span>
+        <span>我是span2</span>
+    </div>
+    <div class="box2">
+        <h3>伪元素选择器</h3>
+        <p>：：before</p>
+        <p>：：after</p>
+        <div class="a">
+            测试
+        </div>
+        <p>
+            - `before` 和 `after` 必须有 `content` 属性 - `before` 在内容前面，after 在内容后面 - `before` 和 `after` 创建的是一个元素，但是属于行内元素 - 创建出来的元素在 `Dom` 中查找不到，所以称为伪元素 - 伪元素和标签选择器一样，权重为 1
+        </p>
+    </div>
+</body>
+
+</html>

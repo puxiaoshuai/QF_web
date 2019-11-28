@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header,
+        nav {
+            height: 100px;
+            background-color: chocolate;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>h5新增加标签</h3>
+    <ul>
+        <li>header 头部标签</li>
+        <li>nav 导航标签</li>
+        <li>article 内容标签</li>
+        <li>section 块级标签</li>
+        <li>footer 底部标签</li>
+        <li>aside 侧边栏标签</li>
+        <li>footer 底部标签</li>
+    </ul>
+    <p>注意：在ie9中被认为行内元素，所有要加display:block</p>
+    <p>pc端很少用，兼容不好，一般在移动端</p>
+    <header>
+
+    </header>
+    <nav>
+        nav
+    </nav>
+    <h3>多媒体标签 </h3>
+    <p>audio 在不使用插件的情况下也可以支持原生音频文件，但是支持的格式是有限的，支持Ogg,mp3,wav </p>
+    <p>解决方法，使用多种音频文件</p>
+    <audio controls="controls" src="./media/muisc.mp3"></audio>
+    <p>音频常见属性，autoplay controls loop</p>
+    <p>下面的注释为多浏览器支持，谁支持用谁的</p>
+    <!-- <audio>
+       <source src="xx" type="auto/mpeg" />
+       <source src="xxx" type="auto/ogg" />
+   </audio> -->
+    <video src="./media/mi.mp4" controls="controls" style="width: 200px ;" />
+</body>
+
+</html>

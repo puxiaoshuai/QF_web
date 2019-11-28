@@ -16,3 +16,52 @@ vscode 提交到git  在第三个图标下，输入内容 使用ctrl+enter 暂�
 3、制作HTML结构。我们还是遵循，先有结构，后有样式的原则。结构永远最重要。
 
 4、然后开始运用盒子模型的原理，通过DIV+CSS布局来控制网页的各个模块。
+部分插件：
+Js-css-html formatter 每次保存自动格式化
+auto rename tag  自动重命名匹配
+Css peel 追踪到样式
+ctrl+alt+i   头部作者注释
+![image.png](https://upload-images.jianshu.io/upload_images/4908477-cb2f1ad5751a862e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+<style>
+     /* 偶数 */
+     ul li:nth-child(even) {
+       background-color: aquamarine;
+     }
+   
+     /* 奇数 */
+     ul li:nth-child(odd) {
+       background-color: blueviolet;
+     }
+   
+     /*n 是公式，从 0 开始计算 */
+     ul li:nth-child(n) {
+       background-color: lightcoral;
+     }
+   
+     /* 偶数 */
+     ul li:nth-child(2n) {
+       background-color: lightskyblue;
+     }
+   
+     /* 奇数 */
+     ul li:nth-child(2n + 1) {
+       background-color: lightsalmon;
+     }
+   
+     /* 选择第 0 5 10 15, 应该怎么选 */
+     ul li:nth-child(5n) {
+       background-color: orangered;
+     }
+   
+     /* n + 5 就是从第5个开始往后选择 */
+     ul li:nth-child(n + 5) {
+       background-color: peru;
+     }
+   
+     /* -n + 5 前五个 */
+     ul li:nth-child(-n + 5) {
+       background-color: tan;
+     }
+   </style>
+   ```
