@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        
+        img {
+            display: block;
+            width: 400px;
+            height: 400px;
+        }
+        
+        .change {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <p>style color等的改变</p>
+    <h3>1.js调用修改的样式权重比较高，算是行内样式，使用element。style来操作</h3>
+    <h3>2.element,classname类名样式操作，适合样式比较多功能复杂的</h3>
+    <p>如果要保留原先的类名，可以 classa classb 这样</p>
+
+    <div></div>
+
+    <button>关闭图片</button>
+    <img src="../images//2.jpg" alt="">
+    <script>
+        let div = document.querySelector("div")
+            // div.onclick = function() {
+            //     this.style.backgroundColor = "blue";
+            //     this.style.width = "250px";
+            //     this.style.height = "250px";
+            // }
+        div.onclick = function() {
+            this.className = 'change'
+        }
+        let btn = document.querySelector("button")
+        let img = document.querySelector("img");
+        btn.onclick = function() {
+            img.style.display = "none"
+        }
+    </script>
+
+</body>
+
+</html>

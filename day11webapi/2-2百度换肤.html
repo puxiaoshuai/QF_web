@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: url('../images/2.jpg')
+        }
+        
+        div {
+            position: relative;
+            height: 100px;
+        }
+        
+        ul {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        
+        li {
+            display: block;
+            text-decoration: none;
+            list-style: none;
+            float: left;
+            border: 2px solid #cccccc;
+        }
+        
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><img src="../images/2.jpg" alt=""></li>
+            <li><img src="../images/1.jpg" alt=""></li>
+            <li><img src="../images/sm.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        let imgs = document.getElementsByTagName("img");
+        let body = document.body
+        let lis = document.getElementsByTagName("li")
+        lis[0].style.border = " 2px solid chocolate"
+        console.log("11", imgs[0].src)
+        for (let i = 0; i < imgs.length; i++) {
+            const img1 = imgs[i];
+            img1.onclick = function() {
+                // 赋值要严格按照
+                body.style.backgroundImage = "url(" + img1.src + ")"
+                for (let index = 0; index < lis.length; index++) {
+                    lis[index].style.border = " 2px solid #cccccc"
+
+                }
+                lis[i].style.border = " 2px solid chocolate"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

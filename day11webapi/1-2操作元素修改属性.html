@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">美女</button>
+    <button id="btn2">帅哥</button>
+    <img id="img1" src="../images/2.jpg">
+    <script>
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let img = document.querySelector("img")
+        btn1.onclick = function() {
+            img.src = "../images/2.jpg"
+            img.title = '美女'
+        }
+        btn2.onclick = function() {
+            img.src = "../images/1.jpg"
+            img.title = '甩锅'
+        }
+    </script>
+</body>
+
+</html>

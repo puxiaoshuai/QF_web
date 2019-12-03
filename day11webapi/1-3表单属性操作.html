@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>type value checked selectd disabled</p>
+    <button>改变</button>
+    <input type="text" value="请输入内容">
+    <button id="btn1">显示密码</button>
+    <input id="input1" type="text" value="请输入内容">
+    <script>
+        let btn = document.querySelector("button")
+        let input = document.querySelector("input")
+        btn.onclick = function() {
+            input.value = "我是新的内容"
+                //btn.disabled = true
+                // this指向函数的调用者
+            this.disabled = true
+        }
+        let btn1 = document.getElementById("btn1")
+        let input1 = document.getElementById("input1")
+        let flag = false //设置密码显隐的标记
+        btn1.onclick = function() {
+            if (flag) {
+                flag = false
+                input1.type = "text"
+            } else {
+                flag = true
+                input1.type = "password"
+            }
+        }
+    </script>
+</body>
+
+</html>
