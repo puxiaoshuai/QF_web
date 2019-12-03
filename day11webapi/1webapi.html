@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>javaScript分为 javaScript语法， DOM(页面文档对象模型), BOM（浏览器对象模型）</p>
+    <p>web api</p>
+    <p>DOM(页面文档对象模型), BOM（浏览器对象模型）</p>
+    <p>DOM,一个页面就是一个文档，文档中有很多元素</p>
+    <ul>
+        <li>文档：一个页面就是一个文档，DOM中使用document来表示</li>
+        <li>元素：页面中所有的标签都是元素，DOM中使用element来表示</li>
+        <li>节点：网页中的所有内容都是节点，（标签，属性，文本，注释等），使用node来表示</li>
+    </ul>
+    <hr>
+    <p>获取页面的元素</p>
+    <h3>获取元素的方法</h3>
+    <ul>
+        <li>根据ID来获取，getElementById，更多用法在代码中查看</li>
+        <li>根据标签名来获取，document.getElementByTagName()，更多用法在代码中查看</li>
+        <li>根据标签名来获取，element.getElementByTagName()，更多用法在代码中查看</li>
+        <li>通过html5新增的方法获取，在老版本ie中是不行的</li>
+        <li>html5中，getElemntByClassName()</li>
+        <li>html5中，querySelector(".box")返回指定选择器的第一个元素对象，里面的选择器要加符号，.#</li>
+        <li>html5中，querySelectorAll(“.box”)返回指定选择器的所有的元素对象，里面的选择器要加符号，.#</li>
+        <li>获取特殊元素 document.body html 元素由document.documentElement</li>
+    </ul>
+    <p id="time">2019年12月3号</p>
+    <h3>事件基础</h3>
+    <ul>
+        <li>事件基础</li>
+    </ul>
+    <button id="btn">唐伯虎</button>
+    <h3>操作元素</h3>
+    <ul>
+        <li>innerText</li>
+        <li>innerHtml，识别html标签，W3C推荐</li>
+
+    </ul>
+    <div id="content1"></div>
+    <div id="content2"></div>
+    <h3>常用元素属性操作</h3>
+    <ul>
+        <li>src href id alt title</li>
+    </ul>
+    <script>
+        let a = document.getElementById("time")
+        console.log("数据", a)
+        console.log("数据1", a.innerHTML)
+        console.log("数据2", a.innerText)
+            // 打印更多的详细信息
+        console.dir(a)
+        let b = document.getElementsByTagName("li")
+        console.log("tag==========")
+        console.dir(b)
+        var btn = document.getElementById("btn")
+        var div_c = document.getElementById("content1")
+        var div_c2 = document.getElementById("content2")
+            // innerHtml是W3C标准，推荐
+        btn.onclick = function() {
+
+                div_c.innerText = "点秋香";
+                div_c2.innerHTML = '<h3>点秋香</h3>';
+            }
+            // 操作元素
+    </script>
+</body>
+
+</html>
