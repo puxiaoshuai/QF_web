@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>节点操作方式1.使用 document.getxxx,逻辑性不强，繁琐</li>
+        <li>节点操作方式2.父级子级兄弟级来进行操作。逻辑性强，但是兼容性差</li>
+        <li>节点操作2更方便，推荐</li>
+
+    </ul>
+    <h3>节点层级</h3>
+    <h4>户节点 parentNode,离原素最近的节点，如果找不到就是null</h4>
+    <h4>子节点 childNodes(标准),得到的是一个集合，所有的字节点，包含元素节点，和文本节点,一般不提倡</h4>
+    <h4 style="color: red">子节点 children(非标准),得到的是一个集合，所有的字节点，只有包含元素节点，提倡</h4>
+    <h4>子节点 第一个孩子 firstchild 最后一个 lastchild,算标准，不提倡</h4>
+    <p>下面的方法有兼容性问题，ie9上才能用，解决方案</p>
+    <h4>子节点 第一个孩子 firstElementChild 最后一个 lastElementChild</h4>
+    <h3 style="color: red">实际开发中，拿孩子，就是chilndren[0]</h3>
+    <ol>
+        <li>我是1</li>
+        <li>我是2</li>
+        <li>我是3</li>
+    </ol>
+    <hr>
+    <p>兄弟节点 nextSibling下一个兄弟节点(文本或者元素节点)</p>
+    <p>兄弟节点 previousSibling上一个兄弟节点(文本或者元素节点)</p>
+    <hr>
+    <p>下面的有兼容性问题，封装函数</p>
+    <p>兄弟节点 nextElementSibling(下一个元素节点)</p>
+    <p>兄弟节点 previousElementSibling(上一个元素节点)</p>
+    <script>
+        let ol = document.querySelector("ol")
+        console.log("==>", ol.firstElementChild);
+        console.log("==>", ol.lastElementChild);
+    </script>
+</body>
+
+</html>

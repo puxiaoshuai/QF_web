@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态生成表格</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(179, 101, 101);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tr是行，td是单元格 -->
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>科目</td>
+                <td>成绩</td>
+                <td>操作1</td>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        let datas = [{
+                "name": "战三",
+                "class": "数学",
+                "age": 23
+            }, {
+                "name": "李四",
+                "class": "数学",
+                "age": 23
+            }, {
+                "name": "王五",
+                "class": "数学",
+                "age": 23
+            }]
+            // 有几个数据，我就创建几行
+        let tbody = document.querySelector("tbody")
+        for (let index = 0; index < datas.length; index++) {
+            const item = datas[index];
+            let tr = document.createElement("tr")
+            tbody.appendChild(tr)
+                // 遍历每个对象，进行数据的填充
+            for (const key in datas[index]) {
+                //    这里的key是下标
+                console.log(datas[index][key]);
+
+                var td = document.createElement("td")
+                td.innerHTML = datas[index][key];
+                tr.append(td)
+            }
+        }
+        // 最后单独创建删除的单元格
+    </script>
+</body>
+
+</html>

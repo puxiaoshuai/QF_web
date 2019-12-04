@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>获取元素自定义值,区别于src href 自带的，这是自定义的，</p>
+    <p>getAttribute("属性")</p>
+    <p>setAttribute("属性","值")</p>
+    <p>removeAttribute（属性）移除属性值</p>
+    <div a="我是自定义属性值">点我看效果</div>
+    <button>新值</button>
+    <script>
+        let div = document.querySelector("div")
+        let tv = div.getAttribute('a')
+        let btn = document.querySelector("button")
+        div.onclick = function() {
+
+            alert(tv)
+            div.setAttribute("a", "我有新的值了")
+            alert(div.getAttribute('a'))
+        }
+        btn.onclick = function() {
+            alert(div.getAttribute('a'))
+        }
+    </script>
+</body>
+
+</html>

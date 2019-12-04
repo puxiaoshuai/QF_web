@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 儿子选择器 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        .nav>li {
+            display: block;
+            float: left;
+            width: 120px;
+            height: 40px;
+            background-color: #ccc;
+            border: 2px solid red;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .current {
+            background-color: red;
+        }
+        
+        .nav ul li {
+            width: 120px;
+            height: 40px;
+            background-color: red
+        }
+        
+        .nav ul {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="current">
+            图书1
+            <ul style="display: block">
+                <li>格林童话</li>
+                <li>格林童话</li>
+                <li>格林童话</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">图书2</a>
+            <ul>
+                <li>格林童话2</li>
+                <li>格林童话2</li>
+                <li>格林童话2</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">图书3</a>
+            <ul>
+                <li>格林童话3</li>
+                <li>格林童话3</li>
+                <li>格林童话3</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        let nav = document.querySelector('.nav')
+        let lis = nav.children;
+        console.log(lis);
+
+        for (let i = 0; i < lis.length; i++) {
+
+            lis[i].onclick = function() {
+                for (let index = 0; index < lis.length; index++) {
+                    const li = lis[index];
+                    li.className = ''
+                }
+                this.className = 'current'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言板</title>
+</head>
+
+<body>
+    <input type="text" value="请留言">
+    <button>留言</button>
+    <ol>
+
+    </ol>
+    <script>
+        let btn = document.querySelector("button")
+        let input = document.querySelector("input")
+            // 父类
+        let ol = document.querySelector("ol")
+
+        btn.onclick = function() {
+            let value = input.value
+            if (value === "" | value === "请留言") {
+                alert("请输入内容")
+            } else {
+                // 创建节点
+                let li = document.createElement("li")
+                li.innerHTML = value + "<a href='javescript:;' >删除</a>";
+                ol.appendChild(li)
+                    // 删除元素
+                let as = ol.querySelectorAll("a");
+                console.log(as);
+
+                for (let index = 0; index < as.length; index++) {
+                    const a = as[index];
+
+                    a.onclick = function() {
+                        // 移除a的级就是 li ，使用this.parentNode来确定
+                        ol.removeChild(this.parentNode);
+                    }
+
+
+
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

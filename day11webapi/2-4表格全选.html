@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <table border="1" width="600" align="center" cellspacing="0" cellpadding="6">
+        <thead>
+            <tr>
+                <th><label><input  id="in_all" name="all" type="checkbox" value="" />全选</label></th>
+                <th>商品</th>
+                <th>价钱</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="t_body">
+            <tr align="center">
+                <td><label><input name="all"  type="checkbox" value="" /></label></td>
+                <td>华为手机</td>
+                <td>400</td>
+            </tr>
+            <tr align="center">
+                <td><label><input name="all" type="checkbox" value="" /></label></td>
+                <td>安德瑞手机</td>
+                <td>300</td>
+            </tr>
+            <tr align="center">
+                <td><label><input name="all" type="checkbox" value="" /></label></td>
+                <td>苹果手机</td>
+                <td>200</td>
+            </tr>
+            <tr align="center">
+                <td><label><input name="all" type="checkbox" value="" /></label></td>
+                <td>垂直手机</td>
+                <td>100</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    <script>
+        let check_all = document.getElementById("in_all")
+        let checks = document.getElementById("t_body").querySelectorAll("input")
+        check_all.onclick = function() {
+            for (let i = 0; i < checks.length; i++) {
+                const check_input = checks[i];
+                check_input.checked = this.checked
+            }
+        }
+        for (let index = 0; index < checks.length; index++) {
+            const check_input = checks[index];
+            // 每次点击循环遍历按钮是否全部选中
+            let flag = true
+            check_input.onclick = function() {
+                for (let a = 0; a < checks.length; a++) {
+                    if (checks[a].checked === false) {
+                        flag = false;
+                    }
+                }
+                check_all.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>
