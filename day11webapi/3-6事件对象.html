@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>事件对象</div>
+    <script>
+        var div = document.querySelector("div")
+        div.onclick = function(event) {
+            //1.event就是一个事件对象，当做形参
+            //2事件对象只有有了事件才会存在。他是系统自动给我们创建的，不需要我们传递参数
+            //target返回触发事件的对象
+            console.log(event.target);
+            //返回事件的对象，非标准，ie6-8用
+            console.log(event.srcElement);
+            //event.preventDefault() 阻止默认事件，低版本使用  reruenValue
+            //return  false 没有兼容问题，都能用，阻止默认事件，后面的代码也不执行了
+
+
+
+        }
+    </script>
+</body>
+
+</html>

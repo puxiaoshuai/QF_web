@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: chocolate;
+            position: relative;
+        }
+        
+        .son {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>注册事件</p>
+    <p>1.传统方式 onclick,同一个元素同一事件智能设置一个出来函数，最后注册的生效</p>
+    <p>2.方法监听注册方式 addEventLister,可以注册多个监听器</p>
+    <button>方法监听</button>
+    <hr>
+    <p>事件解绑，传统方式使用e.onclick=null</p>
+    <p>事件解绑，方式监听使用e .removeEventListener('click',fn)</p>
+    <hr>
+    <p>DOM事件流:事件发生时在元素节点之间按照特定的顺序传播，这个传播过程就是DOM事件流</p>
+    <p>DOM事件的三个阶段:捕获阶段，当前目标阶段，冒泡阶段</p>
+    <h3>在实际的开发中，我们更关心的是事件冒泡</h3>
+    <p>有的事件是没有冒泡的，比如 onblur,onfacus,onmouseenter onmouseleave</p>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector("button")
+            // 事件类型是字符串，且不带on
+        btn.addEventListener('click', function() {
+            alert("方法监听")
+        })
+        btn.addEventListener('click', fn)
+
+        function fn() {
+            alert("第二个监听")
+            btn.removeEventListener('click', fn)
+        }
+        //=======================================
+        //dom事件流注意：js代码中智能执行捕获或者冒泡其中的一个阶段
+        //onclick和 attachEvent(ie)只能得到冒泡事件
+        //3.捕获阶段若添加了addEventListener 第三个参数如果是true，则处在捕获阶段，
+        //doc ->html>body>father>son ,一层一层下来，谁添加了事件就执行，没有就继续向下
+        // var son = document.querySelector(".son")
+        // son.addEventListener("click", function() {
+        //     alert("son")
+        // }, true)
+        // var father = document.querySelector(".father")
+        // father.addEventListener("click", function() {
+        //         alert("father")
+        //     }, true)
+        //以上的情况就是father先捕获到，先执行
+        //第三个参数为flase时，处在冒泡事件，son =》father>body >html>doc
+        var son = document.querySelector(".son")
+        son.addEventListener("click", function() {
+            alert("son")
+        }, false)
+        var father = document.querySelector(".father")
+        father.addEventListener("click", function() {
+            alert("father")
+        }, false)
+    </script>
+</body>
+
+</html>

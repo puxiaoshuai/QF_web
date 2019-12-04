@@ -59,21 +59,34 @@
             }]
             // 有几个数据，我就创建几行
         let tbody = document.querySelector("tbody")
+            // 根据数据来生成几行，这里生成 3行
         for (let index = 0; index < datas.length; index++) {
             const item = datas[index];
             let tr = document.createElement("tr")
             tbody.appendChild(tr)
                 // 遍历每个对象，进行数据的填充
+                //每生成一行，就把每一行的对象拿到，进行遍历对象的值，设置到一行的列上
             for (const key in datas[index]) {
                 //    这里的key是下标
                 console.log(datas[index][key]);
-
                 var td = document.createElement("td")
                 td.innerHTML = datas[index][key];
                 tr.append(td)
             }
+            // 最后单独创建删除的单元格
+            let del = document.createElement("td")
+            del.innerHTML = "<a href='javascript:;'>删除</a>"
+            tr.appendChild(del)
         }
-        // 最后单独创建删除的单元格
+        var as = document.querySelectorAll("a")
+        for (let i = 0; i < as.length; i++) {
+            const a = as[i];
+            a.onclick = function() {
+                // 点击a 删除a所在行(链接的爸爸的爸爸) node.removeChild(a)
+                tbody.removeChild(this.parentNode.parentNode)
+            }
+
+        }
     </script>
 </body>
 

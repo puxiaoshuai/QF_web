@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>三种动态创建元素的区别</h3>
+    <ul>
+        <li>doc.write()</li>
+        <li>doc.innerHTML</li>
+        <li>doc.createElement</li>
+    </ul>
+    <p>区别</p>
+    <ol>
+        <li>doc。write是直接把内容写入内容流，但是文档执行完毕泽他会导致页面进行重新绘制</li>
+        <li>innerHTML是直接把内容写入某个DMO节点，不会导致页面重绘</li>
+        <li>innerHTML创建多个元素的效率更高（不要拼接字符串，采用arr.push(html代码)数组形式进行拼接，结构稍微复杂）</li>
+        <li>createElement创建多个元素的效率稍微低一点，但是结果更清晰</li>
+    </ol>
+</body>
+
+</html>
