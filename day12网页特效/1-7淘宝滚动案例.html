@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./animate_y.js"></script>
     <style>
         * {
             margin: 0;
@@ -96,24 +97,29 @@
         let main_top = main_div.offsetTop
         document.addEventListener("scroll", function() {
 
-            // 当文档卷去的头部 window.pageYOffset大于了banber距离顶部的距离时。改成固定定位
-            if (window.pageYOffset >= num) {
-                nav.style.position = "fixed"
-                nav.style.top = nav_num - num + "px"
-                nav.style.right = "0px"
-            } else {
-                // 否则就还原
-                nav.style.position = "absolute"
-                nav.style.top = "300px"
-            }
-            if (window.pageYOffset >= main_top) {
-                nav_footer.style.display = "block"
+                // 当文档卷去的头部 window.pageYOffset大于了banber距离顶部的距离时。改成固定定位
+                if (window.pageYOffset >= num) {
+                    nav.style.position = "fixed"
+                    nav.style.top = nav_num - num + "px"
+                    nav.style.right = "0px"
+                } else {
+                    // 否则就还原
+                    nav.style.position = "absolute"
+                    nav.style.top = "300px"
+                }
+                if (window.pageYOffset >= main_top) {
+                    nav_footer.style.display = "block"
 
-            } else {
-                // 否则就还原
-                nav_footer.style.display = "none"
-            }
+                } else {
+                    // 否则就还原
+                    nav_footer.style.display = "none"
+                }
 
+            })
+            //点击返回顶部就窗口滚动到最上方
+        nav_footer.addEventListener('click', function() {
+            // window.scroll(0, 0)
+            window.run_v(window, 0)
         })
     </script>
 </body>

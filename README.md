@@ -66,3 +66,14 @@ Css peel 追踪到样式
    </style>
    ```
    ![image.png](https://upload-images.jianshu.io/upload_images/4908477-414ce14dab605613.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+#####移动端的一些插件
+1.Swiper 轮播图  
+2.zy.media.js 移动端视频插件
+#####移动端常用开发框架
+#####常见js库
+jquery
+Prototype
+YUI
+DOjo
+Ext JS
+移动端的zepto

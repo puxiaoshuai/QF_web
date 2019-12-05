@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            /* 移动没效果，要加定位 */
+            position: absolute;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>触屏事件</h3>
+    <ul>
+        <li>touchstart 手指触摸到一个DOM元素是触发</li>
+        <li>touchmove 手指在一个DOM元素上按住滑动时 触发</li>
+        <li>touchend手指从一个DOM元素上松开是触发</li>
+    </ul>
+    <h3>重点</h3>
+    <ul>
+        <li>touches 正在触摸屏幕的所以手指的列表</li>
+        <li>targetTouches正在触摸当前DOM元素上的手指的列表</li>
+        <li>changedTouches手指状态发生了改变的列表，从无到有，从有到无变化</li>
+    </ul>
+    <div></div>
+    <script>
+        let div = document.querySelector("div")
+            //手指初始化坐标
+        let startX = 0;
+        let startY = 0;
+        //盒子初始化位置
+        let x = 0;
+        let y = 0;
+        div.addEventListener("touchstart", function(e) {
+            //e.preventDefault()
+            // 第一步获取手指初始化坐标
+            startX = e.targetTouches[0].pageX;
+            startY = e.targetTouches[0].pageY;
+            //获取盒子的weizhi
+            x = this.offsetLeft;
+            y = this.offsetTop;
+
+
+
+        })
+        div.addEventListener("touchmove", function(e) {
+            //计算手指移动距离，移动坐标减去 初始化坐标
+            let movex = e.targetTouches[0].pageX - startX;
+            let movey = e.targetTouches[0].pageY - startY;
+            //并移动盒子
+            this.style.left = x + movex + "px"
+            this.style.top = y + movey + "px"
+
+
+
+        })
+        div.addEventListener("touchend", function() {
+            console.log("手指松开了屏幕");
+
+        })
+    </script>
+</body>
+
+</html>

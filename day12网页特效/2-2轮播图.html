@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        .banner {
+            position: relative;
+            width: 980px;
+            height: 510px;
+            margin: 0 auto;
+            background-color: chocolate;
+        }
+        
+        .arr_left {
+            position: absolute;
+            top: 50%;
+            /* 移动自身的一半 */
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, .3);
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        
+        .arr_right {
+            position: absolute;
+            top: 50%;
+            /* 移动自身的一半 */
+            right: 0px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, .3);
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        
+        .bottom_box {
+            position: absolute;
+            top: 480px;
+            /* 移动自身的一半 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, .2);
+        }
+        
+        .bottom_box li {
+            float: left;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<!-- 轮播图功能需求 -->
+<!-- 1鼠标经过轮播图模块，左右按钮显示，离开隐藏左右按钮 -->
+<!-- 2点击右侧的按钮一次，图片往左播放一张，类推 -->
+<!-- 3.图片播放的同时，小圆圈也一起变化 -->
+<!-- 4.鼠标不经过轮播图，轮播图自动播放图片 -->
+<!-- 5.点击小圆圈，可以播放相应的图片 -->
+<!-- 6s鼠标经过，轮播图模块，自动播放停止 -->
+
+<body>
+    <div class="banner">
+        <div class="arr_left">
+            <</div>
+                <div class="arr_right">></div>
+        </div>
+        <div class="bottom_box">
+            <ul>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+</body>
+
+</html>
