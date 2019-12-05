@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.html">
+        <!-- 使用name属性来传递参数 -->
+        <input type="text" name="uname">
+        <input type="submit" value="登录">
+    </form>
+    <script>
+        let inputs = document.querySelectorAll("input")
+        let submit = inputs[1]
+        submit.onclick = function() {
+            document.location.href = "index.html"
+        }
+    </script>
+</body>
+
+</html>

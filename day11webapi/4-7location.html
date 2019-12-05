@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location对象</title>
+</head>
+<ul>
+    <li>loc.href 获取或者设置整个url（重点）</li>
+    <li>loc.host 返回主机名</li>
+    <li>loc.port 返回端口号</li>
+    <li>loc.pathname 获取返回路径</li>
+    <li>loc.search 返回参数（重点）</li>
+    <li>loc.hash 返回片段</li>
+    <li>assgin也能实现 重定向，有后退功能</li>
+    <li>repalce 也是重定向。没有后退功能</li>
+    <li>location.reload() 刷新 true 强制刷新</li>
+</ul>
+<h1>3秒后跳转到百度</h1>
+
+<body>
+    <script>
+        let num = 3;
+        let h1 = document.querySelector("h1")
+        let timer = setInterval(() => {
+            num--;
+            h1.innerHTML = num + "秒后跳转到百度"
+            if (num == 1) {
+                clearInterval(timer)
+                location.href = "http://www.baidu.com"
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

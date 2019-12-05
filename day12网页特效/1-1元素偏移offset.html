@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        span {
+            color: red;
+        }
+        
+        .box1 {
+            /* 父亲 */
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>offset就是偏移量，能动态设置元素的位置(位移)</p>
+    <ul>
+        <li>获得元素距离带有定位父元素的位置</li>
+        <li>获得元素自身的大小（宽高）</li>
+        <li><span>注意</span>：返回的数值不带单位</li>
+    </ul>
+    <h3>常见属性</h3>
+    <ul>
+        <li>e.offsetParent 返回改元素带有定位的父级元素，<span>如果父级元素没有定位怎返回body</span></li>
+        <li>e.offsetTop 返回元素相对带有<span>定位的父元素</span>上方的偏移量</li>
+        <li>e.offsetLeft 返回元素相对带有<span>定位的父元素</span>左侧方的偏移量</li>
+        <li>e.offsetWidth 返回自身的宽度,包含pading等，</li>
+        <li>e.offsetHeight 返回自身的高度,包含pading等，</li>
+    </ul>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+    <script>
+        let box1 = document.querySelector(".box1")
+        let box2 = document.querySelector(".box2")
+        console.log(box2.offsetTop);
+        console.log(box2.offsetParent); //返回父亲，父没有定位的话，就返回body
+        console.log(box2.parentNode); //返回父亲，最近一级，不管父级有没有定位
+    </script>
+</body>
+
+</html>

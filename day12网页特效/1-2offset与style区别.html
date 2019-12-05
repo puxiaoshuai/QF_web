@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 100%;
+            height: 200px;
+        }
+        
+        .dom,
+        .bom {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>offset与 style的区别</p>
+    <div class="father">
+        <div class="dom">
+            <h3>offset</h3>
+            <ul>
+                <li>offset可以得到任意样式表中的样式值</li>
+                <li>offset获得的值是没有单位的</li>
+                <li>offsetWidth包含padding+border+width</li>
+                <li>offsetWidth等属性只能读，不能赋值</li>
+                <li><span>获取元素大小的位置，offet更合适</span></li>
+            </ul>
+        </div>
+        <div class="bom">
+            <h3>style</h3>
+            <ul>
+                <li>style只能得到行内的样式值</li>
+                <li>style。width是有单位的字符串</li>
+                <li>style.width不包含padding+border的值</li>
+                <li>style.width可读写</li>
+                <li><span>给元素更改值，style更合适</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>

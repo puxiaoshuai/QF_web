@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <p>注意 必须加定位</p>
+    <p>缓动原理，让每次移动的距离变小</p>
+    <p>核心算法：(目标值-现在的位置)/10 作为每次的步长</p>
+    <p>修改+1的步长，变为我们公式</p>
+    <div class="box"></div>
+    <button>开始</button>
+    <script>
+        let box = document.querySelector(".box")
+        let button = document.querySelector("button")
+        button.addEventListener("click", function() {
+            run(box, 50, function() {
+                box.style.backgroundColor = "red";
+            })
+        })
+
+
+        function run(obj, targent, callback1) {
+            //bug:当我们点击按钮调用方法的话，会每次调用，会越来越快,所有先清除
+            clearInterval(obj.timer)
+                //使用var let  会开辟内存空间，为节约
+            obj.timer = setInterval(function() {
+                var step = (targent - obj.offsetLeft) / 10;
+
+                // obj.style.top = obj.offsetTop + step + "px"
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if (obj.offsetLeft == targent) {
+                    console.log("结束");
+                    clearInterval(obj.timer)
+                    if (callback1) {
+                        //调用函数
+                        callback1();
+                    }
+                }
+                //判断要写在前面
+                obj.style.left = obj.offsetLeft + step + "px"
+            }, targent);
+        }
+    </script>
+</body>
+
+</html> zu

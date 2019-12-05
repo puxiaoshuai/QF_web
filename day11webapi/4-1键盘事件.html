@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>键盘事件</title>
+
 </head>
 
 <body>
     <p>onkeyup 某个建委被松开时触发</p>
     <p>onkeydown 键位被按下时触发</p>
     <p>onkeypress 某个键位按下时触发，出去一些功能键位，ctrl+shift</p>
+    <h3>键盘事件对象</h3>
+    <input type="text" value="点击s键位，进行搜索聚焦">
     <script>
-        document.onkeyup = function() {
-            alert("某个键位谈起了")
+        let input = document.querySelector("input")
+
+        document.onkeyup = function(e) {
+            console.log(e);
+            // e.key就是按下的哪个值 ，e.keyCode就是Ascll值
+            if (e.key === "s") {
+                input.value = ""
+                input.focus();
+            }
         }
     </script>
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>定时器 1,setTimeout 2.setinterval()</p>
+    <h3>window.setTimeout(函数,延迟时间),相当于定时炸弹</h3>
+    <p>页面中可能很多定时器，起名字</p>
+    <p>clearTimeout,清除定时器</p>
+    <div class="ad">
+        <img src="../images/2.jpg" style="width: 200px;height:200px" alt="">
+        <h3>我是广告,3s后消失</h3>
+    </div>
+    <h3>window.setinterval(函数,延迟时间),相当于恐怖游轮</h3>
+    <script>
+        setTimeout(() => {
+            alert("2s延迟")
+        }, 2000);
+        let ad = document.querySelector(".ad")
+        setTimeout(() => {
+            ad.style.display = "none"
+        }, 3000);
+    </script>
+</body>
+
+</html>

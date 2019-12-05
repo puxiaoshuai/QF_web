@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .all {
+            position: relative;
+        }
+        
+        .header {
+            margin-right: 40px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        
+        .banner {
+            margin-right: 40px;
+            height: 400px;
+            background-color: chocolate;
+        }
+        
+        .content {
+            margin-right: 40px;
+            height: 600px;
+            background-color: pink;
+        }
+        
+        .footer {
+            margin-right: 40px;
+            height: 300px;
+            background-color: purple;
+        }
+        
+        .nav {
+            position: absolute;
+            top: 300px;
+            right: 0px;
+            width: 40px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        
+        .nav_h {
+            width: 40px;
+            height: 140px;
+        }
+        
+        .nav_f {
+            display: none;
+            background-color: bisque;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="header">
+            头部
+        </div>
+        <div class="banner">
+            广告
+        </div>
+        <div class="content">
+            内容
+        </div>
+        <div class="footer">
+            底部
+        </div>
+        <div class="nav">
+            <div class="nav_h"></div>
+            <div class="nav_f">
+                回到顶部
+            </div>
+        </div>
+    </div>
+    <script>
+        let nav = document.querySelector(".nav");
+        let nav_footer = document.querySelector(".nav_f");
+        let banner = document.querySelector(".banner")
+        let main_div = document.querySelector(".content")
+            // banner距离顶部的距离
+        let num = banner.offsetTop
+            // 右侧的nav距离顶部的距离
+        let nav_num = nav.offsetTop
+            // 文档进行滚动监听
+        let main_top = main_div.offsetTop
+        document.addEventListener("scroll", function() {
+
+            // 当文档卷去的头部 window.pageYOffset大于了banber距离顶部的距离时。改成固定定位
+            if (window.pageYOffset >= num) {
+                nav.style.position = "fixed"
+                nav.style.top = nav_num - num + "px"
+                nav.style.right = "0px"
+            } else {
+                // 否则就还原
+                nav.style.position = "absolute"
+                nav.style.top = "300px"
+            }
+            if (window.pageYOffset >= main_top) {
+                nav_footer.style.display = "block"
+
+            } else {
+                // 否则就还原
+                nav_footer.style.display = "none"
+            }
+
+        })
+    </script>
+</body>
+
+</html>

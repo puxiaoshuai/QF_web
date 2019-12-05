@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 我们在盒子内点击，要得到鼠标李盒子左上的距离 (相对盒子的xy)-->
+    <!-- 1.e.pageX e.pageY -->
+    <!-- 2.得到盒子在页面中的距离，box.offsetLeft,box.offsetTop -->
+    <!-- 相减就能算出 -->
+    <div class="box">
+
+    </div>
+    <p></p>
+    <script>
+        let box = document.querySelector(".box");
+        let p = document.querySelector("p")
+        box.onmousemove = function(e) {
+            let f_w = e.pageX
+            let f_h = e.pageY
+            let s_w = box.offsetLeft
+            let s_h = box.offsetTop
+            p.innerHTML = "在盒子中点击的位置:(" + (f_w - s_w) + "," + (f_h - s_h) + ")"
+
+        }
+    </script>
+</body>
+
+</html>

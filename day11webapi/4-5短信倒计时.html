@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="输入信息">
+    <button>点击发送</button>
+    <script>
+        let input = document.querySelector("input")
+        let btn = document.querySelector("button")
+        let num = 3;
+        btn.onclick = function() {
+            if (input.value === "输入信息" || input.value === "") {
+                alert("请输入内容哦")
+            } else {
+                console.log("进入");
+
+                btn.disabled = true;
+                btn.innerHTML = "还剩" + num + "秒";
+                let timer = setInterval(() => {
+                    num--;
+                    btn.innerHTML = "还剩" + num + "秒";
+
+                    if (num === 0) {
+                        clearInterval(timer)
+                        btn.disabled = false;
+                        btn.innerHTML = "点击发送";
+                        num = 3
+                    }
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+
+</html>

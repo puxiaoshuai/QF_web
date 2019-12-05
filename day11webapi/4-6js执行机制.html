@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>js特点就是单线程，同一时间内只能做一件事，按顺序执行</p>
+    <p>h5允许js创建多个线程</p>
+    <h3>多线程，同步和异步</h3>
+    <p>同步任务在主线程执行，形成一个执行栈</p>
+    <p>异步任务 通过回调函数实现，如下</p>
+    <ol>
+        <li>普通事件，click,reseize</li>
+        <li>资源加载，load,err</li>
+        <li>定时器，setInterval,setTimeout</li>
+    </ol>
+    <p>先执行栈中的同步任务</p>
+    <p>遇到回调函数，异步任务时，把任务放到任栈，</p>
+    <p>继续执行同步任务，同步任务执行完了，就执行异步任务</p>
+    <h3>由于主线程不断重复获取任务，执行任务，在获取任务，在执行，所有这种机制被称为事件循环</h3>
+    <script>
+        // console.log(1);
+        // // 定时器是异步任务，把异步任务放到任务队列中，当同步任务执行完成，开始任务队列的执行
+        // setTimeout(() => {
+        //     console.log(2);
+
+        // }, 0);
+        // console.log(3);
+    </script>
+</body>
+
+</html>

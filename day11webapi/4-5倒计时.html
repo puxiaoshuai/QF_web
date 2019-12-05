@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .day,
+        .hour,
+        .min,
+        .sec {
+            float: left;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: chocolate;
+            color: white;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="day">
+
+        </div>
+        <div class="hour">
+
+        </div>
+        <div class="min">
+
+        </div>
+        <div class="sec">
+
+        </div>
+    </div>
+    <script>
+        let day1 = document.querySelector(".day")
+        let hour = document.querySelector(".hour")
+        let min = document.querySelector(".min")
+        let sec = document.querySelector(".sec")
+        var stringTime = '2019-12-6 21:23:10';
+        // 第一次先调用一次时间
+        console.log(day1);
+
+        daoji();
+        // 这里的函数不能带daoji不能带括号，不然只执行一次
+        setInterval(daoji, 1000);
+
+        function daoji() {
+            //获取即时时间的对象
+            var now = new Date();
+            //获取结束时间的对象
+            var end = new Date(stringTime);
+            //获取即时的时间戳
+            var nowTimeStamp = now.getTime();
+            //获取活动结束的时间戳
+            var endTimeStamp = end.getTime();
+            //活动剩余秒数，js的时间戳是毫秒级别的
+            var remainSecond = (endTimeStamp - nowTimeStamp) / 1000;
+            //剩余的秒数等于days+hours+minutes+seconds
+            var oneDay = 24 * 60 * 60;
+            var oneHour = 60 * 60;
+            var oneMinute = 60;
+            //剩余的天数
+            var remainDays = parseInt((remainSecond / oneDay));
+            day1.innerHTML = remainDays + "天"
+                //减掉整数的天数，并对剩下的进行小时取整就是剩下的小时
+            var remainHours = parseInt(((remainSecond - (remainDays * oneDay)) / oneHour));
+            var Hours = parseInt((remainSecond / oneHour));
+            hour.innerHTML = remainHours + "时"
+                //减掉整数的小时，并对剩下的进行分钟取整就是剩下的分钟数
+            var remainMinutes = parseInt((remainSecond - (Hours * oneHour)) / oneMinute);
+            //减掉整数的分钟就是剩下的秒数
+            var Minutes = parseInt(remainSecond / oneMinute);
+            min.innerHTML = remainMinutes + "分"
+            var remainSeconds = parseInt(remainSecond - (Minutes * oneMinute));
+            //倒计时开始
+            sec.innerHTML = remainSeconds + "秒"
+
+            var div1 = document.getElementsByTagName('div')[0];
+            if (remainDays < 0 || remainHours < 0 || remainMinutes < 0 || remainSeconds < 0) {
+                div1.innerHTML = '活动已经结束';
+                clearInterval(k);
+                return;
+                //判断活动是否到期
+            } else if (remainDays == 0 && remainHours == 0 && remainMinutes == 0 && remainSeconds == 0) {
+                div1.innerHTML = '活动已经结束';
+                clearInterval(k); //清除定时器
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>

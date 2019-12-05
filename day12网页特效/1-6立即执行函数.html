@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>立即执行函数，不用调用，看代码</p>
+    <p>作用：独立创建了一个作用域</p>
+
+    <script>
+        // 也可以取名字
+        (function(a, b) {
+            console.log("自动执行" + a + b);
+
+        })(11, 12);
+        (function(a, b) {
+            console.log("自动执行" + a + b);
+        }(1, 2))
+    </script>
+</body>
+
+</html>

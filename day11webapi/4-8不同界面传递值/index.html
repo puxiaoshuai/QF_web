@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+</head>
+
+<body>
+    <h3>欢迎回家:</h3><span></span>
+
+    <script>
+        let span = document.querySelector("span")
+        let url = document.location.href
+        let names = url.split("=")
+        console.log(names);
+
+        span.innerText = names[1]
+    </script>
+</body>
+
+</html>

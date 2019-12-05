@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 100%;
+            height: 200px;
+        }
+        
+        .dom,
+        .bom {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>什么是BOM:浏览器对象模型</p>
+    <div class="father">
+        <div class="dom">
+            <ul>
+                <li>文档对象模型</li>
+                <li>DOM就是把文档当做一个对象来看待</li>
+                <li>DOM的顶级对象就是doucmnet</li>
+                <li>DOM主要学习的是操作页面的元素</li>
+                <li>DOM是W3C标准</li>
+            </ul>
+        </div>
+        <div class="bom">
+            <ul>
+                <li>浏览器对象模型</li>
+                <li>把浏览器当做一个对象来看待</li>
+                <li>BOm的顶级对象就是window</li>
+                <li>BOM主要学习的是浏览器窗口的一些对象</li>
+                <li>BOM是浏览器厂商在各自浏览器上定义的，兼容性差</li>
+                <li>BOM更大，包含 document,location navigation screen history</li>
+                <li>他是一个全局对象 window.alert(),window可省略</li>
+            </ul>
+        </div>
+    </div>
+    <h3>window对象窗口加载事件 w.onload或者addEventListener 就是文档加载完之后触发该事件，能写在元素的上方 </h3>
+    <p>传统方式，已最后的w.onload为准，addEventListener能进行多个</p>
+    <p>load等页面全部加载完毕，包括dom元素，图片，等</p>
+    <p>DOMContentLoaded就是dom加载完毕，不包括img,flash等</p>
+    <p>resize窗口变化，触发事件，一般可以来响应式布局，w.innerWidth获取屏幕宽度</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(param) {
+            alert("11")
+        })
+    </script>
+</body>
+
+</html>

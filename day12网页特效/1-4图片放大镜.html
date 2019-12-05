@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 700px;
+            border: 2px solid #cccccc;
+        }
+        
+        .box2 {
+            display: none;
+            float: left;
+            width: 400px;
+            height: 400px;
+            margin-left: 20px;
+            border: 2px solid #cccccc;
+            background-size: 400px 400px;
+        }
+        
+        .oldimg {
+            width: 290px;
+            height: 400px;
+            background: url('../images/2.jpg') no-repeat;
+            background-size: 290px 400px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        
+        .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            opacity: 0.4;
+            cursor: move
+        }
+        
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="oldimg">
+
+        </div>
+        <div class="mask">
+
+        </div>
+    </div>
+    <div class="box2">
+        <img src="../images/2.jpg" alt="">
+    </div>
+    <script>
+        let mask = document.querySelector(".mask")
+        let box2 = document.querySelector(".box2")
+        let oldimg = document.querySelector(".oldimg")
+
+        oldimg.onmouseen = function() {
+            box2.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>
