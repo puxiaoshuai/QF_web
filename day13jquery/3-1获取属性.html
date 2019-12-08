@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>获取属性：栗子：prop("href")</p>
+    <p>自定义属性使用attr获取，设置</p>
+    <h3>数据缓存 data(),指定元素上存取数据，并不会修改DOM元素结构，一旦页面刷新，之前存放的数据都会移除</h3>
+
+    <a href="http://www.baidu.com" title="百度">白兔</a>
+    <script>
+        $(document).ready(function() {
+            console.log($("a").prop("href"));
+            $("a").prop("title", "新的")
+
+        });
+    </script>
+</body>
+
+</html>

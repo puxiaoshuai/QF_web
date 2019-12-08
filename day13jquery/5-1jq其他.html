@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <h3>jq拷贝对象</h3>
+    <pre>
+
+        $.extend("true","target",obj,objN)
+        true是深拷贝，false是浅拷贝，obj,是目标对象
+    </pre>
+    <h3>多库共存 $符号的冲突，改成Jquery 或者var xx=$.noConflict();</h3>
+    <h3>jq插件</h3>
+    <script>
+        let class_a = {
+            id: 0,
+            age: 23
+        }
+        var obj = {
+            id: 1,
+            name: "张丹撒"
+        }
+        $.extend(class_a, obj)
+        console.log(class_a);
+    </script>
+
+</body>
+
+</html>

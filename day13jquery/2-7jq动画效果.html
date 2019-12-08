@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <h3>动画stop，写在动画的前面</h3>
+    <p>show(speed,[easing],[fn])</p>
+    <p>slow,normal，fast,</p>
+    <p>easing: swing默认，linear</p>
+    <p>fn回调函数</p>
+    <script>
+        $(document).ready(function() {
+            $("div").click(function(e) {
+                $(this).fadeToggle()
+
+            });
+        });
+    </script>
+</body>
+
+</html>

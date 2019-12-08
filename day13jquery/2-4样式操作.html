@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        
+        .box2 {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        
+        .box3 {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        
+        .current {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+        }
+        
+        .tg {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>简单使用 css来修改，复杂的话就操作类</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <hr>
+    <h3>切换类</h3>
+
+    <script>
+        $(document).ready(function() {
+            $(".box1").mouseenter(function() {
+                // $(this).css("backgroundColor", "red");
+                // $(this).css("width", 300);
+                // $(this).css("height", 300);
+                // 下面的字段引号可不加，值
+                $(this).css({
+                    width: 300,
+                    height: 300,
+                    backgroundColor: "red"
+                });
+            });
+            $(".box1").mouseout(function() {
+                $(this).css("backgroundColor", "chocolate");
+                $(this).css("width", 200);
+                $(this).css("height", 200);
+            });
+            $(".box2").mouseenter(function(e) {
+                //   添加类不需要加.
+                $(this).addClass("current");
+            });
+            $(".box2").mouseout(function(e) {
+
+                $(this).removeClass("box3");
+            });
+            // 上面的效果可以通过切换类
+            $(".box3").mouseenter(function() {
+                $(this).toggleClass("tg");
+            });
+        });
+    </script>
+</body>
+
+</html>

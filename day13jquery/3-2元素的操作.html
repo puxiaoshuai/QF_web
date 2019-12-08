@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <h3>1.遍历操作 $("x").each(func(index,domele))</h3>
+    <h3 style="color: red;">1.1 $.each("div",func(i,dom)),$.each(arr,func(i,dom))主要是表里数据，处理数据,可以遍历任何对象</h3>
+    <p style="color: red;">domole是dom对象，需要转换成jq对象。$(domele)</p>
+    <hr>
+    <h3>创建元素</h3>
+    <p>语法:$(‘li li’) 内部添加append加到最后，内部添加prepend加到前面, 儿子</p>
+    <p>外部添加 after,before， 兄弟</p>
+
+    <ul>
+        <li>哈哈</li>
+    </ul>
+    <div class="test">我是原来的div</div>
+    <hr>
+    <h3>删除 remove()删除匹配的本身,empty()删除匹配元素集合中的所以子节点</h3>
+    <h3>html("")清空匹配的元素的内容</h3>
+    <script>
+        var arr = ['red', 'green', "blue"]
+        $("div").each(function(index, ele) {
+            //index是索引号，ele为dom对象
+            $(ele).css("color", arr[index]);
+        })
+        var li = $("<li>我是js创建的数据2</li>")
+        $("ul").prepend(li)
+        let div1 = $("<div>我是后面添加的</div>")
+        $(".test").after(div1);
+        // $("ul").remove(); ul元素都删除了
+        // $("ul").empty(); ul还是存在，儿子不见了 跟 html("")作用一致
+        //$("ul").html("");ul还是存在，儿子不见了
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <span>微博发布</span>
+    <textarea name="" class="txt" cols="20" rows="10"></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        $("button").click(function(e) {
+            e.preventDefault();
+            let txt = $("textarea");
+            let ul = $("ul");
+            let value = txt.val();
+            if (value === "") {
+                alert("您为输入任何内容")
+            } else {
+                let li = $("<li>" + value + "<a href='#'>删除</a></li>")
+                ul.prepend(li)
+            }
+            // 不是使用$("a").click 动态创建的是不生效的
+            $("a").on("click", function() {
+                //a的父类就是li
+                $(this).parent().slideUp(function() {
+                    //下面的this就是li
+                    $(this).remove()
+                })
+            });
+
+        });
+    </script>
+</body>
+
+</html>

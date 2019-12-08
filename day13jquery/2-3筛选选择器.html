@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>e:first获取第一个e元素</li>
+        <li>e:last获取最后元素</li>
+        <li>e:eq(index) 获取索引为index的元素，index从0开始</li>
+        <li>e:odd 获取e.中索引为奇数</li>
+        <li>e:even获取e.中索引为偶数</li>
+    </ul>
+    <hr>
+    <h3>重点</h3>
+    <ul>
+        <li>parent()查找父级</li>
+        <li>children() 相当于 $("ul>li") 最近的一级，亲儿子</li>
+        <li>find(),相当于$("ul li") 后代选择器</li>
+        <li>siblings(),查找兄弟节点，不包括本身</li>
+        <li>e:even获取e.中索引为偶数</li>
+        <li>nextAll()查找当前元素之后的同辈元素</li>
+        <li>prevAll()查找当前元素之前的同辈元素</li>
+        <li>hasClass(),返回布尔值</li>
+        <li>eq(),相当于 $("li:eq(2)"),index从0开始</li>
+    </ul>
+    <h3>p如果查找父类的父类的父类，.parent().parent().parent()就比较麻烦， 使用parents("选择器")就可以返回祖先元素
+    </h3>
+    <script>
+        $(document).ready(function() {
+            $("li:first").css("color", "blue");
+            $("li:last").css("color", "red");
+            $("li:eq(2)").css("color", "#cfcfcf");
+
+        });
+    </script>
+</body>
+
+</html>

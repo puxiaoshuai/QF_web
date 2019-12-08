@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .current {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>单个注册事件</p>
+    <hr>
+    <h3>on()方法能匹配元素上绑定一个或者多喝事件的处理函数</h3>
+    <h3>优势2事件委派，把原来加载子元素身上的事件绑定到父元素上，就是把事件委派给父元素</h3>
+    <h3>优势3未来动态创建元素</h3>
+    <ul>
+        <li>我是第一个 </li>
+        <li>我事件第二和</li>
+    </ul>
+    <ol>
+
+    </ol>
+
+    <h3>写法如下</h3>
+    <pre>
+            $("ul").on("click", "li", function() {
+                alert("hello,前端")
+            });
+    </pre>
+    <h3>事件解绑 off $("div").off()解除所有的事件，off("click")解除div上的点击事件</h3>
+    <script>
+        $(document).ready(function() {
+            // $("p").click(function(e) {
+            //     e.preventDefault();
+            //     $(this).css("color", "red");
+            // });
+            // $("p").mouseenter(function(e) {
+            //     e.preventDefault();
+            //     $(this).css("color", "blue");
+            // });
+            //事件on,把事件写到一个对象里面
+            // $("p").on({
+            //     mouseenter: function() {
+            //         $(this).css("color", "red");
+            //     },
+            //     click: function() {
+            //         $(this).css("color", "blue");
+            //     },
+            //     mouseleave: function() {
+            //         $(this).css("color", "black");
+            //     }
+            // });
+            // $("p").on("mouseenter mouseleave", function() {
+            //     $("p").toggleClass("current");
+            // });
+            $("ul").on("click", "li", function() {
+                alert("hello,前端")
+            });
+            // 这样子动态创建出来的元素才有点击事件，
+            $("ol").on("click", "li", function() {
+                alert("11")
+            })
+            let li1 = $("<li>动态创建的元素，使用on能绑定事件</li>")
+            $("ol").append(li1);
+        });
+    </script>
+</body>
+
+</html>

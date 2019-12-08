@@ -77,3 +77,6 @@ YUI
 DOjo
 Ext JS
 移动端的zepto
+#####jq常用插件库  http://www.jq22.com
+#####jq常用插件库  http://www.htmleaf.com
+瀑布流，懒加载 lazyload  全屏滚动 fullpage

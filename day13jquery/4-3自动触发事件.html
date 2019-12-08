@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>自动触发事件trigger()</h3>
+    <p>第一种方式 ele.click()</p>
+    <p>第二种方式 ele.trigger("type")</p>
+    <p>第三种，ele.triggerHandler ，不会触发元素的默认行为</p>
+    <div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("div").click(function(e) {
+                e.preventDefault();
+                alert("点击了我")
+            });
+            //下面的话能直接调用
+            // $("div").click()
+
+            //$("div").trigger("click");
+            //3.第三种不会触发元素的默认行为，比如input，获得焦点是，默认光标不会闪烁
+            $("div").triggerHandler("click");
+        });
+    </script>
+</body>
+
+</html>
