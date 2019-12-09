@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>构造函数虽然很好用，但是存在浪费内存的问题</p>
+    <p style="color: red;">我们希望所有的对象使用同一个函数，节省内存，</p>
+    <p>构造函数原型prototype,构造函数通过原型分配函数是所有对象共享的</p>
+    <p style="color: red;">我们可以把那些不变的方法，直接定义在prototype对象上，这样所有对象的实例就可以共享这些方法了</p>
+    <script>
+        function Star(name, age) {
+            this.name = name
+            this.age = age
+                // this.sing = function() {
+
+            //     console.log("我会唱歌");
+
+            // }
+            //不变的方法，定义带prototyoe
+        }
+        Star.prototype.sing = function() {
+            console.log("我会唱歌")
+        }
+        let star = new Star("蒲小帅", 19)
+        let star1 = new Star("李四", 19)
+
+        console.log(star.sing === star1.sing);
+    </script>
+</body>
+
+</html>

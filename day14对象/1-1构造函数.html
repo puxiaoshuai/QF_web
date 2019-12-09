@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <p>注意，构造函数创建对象，首字母要大写，构造函数要和new 一起使用才有意义</p>
+    <p>实例成员，静态成员</p>
+    <p>实例成员就是构造函数通过this添加的成员， 比如代码中的 name,age,</p>
+    <p>实例成员只能通过实例化对象来访问</p>
+    <p>静态成员，在构造函数本身上添加成员 如 Star.sex="男"，静态成员智能通过构造函数来访问</p>
+
+    <script>
+        // 创建对象 1.new Object()
+        //创建对象2 a={} 字面量
+        //创建对象 3 构造函数是一种特殊的函数，用来初始化对象，即对成员变量赋初始值，它总和new 一起使用，我们可以把对象中一些公共属性和方法抽取出来，封装到这个函数里
+
+        function Star(name, age) {
+            this.name = name
+            this.age = age
+            this.sing = function() {
+                console.log("我会唱歌");
+
+            }
+        }
+        let star = new Star("蒲小帅", 19)
+        let star1 = new Star("李四", 19)
+
+        console.log(star.sing === star1.sing);
+    </script>
+</body>
+
+</html>

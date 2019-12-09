@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>对象原型 _proto_,因为有个所有定义在原型对象上的方法，实例对象能直接调用</p>
+    <p>如果我们修改了原来的原型对象，给原型对象复制的是一个对象，则必须手动的利用constructor来指挥原来的构造函数</p>
+    <pre>
+
+        Star.prototype={
+            constuctor:Star,
+            sing:function(){
+
+            },
+            movie:function(){
+                
+            }
+        }
+    </pre>
+</body>
+
+</html>
