@@ -1,0 +1,267 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/* 字体 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?hfhyhj');
+    src: url('../fonts/icomoon.eot?hfhyhj#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?hfhyhj') format('truetype'),
+        url('../fonts/icomoon.woff?hfhyhj') format('woff'),
+        url('../fonts/icomoon.svg?hfhyhj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+input{
+	outline: 0
+}
+/* i统一使用 这个图标 */
+i{
+    font-family: 'icomoon';
+    font-size: 12px;
+}
+
+/*版心*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 头部开始 */
+.shortcut{
+	height: 31px;
+	background-color: #f1f1f1;
+	line-height: 31px;
+}
+.shortcut li{
+	float: left;
+}
+.style-red{
+  color: #c81623;	
+}
+.shortcut .spacer{
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 0 12px;
+	margin-top: 9px;
+}
+/* 头部结束 */
+/* logo栏目开始 */
+.logoheader{
+	height: 104px;
+	
+	position: relative;
+	
+}
+.logoheader .logo {
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+}
+.logoheader .center_input{
+	position: absolute;
+	width: 541px;
+	height: 56px;
+	
+	left: 50%;
+	margin-left: -269px;
+	top: 50%;
+	margin-top: -28px;
+	
+}
+
+.logo a{
+	display: block;
+	width: 175px;
+	height: 56px;
+	background: url('../img/logo.png');
+	font-size: 0;
+	
+}
+.center_input input{
+	float: left;
+	width:445px;
+	height: 32px; 
+	border: 2px solid #b1191a;
+	color: #CCC;
+	padding-left: 10px;
+
+}
+.center_input button{
+	float: left;
+	height: 36px;
+	width: 82px;
+	background-color: #b1191a;
+	border: 0;
+	color: #fff;
+	font-size: 16px;
+}
+.center_input .hotkeys a{
+	float: left;
+	padding-top: 8px;
+	padding-left: 13px;
+	padding-right: 13px;
+
+}
+.logoheader .caricon{
+	height: 36px;
+	width: 138px;
+	border: 1px solid #dfdfdf;
+	background-color: #f7f7f7;
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+	right: 36px;
+	line-height: 36px;
+	text-align: center;
+	
+}
+.caricon .icon_car {
+	margin-right: 8px;
+}
+.caricon .icon_right1 {
+	margin-left: 8px;
+}
+.count{
+	position: absolute;
+	top: -5px;
+	/* 左侧对齐文字才能往游走 */
+	left:  105px;
+	height: 14px;
+	line-height: 14px;
+	padding: 0 3px;
+	color: white;
+	background-color: #b1191a;
+    border-radius: 7px 7px 7px 0;
+
+
+}
+/* logo栏目header 结束 */
+/* 商品分类heser开始 */
+.shop_header{
+	height: 48px;
+	border-bottom: 2px solid #b1191a;
+}
+.shop_header .dorpdown{
+	height: 100%;
+	
+	
+}
+.shop_header .dorpdown .dt{
+	height: 48px;
+	width: 210px;
+	background-color:#B1191A;
+	font-size: 16px;
+	color: white;
+	line-height: 48px;
+	text-align: center;	
+}
+.shop_header .dorpdown .dd{
+	height: 465px;
+	width: 210px;
+	background-color: #C81623;
+	margin-top: 2px;
+}
+.menu_item{
+	height: 31px;
+	line-height: 31px;
+	padding: 0 10px;
+}
+.menu_item:hover{
+	background-color: #fff;
+}
+.menu_item:hover a{
+	color: #c81623;
+}
+.menu_item a{
+	font-size: 14px;
+	color: white;
+}
+.menu_item i{
+	float: right;
+	
+	font-size: 16px;
+}
+.navitems{
+	margin-left: 10px;
+}
+.navitems li{
+	float: left;
+}
+.navitems li a{
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+	padding: 0  25px;
+}
+
+/* 商品分类header结束 */
+/* 底部footer开始 */
+.footer{
+	height: 380px;
+	background: #F5F5F5;
+	padding-top: 30px;
+}
+.server{
+	height: 79px;
+
+	border-bottom: 1px solid #b3b3b3;
+}
+.server li{
+	float: left;
+	width: 240px;
+	height: 79px;
+
+}
+.server_icon_zheng{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-left: 35px;
+	/* 通过信息面板来找 F8 */
+	background:url("../img/icons.png") no-repeat -253px -3px;
+}
+.server_tv_title{
+	float: left;
+	margin-left: 10px;
+}
+.server_tv_title h5{
+	font-size: 14px;
+}
+.help{
+	height: 187px;
+
+	border-bottom: 1px solid #b3b3b3;
+}
+.help li{
+	float: left;
+	width: 165px;
+	height: 187px;
+	padding-left: 35px;
+}
+.help dt{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #3f3f3f;
+}
+.help dd{
+	
+	margin-bottom: 2px;
+	font-size: 12px;
+	color: #3f3f3f;
+}
+.about_us{
+	padding-top: 22px;
+	text-align: center
+}
+.links{
+	margin: 15px 0 15px 0;
+}
+/* 底部footer结束 */

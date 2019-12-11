@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: chartreuse;
+            margin: 0 auto;
+        }
+        
+        .leftbox,
+        .rightbox {
+            float: left;
+        }
+        
+        .leftbox {
+            width: 200px;
+            height: 600px;
+            background-color: red;
+        }
+        
+        .rightbox {
+            width: 400px;
+            height: 600px;
+            background-color: chocolate;
+        }
+        
+        img {
+            width: 400px;
+            height: 600px;
+        }
+        
+        li {
+            height: 98px;
+            width: 200px;
+            background-color: #ffe0e0;
+            border-left: 2px solid #ffadad;
+            border-top: 2px solid #ffadad;
+            border-right: 2px solid #ffadad;
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        .current {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="leftbox">
+            <ul>
+                <li class="current">美女1</li>
+                <li>美女1</li>
+                <li>美女1</li>
+                <li>美女1</li>
+                <li>美女1</li>
+                <li>美女1</li>
+            </ul>
+        </div>
+        <div class="rightbox">
+            <img src="../images/2.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let images = ["../images/2.jpg", "../images/1.jpg"]
+        $(document).ready(function() {
+            $("img").css("src", images[1]);
+        });
+    </script>
+</body>
+
+</html>

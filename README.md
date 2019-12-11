@@ -80,3 +80,14 @@ Ext JS
 #####jq常用插件库  http://www.jq22.com
 #####jq常用插件库  http://www.htmleaf.com
 瀑布流，懒加载 lazyload  全屏滚动 fullpage
+===========node
+nodemon  检查文件的修改，直接动态生效
+nrm npm下载地址切换工具 npm 默认是下载国外的 npm install nrm -g 全局安装
+nrm ls  查询可用列表
+nrm user taobao  切换到到淘宝
+gulp     gulp-cli 命令操作库 更多在day 15 2-1 gulp模块
+mime  模块判断 mime.getType() 返回资源的类型
+router 路由
+serve-static 静态只有服务访问功能
+<!-- 感觉nodejs就是前后端没分离啊 -->
+

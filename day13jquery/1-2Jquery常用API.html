@@ -20,6 +20,18 @@
         <li>jq元素操作</li>
         <li>jq尺寸位置操作</li>
     </ul>
+    <p>隐式迭代，进行了内部循环</p>
+    <script>
+        $(document).ready(function() {
+            $('h3').mouseenter(function() {
+                $("h3").hide(2000).fadeIn(2000);
+            });
+            $("h3").click(function(e) {
+                e.preventDefault();
+                alert("hhh1")
+            });
+        });
+    </script>
 </body>
 
 </html>

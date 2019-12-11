@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>gulp是基于node平台开发的前端构建工具</p>
+    <p>将机械化的操作编写成任务，想要执行机械化操作时。执行一个命令，任务列表就自动执行了</p>
+    <p>gulp能做什么？</p>
+    <ul>
+        <li>项目上线HTMl.CSS,JS文件压缩合并</li>
+        <li>语法转换</li>
+        <li>公共文件抽离</li>
+        <li>修改文件浏览器自动刷新</li>
+    </ul>
+    <p>操作步骤： npm install gulp 非全局，当前项目使用 </p>
+    <p>2.在根项目下创建gulpfile.js文件，规定</p>
+    <p>3.重构项目的文件夹结构src目录放置源代码文件，dist目录放置构建后的文件</p>
+    <p>4.在gulpfile.js文件中编写任务</p>
+    <p>5.命令行工具中执行gulp任务</p>
+    <hr>
+    <h3>Gulp中提供的方法</h3>
+    <p>gulp.src()获取任务要处理的文件</p>
+    <p>gulp.dest()输出文件</p>
+    <p>gulp.task()建立gulp文件</p>
+    <p>gulp.watch()监控文件的变化</p>
+    <hr>
+    <h3>gulp插件</h3>
+    <p>gulp-htmlmin，html文件压缩</p>
+    <p>gulp-csso，css文件压缩</p>
+    <p>gulp-babel，js语法转换</p>
+    <p>gulp-less，less语法转换css</p>
+    <p>gulp-uglify，压缩混淆js文件</p>
+    <p>gulp--file-include，抽取公共代码</p>
+    <p>browsersync浏览器同步</p>
+
+    <h3>代码压缩等都转换换了之后，把其他image,libs等文件夹也要复制到dist目录，让dist目录下的目录文件齐全</h3>
+    <p>gulp.task("defaut", ["first", "xxx", "xxx"])</p>
+    <p>使用 gulp dufaut 进行多个任务的执行</p>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>js开发弊端:文件依赖和命名冲突</p>
+    <p>文件依赖人为的维护比较困难，特别是接收别人的项目</p>
+    <p>命名冲突，可能产生覆盖值的问题</p>
+    <p>模块化开发就是解决上面的问题</p>
+    <hr>
+    <p>node模块化开发</p>
+    <p>node规定一个<span>js文件</span>文件就是一个模块，模块<span>内部的变量和函数</span>在默认的情况下在<span>外部是无法访问的<span></span></p>
+    <p>模块内部使用exports对象进行成员导出使用 require方法导入其他模块</p>
+    <p>另外一种导入导出，使用module.exports.xx=xxx</p>
+    <p>require引入</p>
+    <p>exports 和 module.exports都存在时，以 module.exports为准</p>
+</body>
+
+</html>
