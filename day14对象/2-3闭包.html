@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>闭包是指有权访问另外一个函数作用域中的变量的函数</p>
+    <p>简单理解就是一个作用域可以访问另外一个函数中的局部变量</p>
+    <h3>闭包的作用</h3>
+    <script>
+        // fun这个函数作用域，访问了另外一个函数fn里面的局部变量，num 这就是闭包
+        //下面是闭包,能访问也很正常，内部函数访问同级的变量
+        // function outer() {
+        //     var num = 10;
+
+        //     function inner() {
+        //         console.log(num);
+
+        //     }
+        //     inner()
+        // }
+        // outer()
+        //增强
+        function outer() {
+            var num = 10;
+
+            function inner() {
+                console.log(num);
+
+            }
+            return inner;
+        }
+        let f = outer()
+            //打印了10，表示inner函数作用域访问了另外一个函数的局部变量，所以是闭包
+        f()
+    </script>
+</body>
+
+</html>
