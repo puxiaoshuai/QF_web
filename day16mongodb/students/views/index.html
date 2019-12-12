@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生列表</title>
+    <!-- // 该路径就是是 pulic/css/index.css -->
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./js/semantic.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="box">
+        <h3>学生信息注册系统</h3>
+        <div class="content">
+            <div class="content_center">
+                <form class="ui form" action="/index" method="post">
+                    <div class="field">
+                        <label>姓名</label>
+                        <input type="text" name="name" placeholder="姓名">
+                    </div>
+
+
+                    <div class="inline fields">
+                        <label for="fruit">性别</label>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="sex" checked="" value="男">
+                                <label>男</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="sex" value="女">
+                                <label>女</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="inline fields">
+                        <label for="fruit">爱好</label>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="hobbies" value="敲代码">
+                                <label>敲代码</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="hobbies" value="打游戏">
+                                <label>打游戏</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="hobbies" value="逛街">
+                                <label>逛街</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="field">
+                        <label>所属学院</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="collage">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">成都学院</div>
+                            <div class="menu">
+                                <div class="item" data-value="成都学院">成都学院</div>
+                                <div class="item" data-value="华阳学院">华阳学院</div>
+                                <div class="item" data-value="双流学院">双流学院</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ui primary button" type="submit">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
