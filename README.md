@@ -91,3 +91,7 @@ router 路由
 serve-static 静态只有服务访问功能
 <!-- 感觉nodejs就是前后端没分离啊 -->
 
+
+![image.png](https://upload-images.jianshu.io/upload_images/4908477-9baa001c7f7a444c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+

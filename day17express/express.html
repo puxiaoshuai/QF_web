@@ -44,6 +44,18 @@
     <hr>
     <h3>静态资源的访问，内置的app.use(express.static("public"))</h3>
     <p>访问形式在浏览器中 ：3000/images/a.jpg 3000/hello.html :3000/js/app.js</p>
+    <hr>
+    <h3>模板引擎 express-art-template是在art-template 上封装的 需要安装他们两个</h3>
+    <pre>
+    //当选人后缀为art的模板时，使用express-art-template
+    app.engine("art",require("express-art-template"))
+    //设置模板存放的目录
+    app.set("views",path.join(__dirname,"views"))
+    //当模板不写后缀时，默认art
+    app.set("view engine","art")
+    //渲染模板  res.render("index")
+    </pre>
+    <hr> app.locals对象下面，所以的模板都能获取的到
 </body>
 
 </html>
