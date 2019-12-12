@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 800px;
+    height: 600px;
+    background-color: cadetblue;
+    margin: 40px auto;
+}
+
 h3 {
-    color: red
+    color: white;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.content {
+    width: 600px;
+    height: 500px;
+    background-color: aliceblue;
+    margin: 60px auto;
+    overflow: hidden;
+}
+
+.content_center {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
 }

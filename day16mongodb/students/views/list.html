@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./js/semantic.min.js"></script>
+    <link rel="stylesheet" href="./css/tablepage.css">
+    <script src="./js/table.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <table class="ui fixed single line celled table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>爱好</th>
+                    <th>学校</th>
+                    <th>加入日期</th>
+                    <th>删除学籍</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each students}}
+                <tr>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.sex}}</td>
+
+                    <td>
+                        {{each $value.hobbies}} {{$value}}丶 {{/each}}
+                    </td>
+                    <td>{{$value.collage}}</td>
+                    <td>{{dataformat($value.enterDate,"yyyy-mm-dd HH:MM")}}</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

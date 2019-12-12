@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>学习顺序</h3>
+    <p>提供简介的路由定义方式</p>
+    <p>对请求参数进行了简化</p>
+    <p>对模板的支持程度更高。。方便渲染HTML界面</p>
+    <p>提供中间件机制有效控制http请求</p>
+    <p>大量的第三方库</p>
+    <hr>
+    <h3>中间件，执行是从上到下</h3>
+    <p>中间件就是一堆方法，可以接受客户端发来的请求，可以对请求作出响应，也可以交给下一个中间件来处理</p>
+    <p>中间件主要由两部分构成，中间方法和请求处理函数</p>
+    <p>中间件方法由express提供，负责处理拦截请求，请求函数由开发人员提供，负责处理请求</p>
+    <hr>
+    <p>app.use 匹配所有的请求方式，可以直接传入请求处理函数，代表接收所有的请求</p>
+    <p>app.use第一个参数可以传入请求地址，代表不论什么请求方式，只有地址匹配就接收这个请求</p>
+    <hr>
+    <h3>中间件的应用，04文件</h3>
+    <p>路由保护，使用中间件来判断用户登录状态，用户没有登录，就拦截请求</p>
+    <p>网站维护公告，在所有路由的最上面自己定义所有请求的中间件，自己为客户端做出响应</p>
+    <p>自定义404页面</p>
+    <hr>
+    <h3>错误处理中间件</h3>
+    <p>在程序执行的过程中，不可避免会出现一些无法预料的错误，比如文件读取失败，数据连接失败</p>
+    <p>错误处理中间件就是一个集中处理错误的地方</p>
+    <hr>
+    <h3>捕获错误 使用try catch</h3>
+    <hr>
+    <h3>模块化路由 参考06js, 进行到出才是真正的模块化路由 module.exports</h3>
+    <hr>
+    <h3>GET 使用req.query获取参数</h3>
+    <p>POST请求要是用body-parser库,被抽取出来的</p>
+    <hr>
+    <p style="color: red">Express路由参数 /add/:id ,req.params获取，就不用像 ？name=形式来写啦</p>
+</body>
+
+</html>

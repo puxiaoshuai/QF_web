@@ -15,7 +15,6 @@
     <p>模板的抽离 {{include '子模板'}}</p>
     <p>模板的继承</p>
     <pre>
-
         {{block "head"}}{{/block}}
     </pre>
     <p>使用 ，先导入 {{extend "../xx.art"}}</p>
@@ -23,11 +22,11 @@
     <hr>
     <h3>模板配置</h3>
     <p>const dataFormat=require("dateformat")</p>
-    <p>比如下载了第三方库，一个时间转换器，使用 template.defaults.imports.自定义name=dataFormat </p>
+    <p>比如下载了第三方库，一个时间转换器，使用 template.defaults.imports.[自定义name]=dataFormat </p>
     <hr>
     <p>模板设置跟目录 template.defaults.root=path.join(__dirame,"views")</p>
     <p>设置默认后缀,就不用使用.art名称了</p>
-    <p>配置模板默认后缀 template.defaults.extname </p>
+    <p>配置模板默认后缀 template.defaults.extname=".html" </p>
     <h2>router 路由库</h2>
 </body>
 
