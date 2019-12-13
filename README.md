@@ -89,9 +89,23 @@ gulp     gulp-cli 命令操作库 更多在day 15 2-1 gulp模块
 mime  模块判断 mime.getType() 返回资源的类型
 router 路由
 serve-static 静态只有服务访问功能
+密码加密 bcrypt  需要依赖 python  npm install -g node-gyp   npm install --global --production windows-build-tools
+express-session 
 <!-- 感觉nodejs就是前后端没分离啊 -->
 
 
 ![image.png](https://upload-images.jianshu.io/upload_images/4908477-9baa001c7f7a444c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+####koa web框架
+ctx.cookies.set(
+            'MyName','JSPang',{
+                domain:'127.0.0.1', // 写cookie所在的域名
+                path:'/index',       // 写cookie所在的路径
+                maxAge:1000*60*60*24,   // cookie有效时长
+                expires:new Date('2018-12-31'), // cookie失效时间
+                httpOnly:false,  // 是否只用于http请求中获取
+                overwrite:false  // 是否允许重写
+            }
+        );
+        ctx.cookies.get()来获取
+koa-views 中间件  ejs是个著名并强大的模板引擎
 

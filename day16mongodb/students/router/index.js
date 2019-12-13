@@ -9,7 +9,6 @@ const router1 = getRouter()
 router1.get("/list", async(req, res) => {
         // 进行查询操作
         let students = await Student.find()
-        console.log(students);
 
         let html = template("list.html", { students: students })
         res.end(html)
@@ -20,6 +19,27 @@ router1.get("/index", (req, res) => {
     let html = template("index.html", {})
     res.end(html)
 
+})
+router1.post("/del", (req, res) => {
+    console.log("进入");
+
+    let formData = ""
+    req.on('data', res => {
+        formData += res;
+    })
+    req.on("end", async() => {
+        let id = formData.split("=")[1]
+        let result = await Student.findByIdAndDelete(id)
+        console.log(result);
+
+        // if (result == null) {
+        //     res.status(300).send("失败")
+        // } else {
+        //     res.status(200).send("成功")
+        // }
+        res.end()
+
+    })
 })
 
 // post请求的获取
