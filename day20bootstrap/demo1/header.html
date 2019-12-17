@@ -32,10 +32,10 @@
             <!-- 大屏幕导航 -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav ">
-                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp&nbsp后台首页</a></li>
-                    <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp用户管理</a></li>
-                    <li><a href="content.html"><span class="glyphicon glyphicon-file"></span>&nbsp&nbsp内容管理</a></li>
-                    <li><a href="tag.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp&nbsp标签管理</a></li>
+                    <li class="active"><a href="./index.html"><span class="glyphicon glyphicon-home"></span>&nbsp&nbsp后台首页</a></li>
+                    <li><a href="./user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp用户管理</a></li>
+                    <li><a href="./content.html"><span class="glyphicon glyphicon-file"></span>&nbsp&nbsp内容管理</a></li>
+                    <li><a href="./tag.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp&nbsp标签管理</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right ">
@@ -63,6 +63,14 @@
 
 
     <!-- home结束 -->
+    <script>
+        $(document).ready(function() {
+            $(".navbar-collapse li").click(function(e) {
+                $(this).addClass("active");
+
+            });
+        });
+    </script>
 </body>
 
 </html>
