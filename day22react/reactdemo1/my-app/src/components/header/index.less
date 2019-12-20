@@ -1,0 +1,44 @@
+.header{
+    background-color: white;
+    .header-top{
+        height: 6opx;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: right;
+        a{
+            
+            margin-left: 40px;
+        }
+
+    }
+    .breadcumb{
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-top:  1px solid #f9c700;
+        .breadcumb-title{
+           text-align: center;
+           font-size: 16px;
+        //    下三角,追加伪类
+        &:after{
+           position: absolute;
+           content: "";
+           left: 50px;
+           width: 10px;
+           height: 10px;
+         
+           border-top: 9px solid orange;
+           border-right: 12px solid transparent;
+           border-left: 12px solid transparent;
+           top:40px ;
+           left: 82px;
+        }
+
+        }
+        .weather{
+            text-align: right;
+        }
+
+    }
+}

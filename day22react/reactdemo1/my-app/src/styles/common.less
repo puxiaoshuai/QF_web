@@ -1,10 +1,12 @@
-
+@import '../styles/default.less';
 .container{
-  display: flex;
+  
+  background-color:@color_bgc;
+ 
   .nav-left{
-    min-width: 300px;
+    background-color: #001529;
+    
     height: calc(100vh);
-    background-color: brown;
   }
   .main{
 
@@ -12,9 +14,12 @@
 
   }
   .content{
-    height: calc(100vh);
+    
     position: relative;
     padding: 20px;
-    background-color: #0d71bb;
+   
   }
+}
+a{
+  color: orange;
 }

@@ -5,6 +5,7 @@ import './styles/common.less'
 import  Footer  from './components/footer/index'
 import  Header   from './components/header/index'
 import  Nav  from './components/nav/index'
+import  Home  from './pages/home/index'
 export default class Admin extends React.Component {
     constructor(props) {
         super(props)
@@ -20,7 +21,7 @@ export default class Admin extends React.Component {
                 <Col span={21} className="main">
                     <Header/>
                     <Row className="content">
-                        content
+                        <Home/>
                     </Row>
                     <Footer className="footer"/>
                 </Col>
