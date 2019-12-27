@@ -1,0 +1,37 @@
+
+.leftNav{
+    float: left;
+    width: 200px;
+    height: 600px;
+    background-color: rgb(173, 173, 173)
+}
+.leftNav li{
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+}
+.leftNav a{
+    text-decoration: none;
+    height: 80px;
+    
+}
+.rightNav{
+    float: right;
+    width: calc(80%);
+    height: 600px;
+    border: 2px solid rgb(245, 127, 127)
+
+}
+.topNav li {
+    display: inline;
+}
+.topNav li a{
+    display:inline-block;
+    text-decoration: none;
+    width: 100px;
+    height: 60px;
+    background-color: chocolate;
+    margin-left: 20px;
+    line-height: 60px;
+    text-align: center;
+}
