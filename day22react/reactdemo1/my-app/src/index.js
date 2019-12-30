@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Life from './pages/Life'
-import Admin from './admin'
-import * as serviceWorker from './serviceWorker';
+// import Admin from './admin'
+import Router from './router'
 
-ReactDOM.render(<Admin />, document.getElementById('root'));
 
-serviceWorker.unregister();
+ReactDOM.render(<Router />, document.getElementById('root'));
+

@@ -13,6 +13,14 @@ export default[
             }, {
                 title:"弹窗",
                 key:"/admin/ui/modals"
+            },
+            {
+                title:"加载spin",
+                key:"/admin/ui/spin"
+            },
+            {
+                title:"tabs",
+                key:"/admin/ui/tabs"
             }
         ]
     }

@@ -2,8 +2,10 @@ import React from 'react'
 import { Row, Checkbox } from 'antd'
 import './index.less'
 import { Menu, Icon } from 'antd';
+import {BrowserRouter as Router ,Link,Route} from 'react-router-dom'
 import menuList from '../../menuList'
 const { SubMenu } = Menu;
+
 export default class Nav extends React.Component {
     rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
     constructor(props) {
@@ -38,25 +40,26 @@ export default class Nav extends React.Component {
             }
             // return <SubMenu title={items.title} key={items.key} >{items.title}</SubMenu>
             // Submenu会有右侧箭头的,Menu.Item没有箭头表示唯一一级
-            return <Menu.Item title={items.title} key={items.key} >{items.title}</Menu.Item>
+        return <Menu.Item title={items.title} key={items.key} ><Link to={items.key}>{items.title}</Link></Menu.Item>
         })
 
     }
 
-    onOpenChange = openKeys => {
-        const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
-        if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-            this.setState({ openKeys });
-        } else {
-            this.setState({
-                openKeys: latestOpenKey ? [latestOpenKey] : [],
-            });
-        }
-    };
+    // onOpenChange = openKeys => {
+    //     const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
+    //     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
+    //         this.setState({ openKeys });
+    //     } else {
+    //         this.setState({
+    //             openKeys: latestOpenKey ? [latestOpenKey] : [],
+    //         });
+    //     }
+    // };
 
     render() {
         return <div className="navleft">
             <div className="logo">
+                {/* 直接从public目录加载 */}
                 <img src="/images/logo.jpg" alt="" />
                 <h1>管理后台</h1>
             </div>
