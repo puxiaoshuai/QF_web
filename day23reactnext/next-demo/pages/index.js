@@ -4,6 +4,9 @@ import HelloWorld from '../components/hello'
 import ButtonMine from '../components/buttons'
 import Link from 'next/link'
 import Router from 'next/router'
+// 成功导入
+import '../public/test.css'
+import { Button } from 'antd'
 const Home = () => {
   function goB(){
    //Router.push("/pagea?name=周大生")
@@ -43,8 +46,10 @@ const Home = () => {
   // })
   return (<>
       <HelloWorld />
+     
       <ButtonMine>点我,点我</ButtonMine>
       <h3>路由跳转</h3>
+      <Button type="danger">antd</Button>
       <hr />
       <div>
         <Link href="/pagea?name=蒲小帅"><a>去蒲小帅的A界面</a></Link>
@@ -57,6 +62,7 @@ const Home = () => {
           <div   className="box"></div>
         </div>
       </div>
+      
       <style jsx>
           {
             `

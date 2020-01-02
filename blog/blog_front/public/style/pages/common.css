@@ -1,0 +1,39 @@
+body{
+    background-color: #f6f6f6
+}
+.comm-left{
+    background-color: #FFF;
+    padding:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+  }
+  .comm-right{
+    background-color: #FFF;
+    margin-left: .5rem;
+    padding:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+  
+  }
+  .comm-main{
+    margin-top: .5rem;
+  }
+  /* 列表 */
+  .list-title{
+    font-size: 1.3rem;
+    color: rgb(78, 78, 78);
+    padding: 0 0.5rem
+}
+.list-icon{
+    padding: 0 0.5rem;
+}
+/* 除开第一个其他的都 */
+.list-icon span:not(:first-child){
+    padding-left: .5rem;
+}
+/* 上右下左 */
+.list-content{
+    padding: 1rem .5rem;
+    font-size: 1rem;
+}
+
