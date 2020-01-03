@@ -10,7 +10,12 @@ import ReactMarkDown from 'react-markdown'
 import MarkNav from 'markdown-navbar';
 import 'markdown-navbar/dist/navbar.css';
 import axios from 'axios'
-
+//富文本
+import marked from 'marked'
+ import hljs from "highlight.js";
+import 'highlight.js/styles/monokai-sublime.css';
+import Tocify from '../components/tocify.tsx'
+import servicePath from '../config/apiUrl'
 const Details = (data) => {
   let markdown='# P01:课程介绍和环境搭建\n' +
   '[ **M** ] arkdown + E [ **ditor** ] = **Mditor**  \n' +
@@ -47,7 +52,26 @@ const Details = (data) => {
   '>>> cccccccccc\n\n'+
   '``` var a=11; ```'
   console.log("详情",data);
-  
+  const renderer = new marked.Renderer();
+  const tocify = new Tocify()
+  renderer.heading = function(text, level, raw) {
+        const anchor = tocify.add(text, level);
+        return `<a id="${anchor}" href="#${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`;
+      };
+marked.setOptions({
+    renderer: renderer, 
+    gfm: true,
+    pedantic: false,
+    sanitize: false,
+    tables: true,
+    breaks: false,
+    smartLists: true,
+    smartypants: false,
+    highlight: function (code) {
+            return hljs.highlightAuto(code).value;
+    }
+  }); 
+  let html=marked(markdown)
     return <>
       <Head>
         <title>{data.title}</title>
@@ -75,14 +99,10 @@ const Details = (data) => {
                   <span><Icon type="fire" /> {data.view_count}人</span>
                 </div>
 
-                <div className="detailed-content" >
-                  <ReactMarkDown source={
-                    data.content
-                  }
-                  // 是否解析markdown
-                  escapeHtml={false}
-                   
-                  ></ReactMarkDown>
+                <div className="detailed-content" 
+                dangerouslySetInnerHTML={{__html:html}}
+                >
+                 
                 </div>
 
              </div>
@@ -96,13 +116,7 @@ const Details = (data) => {
            <Affix>
           <div className="detail-nav">
              <Divider>文章列表</Divider>
-             <MarkNav 
-             className="article-menu"
-             source={data.content}
-             ordered={true}
-             >
-              
-             </MarkNav>
+             {tocify && tocify.render()}
           </div>
           </Affix>
         </Col>
@@ -119,7 +133,7 @@ Details.getInitialProps = async(context)=>{
   let id =context.query.id
   const promise = new Promise((resolve)=>{
 
-    axios('http://127.0.0.1:7001/front/getArticleById/'+id).then(
+    axios(servicePath.getArticleById+id).then(
       (res)=>{
         console.log(res)
         resolve(res.data.data[0])
