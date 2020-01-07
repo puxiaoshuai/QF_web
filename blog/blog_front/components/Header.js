@@ -12,8 +12,8 @@ const Header = () => {
         const fetchData = async () => {
             const result = await axios(servicePath.getTypeInfo).then(
                 (res) => {
-                    setNavArray(res.data.data)
-                    return res.data.data
+                    setNavArray(res.data.results)
+                    return res.data.results
                 }
             )
             setNavArray(result)
@@ -25,6 +25,7 @@ const Header = () => {
             // pages的文件件，为路由的路径
             Router.push('/index')
         }else{
+            // 这是路由跳转
             Router.push('/list?id='+e.key)
         }
     }

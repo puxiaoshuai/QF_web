@@ -11,10 +11,10 @@ import  servicePath  from '../config/apiUrl'
 import Link from 'next/link'
 const MyList = (list_data) => {
   const [mylist,setMyList]=useState(
-    list_data.data
+    list_data.results
   )
   useEffect(()=>{
-    setMyList(list_data.data)
+    setMyList(list_data.results)
   })
   return (
     <div>
@@ -42,12 +42,12 @@ const MyList = (list_data) => {
                 <List.Item>
                   <div className="list-title">{item.title}</div>
                   <div className="list-icon">
-                    <span><Icon type="calendar"/> {item.addTime}</span>
-                    <span><Icon type="folder"/> {item.typeName}</span>
-                    <span><Icon type="fire"/> {item.introduce}</span>
+                    <span><Icon type="calendar"/> {item.create_time}</span>
+                    <span><Icon type="folder"/> {item.type.typeName}</span>
+                    <span><Icon type="fire"/> {item.view_count}</span>
                   </div>
                   <div className="list-content">
-                      {item.context}
+                      {item.content}
                   </div>
                 </List.Item>
               )
@@ -75,7 +75,12 @@ MyList.getInitialProps = async (context)=>{
   let id =context.query.id
   const promise = new Promise((resolve)=>{
     axios(servicePath.getListById+id).then(
-      (res)=>resolve(res.data)
+      
+      (res)=>{
+        console.log("手机号",res.data);
+        
+        resolve(res.data)
+      }
     )
   })
   return await promise
