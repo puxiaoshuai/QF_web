@@ -1,6 +1,12 @@
 let ipUrl="http://127.0.0.1:7001/front/"
+// let servicePath={
+//     getArticleList:ipUrl+'getArticleList' ,  //  首页文章列表接口
+//     getArticleById:ipUrl + 'getArticleById/',  // 文章详细页内容接口 ,需要接收参数
+//     getTypeInfo:ipUrl+"getTypeInfo",//获取文章分类
+//     getListById:ipUrl+"getListById/"
+// }
 let servicePath={
-    getArticleList:ipUrl+'getArticleList' ,  //  首页文章列表接口
+    getArticleList:"http://127.0.0.1:8000/blog" ,  //  首页文章列表接口
     getArticleById:ipUrl + 'getArticleById/',  // 文章详细页内容接口 ,需要接收参数
     getTypeInfo:ipUrl+"getTypeInfo",//获取文章分类
     getListById:ipUrl+"getListById/"

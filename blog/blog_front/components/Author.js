@@ -6,7 +6,7 @@ const Author =()=>{
     return (
         <div className="author">
        <div className="author-icon">
-         <Avatar size={100} src="http://b-ssl.duitang.com/uploads/item/201410/09/20141009224754_AswrQ.jpeg"></Avatar>
+         <Avatar size={100} src="../images/icon.jpg"></Avatar>
        </div>
        <div>
        越有故事的人越沉静简单，越肤浅单薄的人越浮躁不安；真正的强者，不是没有眼泪的人，而是含着眼泪依然奔跑的人

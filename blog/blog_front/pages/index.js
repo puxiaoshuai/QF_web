@@ -14,7 +14,7 @@ import hljs from "highlight.js";
 import 'highlight.js/styles/monokai-sublime.css';
 const Home = (list) => {
   const [mylist,setMyList]=useState(
-    list.data
+    list.results
   )
   const renderer = new marked.Renderer();
   marked.setOptions({
@@ -59,8 +59,8 @@ const Home = (list) => {
                     </Link>
                   </div>
                   <div className="list-icon">
-                    <span><Icon type="calendar"/> {item.addTime}</span>
-                    <span><Icon type="folder"/> {item.typeName}</span>
+                    <span><Icon type="calendar"/> {item.create_time}</span>
+                    <span><Icon type="folder"/> {item.type.typeName}</span>
                     <span><Icon type="fire"/>{item.view_count}</span>
                   </div>
                   <div className="list-content"
@@ -94,10 +94,13 @@ Home.getInitialProps = async ()=>{
   const promise = new Promise((resolve)=>{
     axios(servicePath.getArticleList).then(
       (res)=>{
-        console.log('远程获取数据结果:',res.data.data)
+        console.log('远程获取数据结果:',res.data)
         resolve(res.data)
       }
-    )
+    ).catch(e=>{
+      console.log("异常",e);
+      
+    })
   })
 
   return await promise

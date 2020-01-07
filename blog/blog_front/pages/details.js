@@ -133,10 +133,10 @@ Details.getInitialProps = async(context)=>{
   let id =context.query.id
   const promise = new Promise((resolve)=>{
 
-    axios(servicePath.getArticleById+id).then(
+    axios(servicePath.getArticleList+"/"+id).then(
       (res)=>{
         console.log(res)
-        resolve(res.data.data[0])
+        resolve(res.data)
       }
     )
   })
