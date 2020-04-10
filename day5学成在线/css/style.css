@@ -70,8 +70,11 @@ button{
     border: 1px solid #00a4ff;
     border-right: 0px;
     padding-left: 20px;
-    color: rgb(223, 223, 223)
+    color: rgb(71, 71, 71)
 }
+::-moz-placeholder { color: rgb(167, 167, 167); }
+::-webkit-input-placeholder { color:rgb(167, 167, 167); }
+:-ms-input-placeholder { color:rgb(167, 167, 167); }
 .search button{
     float: left;
     width: 50px;

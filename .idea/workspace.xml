@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0af3bcb-7ede-436b-86ba-89257a5137c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day22react/reactdemo1/my-app/public/images/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day22react/react简介.html" beforeDir="false" afterPath="$PROJECT_DIR$/day22react/react简介.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog_front/config/apiUrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog_front/config/apiUrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog_front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog_front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/11标签显示模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/11标签显示模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/12导航栏.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/12导航栏.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/13css背景.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/13css背景.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/14魔兽世界.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/14魔兽世界.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/16背景驸着.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/16背景驸着.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/18链接导航栏.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/18链接导航栏.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/7选择器权重.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/7选择器权重.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2css基础/9综合案例.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2css基础/9综合案例.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day4浮动/6浮动拓展.html" beforeDir="false" afterPath="$PROJECT_DIR$/day4浮动/6浮动拓展.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day5学成在线/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/day5学成在线/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day5学成在线/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day5学成在线/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8pingyougou/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day8pingyougou/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day9html5/3属性伪元素选择器.html" beforeDir="false" afterPath="$PROJECT_DIR$/day9html5/3属性伪元素选择器.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,83 +35,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/styles/common.less">
+        <entry file="file://$PROJECT_DIR$/day2css基础/9综合案例.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="240">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/pages/base.less">
+        <entry file="file://$PROJECT_DIR$/day2css基础/10更多选择器.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2css基础/11标签显示模式.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="1410">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2css基础/12导航栏.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2css基础/13css背景.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2css基础/14魔兽世界.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2css基础/15小图片左侧对齐盒子.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js">
+        <entry file="file://$PROJECT_DIR$/day2css基础/16背景驸着.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/public/images/logo.jpg">
+        <entry file="file://$PROJECT_DIR$/images/sm.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react简介.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/2.jpg">
+        <entry file="file://$PROJECT_DIR$/images/1.jpg">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/public/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/footer/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/header/index.less">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -119,6 +129,13 @@
         <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less" />
         <option value="$PROJECT_DIR$/day22react/react简介.html" />
         <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js" />
+        <option value="$PROJECT_DIR$/day2css基础/7选择器权重.html" />
+        <option value="$PROJECT_DIR$/day2css基础/9综合案例.html" />
+        <option value="$PROJECT_DIR$/day2css基础/11标签显示模式.html" />
+        <option value="$PROJECT_DIR$/day2css基础/12导航栏.html" />
+        <option value="$PROJECT_DIR$/day2css基础/13css背景.html" />
+        <option value="$PROJECT_DIR$/day2css基础/14魔兽世界.html" />
+        <option value="$PROJECT_DIR$/day2css基础/16背景驸着.html" />
       </list>
     </option>
   </component>
@@ -133,8 +150,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="416" />
-    <option name="y" value="87" />
+    <option name="x" value="517" />
+    <option name="y" value="127" />
     <option name="width" value="1400" />
     <option name="height" value="925" />
   </component>
@@ -143,14 +160,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
+              <item name="day2css基础" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,6 +227,8 @@
       <updated>1576679361738</updated>
       <workItem from="1576679362851" duration="2198000" />
       <workItem from="1576762521619" duration="3247000" />
+      <workItem from="1586394086038" duration="1679000" />
+      <workItem from="1586419073869" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="react   andt">
       <created>1576681528725</created>
@@ -206,10 +241,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5445000" />
+    <option name="totallyTimeSpent" value="7223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="87" width="1400" height="925" extended-state="0" />
+    <frame x="49" y="78" width="1400" height="925" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20280236" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -224,7 +259,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.09622887" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1313394" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -307,14 +342,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/styles/common.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/pages/base.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
+        <state relative-caret-position="90">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
@@ -324,14 +359,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/react简介.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="420">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="150">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
@@ -344,7 +379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/footer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="330">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -357,11 +392,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
+        <state relative-caret-position="577">
           <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog_server/app/controller/front/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/1table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1350" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/2简历.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/3表单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/4div布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/5布局与选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/6样式表的层叠.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/7选择器权重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/8字体.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/9综合案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/10更多选择器.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/11标签显示模式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/12导航栏.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/13css背景.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/14魔兽世界.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/15小图片左侧对齐盒子.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/sm.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2css基础/16背景驸着.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
         </state>
       </provider>
     </entry>
