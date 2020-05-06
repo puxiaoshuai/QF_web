@@ -1,0 +1,100 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+input{
+	outline: 0
+}
+/*版心*/
+.w {
+	width: 946px;
+	margin: 0 auto;
+}
+.box{
+	min-width: 1000px;
+
+}
+/* 头部开始 */
+.myheader{
+	height: 58px;
+	width: 100%;
+}
+.logo{
+	height: 58px;
+	width: 100px;
+	margin-left: 227px;
+	margin-right: 122px;
+
+}
+.hr_item{
+	height: 1px;
+	width: 100%;
+	/* 水平隐隐，垂直  模糊距离  */
+	/* box-shadow: 0px 1px 0px #ebebeb; */
+	background-color: rgb(238, 238, 238);
+}
+.item-name{
+	display: inline-block;
+	height: 58px;
+	margin-left:30px;	
+}
+/* 这下面的span都有这个属性，进行 */
+.item-name span{
+	line-height: 58px;
+	height: 58px;
+	font-size: 18px;
+	margin-left: 4px;
+}
+.item-name i{
+vertical-align: baseline;
+font-size: 20px;
+color:rgb(116, 116, 116);
+}
+.item-name_current span{
+    color: #EE8573;
+}
+.item-name_current i{
+	color: #EE8573;
+	
+}
+/* 搜索 */
+
+.search{
+	
+	text-align: center;
+	height: 40px;
+	width: 260px;
+	margin-left: 40px;
+	background-color: rgb(245, 245, 245);
+	display: inline-block;
+	border-radius: 24px;
+}
+.search i{
+
+	font-size: 14px;
+	color:rgb(163, 163, 163);
+}
+.search input{
+	border-radius: 10px;
+	height: 40px;
+	width: 220px;
+	border: none;
+	background-color: rgb(245, 245, 245);
+}
+.user i{
+	margin-left: 80px;
+	font-size: 20px;
+color:rgb(116, 116, 116);
+}
+/* 内容区域 */
+.content{
+	background-color: aliceblue;
+	margin: 0 auto;
+}
+
+/* 头部结束 */
+

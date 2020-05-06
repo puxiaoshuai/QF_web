@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .sanjiao{
+          border-top: 50px transparent  solid ;
+          border-bottom: 50px transparent  solid ;
+          border-left: 0px red  solid ;
+          border-right: 50px peru  solid ;
+          width: 0px;
+          height: 0px;
+          margin:  50px auto;
+      }
+      .dialog1{
+         margin: 0 auto;
+         width: 400px;
+         height: 40px;
+         background-color: green;
+         text-align: center;
+         line-height: 40px;
+         color: white;
+         border-radius: 4px;
+         position: relative;
+      }
+      .dialog1::before{
+          content: "";
+          border-left:0px green solid;
+          border-right: 10px green solid;
+          border-top: 10px transparent solid;
+          border-bottom: 10px transparent solid;
+          position: absolute;
+          left: -10px;
+          top: 10px;
+
+      }
+    
+    </style>
+</head>
+<body>
+     <p>画三角的核心思路就是使用boder来画，宽高不用给 ,对边设置为0，临边设置透明</p>
+     <p>对话框右边的三角， 三角+before伪元素,+子绝父相</p>
+    <div class="sanjiao">
+    </div>
+    <div class="dialog1">
+        画三角的核心思路就是使用boder来画
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        section,
+        footer,
+        aside,
+        nav,
+        article,
+        figure {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>HTML5的设计目的是为了在移动设备上支持多媒体。</p>
+    <mark>哈哈</mark>
+    <article>我是article</article>
+    <aside>我是侧边</aside>
+    <rt>好</rt>
+    <iframe>哈哈</iframe>
+    <article>
+        <header>
+            <h1>Internet Explorer 9</h1>
+            <p><time pubdate datetime="2011-03-15"></time></p>
+        </header>
+        <p>Windows Internet Explorer 9(缩写为 IE9 )是在2011年3月14日21:00发布的</p>
+    </article>
+    <canvas style="border: 1px solid red;" id="myCanvas" width="200" height="100"></canvas>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+    </svg>
+    <p id="demo">位置</p>
+    <button id="btn" >点击获取</button>
+
+    <script>
+        // let c = document.getElementById("#mymyCanvas")
+        // let ctx = c.getContext("2d")
+        let x=document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "该浏览器不支持获取地理位置。";
+            }
+        }
+
+        function showPosition(position) {
+            alert(position)
+            x.innerHTML = "纬度: " + position.coords.latitude +
+                "<br>经度: " + position.coords.longitude;
+        }
+       
+        let btn=document.getElementById("btn")
+        btn.addEventListener("click",getLocation)
+       
+    </script>
+
+</body>
+
+</html>
