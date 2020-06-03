@@ -6,18 +6,52 @@
     <title>js对象</title>
 </head>
 <body>
-     <p>对象的属性类型,</p>
+     <p>对象的属性类型 Configurable,Enumerable,Get,Set</p>
+     <hr>
+     <p>对象的创建1，工厂模式</p>
+     <p>对象的创建，构造函数模式</p>
+     <p>原型模式</p>
+     <p>组合使用构造函数和原型模式</p>
+     <p>寄生构造函数</p>
+     <hr>
+     <p>继承就要使用到原型链</p>
+
+     <p></p>
     <script>
+        // 早期对象的创建
        let person=new Object()
        person.name="蒲小帅"
        console.log(person);
+       //现在对象的创建，对象字面量
        let student={
            name:"普洱",
            sayhi:function(){
                alert(this.name)
            }
        }
-       console.log(student);
+    //    数据属性
+    Object.defineProperty(student,"age",{
+        value:"18",
+        configurable:false ,//能否通过delete删除属性进行重新定义
+        enumerable:false, //能否通过for-in进行循环遍历
+        writable:false,//能否修改属性的值
+    })
+    student.age="26"
+    console.log(student);
+    
+    // 原型模式
+    function Dog(){
+
+    }
+    Dog.prototype={
+        name:"小花狗",
+        age:"2"
+    }
+    let dog=new Dog()
+    dog.age="3"
+    console.log(dog);
+    
+
        
        
        

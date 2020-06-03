@@ -7,12 +7,17 @@
 </head>
 <body>
     <script>
-        console.log(new Date());
-        console.log(new Date().toUTCString());
-        console.log(new Date().toDateString());
-        console.log(new Date().toTimeString());
-        console.log(new Date().toLocaleDateString());
+      let arr=[1,2,3,4]
+       let sum=arr.reduce((prev,cur,index,array)=>{
+        console.log(index);
+        console.log(array);
         
+        
+        return prev+cur
+      })
+      console.log(sum);
+      
+
     </script>
 </body>
 </html>
