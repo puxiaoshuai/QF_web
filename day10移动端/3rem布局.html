@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 22px;
+        }
+        .box{
+            width: 2rem;
+            height: 2rem;
+            background-color: rebeccapurple;
+        }
+        /* 在电脑屏幕上并且最大的宽度是800px */
+        @media screen and (max-width: 800px){
+                body{
+                    background-color: red;
+                }
+        }
+        @media screen and (max-width: 600px){
+                body{
+                    background-color: green;
+                }
+        }
+        span{
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <p>em相对于父元素的字体大小来说的</p>
+    <p>rem相对于html的元素来说的</p>
+    <p>优点，通过修改html中文字大小来改变页面元素的大小</p>
+    <div class="box">
+
+    </div>
+    <p>媒体查询 @media 可针对不同的屏幕尺寸来设置不同的样式</p>
+    <pre>
+        @media mediatype and|not|only (media feature){
+            css 代码
+        }
+    </pre>
+    <p>mediatype 分为 all 所有  print 打印  scree  电脑</p>
+    <p>media feature 分为 width  min-width max-width</p>
+    <hr>
+    <p>不同屏幕要进行写不同的样式，需要使用不用的样式表
+        在link是 使用 media="mediatype  and oonxxxx
+    </p>
+    <span>建议:媒体查询最后从小到大进行判断</span>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #f2f2f2;
+}
+img{
+    width: 5.125rem;
+    height:1rem;
+}
+/* 如果屏幕超过750px，还是按750px */
+@media screen and (min-width:750px){
+    html {
+        font-size: 75px !important;
+    }
+}
+.search_content{
+    width: 10rem;
+    height: 1.173333rem;
+    background-color: orange;
+}

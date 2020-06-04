@@ -6,9 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+         body{
+             perspective: 600px;
+             /* 透视越小，东西越大 */
+         }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            /* translateZ(100px) 沿着 z轴 100px是向外（向我们眼镜方向移动） */
+            transform: translate3d(400px,100px,100px);
+        }
+        .box1{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transition:  all .4s;
+            
+        }
+        .box1:hover{
+            transform: rotateY(180deg)
+            
+        }
+        .front,.back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 300px;
+        font-size: 32px;
+        color: white;
+        }
+        .front{
+            background-color: red;
+            z-index: 1;
+
+        }
+        .back{
+            background-color: orange;
+            transform: rotateY(180deg);
+        }
+        /* ============================= */
+        section{
+            width: 240px;
+            height: 240px;
+            margin:  200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        section div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./media/ic1.jpg') no-repeat   ;
+        
+        }
+        section div:nth-child(1){
+            transform: translateZ(300px);
+        }
+        section div:nth-child(2){
+            transform: translateZ(100px) rotateY(120deg);
+        }
+        section div:nth-child(3){
+            transform: translateZ(100px) rotateY(180deg);
+        }
+        section div:nth-child(4){
+            transform: translateZ(100px) rotateY(240deg);
+        }
+        section div:nth-child(5){
+            transform: translateZ(100px) rotateY(300deg);
+        }
+        section div:nth-child(6){
+            transform: translateZ(100px) rotateY(350deg);
+        }
+    </style>
 </head>
 
 <body>
+    <!-- <p>3d translate3d</p>
+     <div class="box">
+     </div>
+     <p>转换3d,透视perspectve,写在被观察元素的父元素身上</p>
+     <div class="box1">
+         <div class="front">你好</div>
+         <div class="back">大家好</div>
+     </div> -->
+     <section>
+         <div></div>
+         <div></div>
+         <!-- <div></div>
+         <div></div>
+         <div></div>
+         <div></div> -->
+     </section>
 
 </body>
 

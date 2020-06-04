@@ -1,0 +1,18 @@
+body {
+  background-color: pink;
+}
+a {
+  font-size: 32px;
+}
+a:hover {
+  color: green;
+}
+.box p {
+  color: red;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border: 10px solid red;
+}
