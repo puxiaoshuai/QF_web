@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 200px;
+            background-color: orange;
+        }
+
+        footer {
+            height: 200px;
+            background-color: purple;
+        }
+
+        article {
+            height: 300px;
+            color: #000;
+
+        }
+
+        aside {
+            width: 200px;
+            background-color: aqua;
+            height: 300px;
+        }
+
+        .right-aside {
+            width: 200px;
+            background-color: rgb(187, 143, 61);
+            height: 300px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .center_content{
+            flex-grow: 2;
+            background-color: plum;
+
+        }
+        .right_content{
+            flex-grow: 1;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <article>
+        <div class="content">
+            <aside></aside>
+            <div class="center_content">哈哈</div>
+            <div class="right_content">哈哈</div>
+        </div>
+    </article>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

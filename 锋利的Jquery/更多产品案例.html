@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更多产品</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .box{
+            width: 800px;
+            height: 800px;
+            background-color: antiquewhite;
+            margin: 0 auto;
+            text-align:center
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+            text-decoration: none;
+            padding: 0 20px;
+            height: 100px;
+            background-color: gold;
+            border-radius: 20px;
+            margin-left: 40px;
+            margin-top: 10px;
+            font-size: 32px;
+            color: white;
+        }
+        button{
+             background-color: green;
+            padding: 0 10px;
+             height: 60px;
+             font-size: 16px;
+             color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         <ul>
+             <li>佳能</li>
+             <li>佳能A</li>
+             <li>佳能C</li>
+             <li>佳能DD</li>
+             <li>爱国者</li>
+             <li>奥可视看</li>
+             <li>卡熊</li>
+             <li>开学季</li>
+             <li>佳能</li>
+             <li>佳能A</li>
+             <li>佳能C</li>
+             <li>佳能DD</li>
+             <li>爱国者</li>
+             <li>奥可视看</li>
+             <li>卡熊</li>
+             <li>开学季</li>
+             <li>点击查看更多</li>
+            
+         </ul>
+         <button>查看更多</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // 第一步先让后面部分隐藏,gt(5)索引5之后的，not(:last)除开最后一个
+            $("li:gt(5):not(:last)").hide();
+            $("button").click(function (e) { 
+                e.preventDefault();
+                // 先获取button的值
+               let text= $("button").text();
+               if(text==="查看更多"){
+                $("li").show()
+                $("button").text("显示精简模式");
+               }else{
+                $("li:gt(5):not(:last)").hide();
+                $("button").text("查看更多");
+               }
+               
+            });
+        });
+    </script>
+</body>
+</html>

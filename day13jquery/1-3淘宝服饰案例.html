@@ -66,21 +66,41 @@
             <ul>
                 <li class="current">美女1</li>
                 <li>美女1</li>
-                <li>美女1</li>
-                <li>美女1</li>
-                <li>美女1</li>
-                <li>美女1</li>
+                <li>美女2</li>
+                <li>美女3</li>
+                <li>美女4</li>
+                <li>美女5</li>
             </ul>
         </div>
         <div class="rightbox">
-            <img src="../images/2.jpg" alt="">
+            <img src="../images/1.jpg" alt="">
         </div>
     </div>
+    <select id="test" onchange="test()">
+        <option value ="volvo">Volvo</option>
+        <option value ="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
     <script>
-        let images = ["../images/2.jpg", "../images/1.jpg"]
+        function test(param) {
+            alert(document.getElementById("test").value);
+          }
+        let images = ["../images/1.jpg", "../images/2.jpg","../images/banner.jpg"]
         $(document).ready(function() {
-            $("img").css("src", images[1]);
+            let imageurl=$("img")[0].src;
+            $("img").attr('src',images[0])
+            
+            $("ul li").click(function (param) {
+                $(this).siblings().removeClass("current")
+                $(this).addClass("current")
+                let index = $(this).index() ;
+                console.log( images[index]);
+                $("img").attr("src", images[index]);
+                
+              })
         });
+
     </script>
 </body>
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+     <p>我是:</p>
+     <script>
+         $(document).ready(function () {
+             $('p').append("<span>普肖帅</span>");
+             $("<span>今天是</span>").appendTo("p");
+         });
+     </script>
+</body>
+</html>

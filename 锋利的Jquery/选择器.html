@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq选择器</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>分就开始</li>
+        <li>123</li>
+        <li id="1">123</li>
+        <li>412</li>
+        <li>414</li>
+        <li>41</li>
+        <li>4124</li>
+        <li>123</li>
+        <li>141</li>
+        <li>414</li>
+    </ul>
+    <p>:enabled :disabled :checked :selected</p>
+    <p>.test :hidden  这是选择test类下的隐藏元素</p>
+    <p>.test:hidden 这是选择隐藏的class为 test的元素</p>
+    <script>
+        $(document).ready(function () {
+           
+            $("ul li:even").css("color", "green");
+            $("li[id=1]").css("font-size","45px")
+            $("li:last-child").css("background", "purple");
+        });
+    </script>
+
+</body>
+</html>

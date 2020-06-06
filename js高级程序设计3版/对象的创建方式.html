@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.使用字面量创建，创建多个对象代码重复
+    2.工厂模式创建s
+    3.构造函数模式
+    4.原型模式
+    5.原型模式+构造函数s
+    6.动态原型
+    7.寄生构造
+    <script>
+        // 工厂模式
+       function createCar(name,size){
+           let obj=new Object()
+           obj.name=name,
+           obj.size=size
+           obj.info=function(){
+               console.log("本机器:"+name+"型号:"+size);
+           }
+           return obj
+       }
+       let car1=createCar("大炮","超大型")
+       car1.info()
+       //构造函数
+       function Person(name,age){
+           this.name=name;
+           this.age=age;
+           this.sayHi=function(){
+               console.log("我是"+this.name+this.age);
+           }
+       }
+       //工厂模式要进行new  
+       let person2=new Person("普肖帅",12)
+       person2.sayHi()
+       //原型模式
+       function Person1(){
+
+       }
+       Person1.prototype.name="西瓜"
+       Person1.prototype.job="工程师"
+       let person1=new Person1()
+       console.log(person1.name+person1.job);
+       //原型模式+构造函数
+       function Person3(name,age){
+           this.name=name,
+           this.age=age,
+           this.friends=["xiaodong","夏普闹"]
+       }
+       Person3.prototype={
+           constructor:Person3,
+           sayHi:function(){
+               console.log("我是"+this.name);
+               
+           }
+       }
+       let p3=new Person3("周二",16)
+       console.log(p3.name+p3.age);
+       //动态原型
+       function Person4(name,age){
+           this.name=name;
+           this.age=age;
+        //    进行了判断
+           if(typeof this.sayHi!="function"){
+               Person4.prototype.sayHi=function(){
+                console.log("我是"+this.name+this.age);
+               }
+           }
+          
+       }
+       let person4=new Person4("动态原型",12)
+       person4.sayHi()
+       //寄生构造
+       function Person5 (name,age){
+           let obj=new Object()
+           obj.name=name,
+           obj.age=age
+           return obj
+       }
+       let p5=new Person5("想",12)
+       console.log(p5.name+p5.age);
+       
+
+       
+
+
+    </script>
+</body>
+</html>
