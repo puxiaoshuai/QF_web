@@ -1,0 +1,20 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+input{
+	outline: 0
+}
+
+
+/*版心*/
+.w {
+	width: 1226px;
+	margin: 0 auto;
+	clear: both;
+
+}
