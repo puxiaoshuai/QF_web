@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+          .liitem{
+              list-style: none;
+              color: orange;
+          }
+          a img{
+              filter: gray;
+          }
+          a:hover img{
+              filter: blue;
+          }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="add">增加</button>
+        <input v-model="inputv" type="text" placeholder="请输入">
+          
+          <ul>
+              <template  >
+                  <li  class="liitem" v-for="(item,index) in todos">
+                    {{index}}- {{item}} 
+                  <button v-on:click="del(index)" >删除</button>
+                 </li>
+              </template>
+          </ul>
+         <a href=""><img src="../images/1.jpg" alt=""></a> 
+    </div>
+     <script>
+          a=[]
+          
+          let vue=new Vue({
+              "el":"#app",
+              data:{
+                todos:[
+                    "去参观",
+                    "去买菜",
+                    "打乒乓"
+                ],
+                inputv:"",
+                is_xiangtong:false
+
+              },methods: {
+                  del:function(e){
+                     console.log(e);
+                     this.todos.splice(e,1)
+                  },
+                  add:function(){
+                    if(this.inputv===""){
+                        alert("请输入")
+                    }else{
+                        console.log("输入",this.inputv);
+                        this.todos.push(this.inputv)
+                       
+                    }
+                  }
+              },
+          })
+         
+     </script>
+</body>
+</html>
