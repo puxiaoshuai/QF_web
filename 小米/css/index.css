@@ -1,0 +1,48 @@
+.nav {
+  background-color: #333333;
+  height: 40px;
+  width: 100vw;
+}
+.nav .navheader .navheaderleft a,
+.nav .navheader .navheaderright a {
+  display: inline-block;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  color: #bbbbbb;
+  padding-right: 13px;
+}
+.nav .navheader .navheaderright a:nth-last-child(1) {
+  padding-left: 55px;
+}
+.tabs {
+  height: 100px;
+}
+.tabs .logo {
+  float: left;
+  padding-top: 22px;
+}
+.tabs .menu_center {
+  padding-top: 8px;
+  float: left;
+  width: 850px;
+  padding-left: 188px;
+}
+.tabs .menu_center li {
+  display: inline-block;
+  line-height: 92px;
+  height: 88px;
+  font-size: 16px;
+  color: black;
+  padding-right: 18px;
+}
+.tabs .search input {
+  float: left;
+}
+.tabs .search .searchbar {
+  float: left;
+}
+.tabs .search .searchbar img {
+  width: 24px;
+  height: 24px;
+}

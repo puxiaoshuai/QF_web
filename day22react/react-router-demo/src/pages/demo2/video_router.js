@@ -18,10 +18,9 @@ export default function Video() {
                 </ul>
             </div>
             <div className="videoComtent">
-               
+            <Route path="/video/flutterpage/" component={FluterPage} />
+            <Route path="/video/vuepage/" component={VuePage} />
                 <Route path="/video/reactpage/" component={ReactPage} />
-                <Route path="/video/vuepage/" component={VuePage} />
-                <Route path="/video/flutterpage/" component={FluterPage} />
 
             </div>
         </div>

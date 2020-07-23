@@ -15,20 +15,71 @@
         <div>{{msg}}</div>
         <div>{{1+3}}</div>
         <h4>{{5+5+"abc"}}</h4>
+        <p>v-bind来绑定属性</p>
+        <div v-bind:title="msg">
+            悬停
+        </div>
+        <div title="xxx"> 属性title</div>
+        <div v-if="show">你能看到我吗 if</div>
+         <ul>
+             <li v-for="item in todos">
+                {{ item.text }}
+             </li>
+         </ul>
+         <div v-on:click="sayhi">点击</div>
+         <p>组件，定义组件名称 ,使用props接收传递的参数，templet进行加载， v-for 遍历，v-bind:item,接收的参数， </p>
+         <todo-item v-for="item in todos" v-bind:todo="item">
+
+         </todo-item>
+         
+         <div>{{html1}}</div>
+          <div v-html="html1"></div>
+          <p>计算属性，避免模板过重 computerd来计算</p>
+           <p>计算其实跟方法的效果是一样的，在于计算能缓存数据，不用每次都进行更新</p>
+           <p>侦听器 watch</p>
+           <p>绑定 class style  v-bind:class  v-bind:style</p>
+           <p>条件渲染</p>
+           <p>一般if在一个组件上，使用template 就能包裹暂时多个控件</p>
+            <p>v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。</p>
+            <p>Vue.component是全局组件，var ComponentA是局部组件,</p>
+           
     </div>
 
     <script>
+        
         // vue的基本使用  1.需要提供标签填充数据
         //2引入vue.js  
         //3 可以使用vue语法做功能
         //4吧vue提供的数据放到标签里
+        
+        Vue.component("todo-item", {
+            props:['todo'],
+            template:'<li>{{todo.text}}</li>'
+        })
         var vm = new Vue({
             // el元素的挂载位置，可以是css选择器，也可以是DOM元素
             el: "#app",
             //data模型数据
             data: {
-                msg: "你好,vue"
-            }
+                msg: "我是蒲小帅",
+                show: false,
+                todos: [{
+                        text: '学习 JavaScript1'
+                    },
+                    {
+                        text: '学习 Vue1'
+                    },
+                    {
+                        text: '整个牛项目1'
+                    }
+                ],
+                html1:"<h1 style='color:red'>嘿嘿</h1>"
+            },
+            methods: {
+                sayhi:function(){
+                    alert(this.msg)
+                }
+            },
         })
     </script>
 </body>
