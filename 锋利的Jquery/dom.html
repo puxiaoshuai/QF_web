@@ -5,13 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom</title>
     <script src="./js/jquery.min.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
+     <div class="box">
+
+     </div>
      <p>我是:</p>
+     <ul>
+         <li>测试1</li>
+         <li>测试2</li>
+         <li>测试3</li>
+     </ul>
+     <span>第二个li的内容是:</span>
+     <hr>
+     <p>dom的操作也就是增加 append  删  remove()  复制  clone() replaceWith 代替</p>
+     <p>样式操作，获取值操作 </p>
+     <p>遍历节点 children()只考虑子元素，不考虑后代元素
+         next(),prev()前面一个，sibings（）前后同辈元素
+         closest()，向上匹配元素
+     </p>
+     <p>css设置带-的属性，要么带-，要么以驼峰命名， font-size  fontSize</p>
+      <hr>
+      <div class="box" style="position:absolute;">
+
+      </div>
+      <p class="pp">offset()获取当前元素在当前窗口的相对偏移</p>
+     <span id="box">warp</span>
      <script>
          $(document).ready(function () {
              $('p').append("<span>普肖帅</span>");
              $("<span>今天是</span>").appendTo("p");
+            //  diergeli
+            $li =$("ul li:eq(1)");
+            let text=$li.text()
+            $("span").append("<span>"+text+"</span>");
+            $("#box").wrap("<h2></h2>");
+            // next
+            console.log($li.next().text())
+            // box类
+            var offset = $(".box").offset();
+            var top = offset.top;
+            var left = offset.left;
+            console.log(top);
+            console.log(left);
+            //positon
+            var position = $(".pp").position();
+            var top1 = position.top;
+            var left1 = position.left;
+            console.log(top1);
+            console.log(left1);
+            
+            
+
+            
+            
+            
          });
      </script>
 </body>

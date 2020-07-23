@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+      .lighthith {
+        color: red;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panel">
+      <h5>什么是jq</h5>
+      <div class="content">
+        jq是嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻
+      </div>
+    </div>
+    <div class="box" style="position: relative;"></div>
+    <script>
+      $(function () {
+        var $div1 = $(".content");
+        $(".content").hide();
+        // $("h5").click(function (e) {
+        //     e.preventDefault();
+        //     $div1.toggle();
+
+        // });
+        $("h5")
+          .mouseover(function (e) {
+            e.preventDefault();
+            $div1.show();
+            $(this).addClass("lighthith");
+          })
+          .mouseout(function () {
+            $div1.hide();
+            $(this).removeClass("lighthith");
+          });
+        $(".box").click(function (e) {
+          
+          if (ri) {
+            $(this).animate(
+              {
+                left: "-500px",
+              },
+              3000
+            );
+            ri=true
+          } else {
+            $(this).animate(
+              {
+                left: "500px",
+              },
+              3000
+            );
+            ri=false
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

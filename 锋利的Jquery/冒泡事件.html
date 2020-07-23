@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .content{
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+        }
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>事件冒泡从低到高</p>
+    <p>引发的问题,本想点击span，却触发了div,body的事件，因此有必要进行限制，event.stopPropagation（）停止冒泡</p>
+    <div class="content">
+        外曾div
+        <span>内层 span</span>
+        外层div
+    </div>
+    <div id="msg">
+
+    </div>
+    <p>e.preventDefault()阻止默认行为</p>
+    <hr>
+    <p>模拟操作，就是自动进行  trigger("click"),还能进行参数传递</p>
+
+    <script>
+        $(function () {
+            $("span").bind("click", function (e) {
+              let txt=  $("#msg").html()+"<p>span被点击</p>";
+              $("#msg").html(txt);
+              e.stopPropagation()//可改写成retuen false
+            });
+            $(".content").bind("click", function (e) {
+                let txt=  $("#msg").html()+"<p>外层被点击</p>";
+              $("#msg").html(txt);
+              //e.stopPropagation()
+              return false
+            });
+            $("body").bind("click", function (e) {
+                let txt=  $("#msg").html()+"<p>body被点击</p>";
+                $("#msg").html(txt);
+            });
+            
+        });
+    </script>
+</body>
+</html>

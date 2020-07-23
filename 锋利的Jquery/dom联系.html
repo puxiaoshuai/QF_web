@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <a href="#" title="这是自带title">提示</a>
+    <a href="#" class="tip" title="自定义效果">提示2</a>
+    <script>
+        $(document).ready(function () {
+            $(".tip").mouseover(function () { 
+                var tooltip="<div id='tip'>这是提示<div>"
+                $("body").append(tooltip);
+                $("a.tip").css({
+                    "top":e.pageY+20+"px",
+                    "left":e.pageX+20+"px"
+                }).show("fast");
+                
+            }).mouseout(function () {
+                $("#tip").remove();
+              });
+        });
+    </script>
+</body>
+</html>

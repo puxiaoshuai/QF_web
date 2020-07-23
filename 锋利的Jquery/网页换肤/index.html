@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>换肤</title>
+    <link rel="stylesheet" href="css/skin_0.css" type="text/css" id="cssfile">
+    <script src="../js/jquery.min.js"></script>
+      <style>
+          .box{
+            width: 100px;
+            height: 200px;
+            float: left;
+
+          }
+          li{
+              float: left;
+              list-style: none;
+              width: 40px;
+              background-color: gray;
+              height: 40px;
+              margin-left: 20px;
+              margin-right: 10px;
+          }
+          .select{
+             background-color:brown ;
+          }
+      </style>
+</head>
+<body>
+    <ul id="skin">
+        <li id="skin_0" title="棕色" class="select">棕色</li>
+        <li id="skin_1" title="紫色" >紫色</li>
+        <li id="skin_2" title="红色" >红色</li>
+    </ul>
+    <div class="box">
+           我是新闻内容
+    </div>
+    <script>
+        $(function () {
+            let $li=$("#skin li")
+            $li.click(function () {
+                 $("#"+this.id).addClass("select")
+                 .siblings().removeClass("select")
+                 $("#cssfile").attr("href", "css/"+this.id+".css"); 
+                 
+              })
+            
+        });
+
+    </script>
+</body>
+</html>
