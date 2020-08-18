@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ol>
+			<li>当一个 Vue 实例被创建时，它将 data 对象中的所有的 property 加入到 Vue 的响应式系统中。
+			当这些 property 的值发生改变时，视图将会产生“响应”，即匹配更新为新的值。</li>
+			<li>v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；
+			如果在运行时条件很少改变，则使用 v-if 较好</li>
+			<li>在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例</li>
+			<li>组件，定义组件名称 ,使用props接收传递的参数，template进行加载， v-for 遍历，v-bind:todo,定义参数，进行传递，</li>
+			<li style="color: red;">不要 created: () => console.log(this.a)不能使用箭头函数 因为箭头函数并没有 this，this 会作为变量一直向上级词法作用域查找，
+			直至找到为止，经常导致 Uncaught TypeError: Cannot read property of undefined</li>
+			<li>v-model适合跟表单进行绑定</li>
+		</ol>
+	</body>
+</html>

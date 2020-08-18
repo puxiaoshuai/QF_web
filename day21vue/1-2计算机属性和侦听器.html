@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>原来的字符{{msg}}</p>
+			<p>反转的字符{{reverseMsg}}</p>
+			<p>反转的字符{{reverseMsg1()}}</p>
+			<p>计算属性缓存 vs 方法,上面一个是使用computed，一个是使用方法</p>
+			<p>计算属性是基于它们的响应式依赖进行缓存的</p>
+
+		</div>
+		<script type="text/javascript">
+			
+			let vm=new Vue({
+				el:"#app",
+				data:{
+					msg:"hello",
+				},
+				//进行计算处理过滤的问题
+				computed:{
+					reverseMsg:function(){
+						return this.msg.split('').reverse().join("")
+					}
+				},
+				methods:{
+					reverseMsg1:function(){
+						return this.msg.split('').reverse().join("")
+					}
+				}
+			 
+			})
+		</script>
+	</body>
+</html>

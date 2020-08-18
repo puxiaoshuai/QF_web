@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<div id="app">
+			
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				data:{
+					a:"蒲小帅"
+				},
+				el:"#app",
+				created:function(){
+					console.log("created");
+				},
+				mounted:function(){
+					console.log("mounted");
+				},
+				destroyed:function(){
+					console.log("destroyed");
+				}
+			})
+		</script>
+	</body>
+</html>

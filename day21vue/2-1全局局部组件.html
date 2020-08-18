@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组件化基本使用</title>
+	</head>
+	 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<p>组件创建3步，1.创建组件构造器extend 2 注册组件 3.使用组件</p>
+		<p>语法糖，就省略了extend，直接使用 component来就进行注册</p>
+		<div id="app">
+			<!-- 使用全局组件 -->
+			<my-text></my-text>
+			<!-- 使用局部组件 -->
+			<cpn></cpn>
+		</div>
+		<script type="text/javascript">
+			//创建构造器，vue2
+			const MyText=Vue.extend({
+				template:`
+				 <div>
+				 <h1>蒲小帅</h1>
+				  <h2>测试</h2>
+				 <div>
+				`
+			})
+			//注册,这是全局组件
+		    Vue.component("my-text",MyText)
+			let app=new Vue({
+				el:"#app",
+				components:{
+					cpn:MyText
+				}
+			})
+		</script>
+	</body>
+</html>

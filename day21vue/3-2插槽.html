@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<p>slot插槽==================</p>
+		 <template id="box">
+			 <div style="border: 1px solid red;">
+				<p>我是标题</p>
+				<p>我是内容</p>
+				<slot></slot> 
+			 </div>
+			
+		 </template>
+		<div id="app">
+			<myitem>
+				<button>我是新的</button>
+			</myitem>
+			<myitem>
+				<h3>我去好神奇，这个插槽</h3>
+			</myitem>
+			<myitem></myitem>
+			<myitem></myitem>
+
+		</div>
+		<script type="text/javascript">
+			let app=new Vue({
+				el:"#app",
+				methods:{
+					
+				},
+				components:{
+					myitem:{
+						template:"#box"
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

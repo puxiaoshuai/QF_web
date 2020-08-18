@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+	<p>v-once 执行一次插值，数据更新不在变化</p>
+	 <p>v-html="xx"加载原生html</p>
+	 <p>属性的绑定使用 v-bind:id,类似</p>
+	 <p>js表达式支持</p>
+     <hr>
+	<p>如何理解前端渲染？把数据填充到HTML标签中</p>
+    <p>指令？指令的本质就是自定义属性</p>
+    <p>指令的格式 v-开始 比如（v-cloak）</p>
+	<p>指令的静态参数， v-bind:href="url"</p>
+	<p>指令动态参数， v-bind:[att]="url"</p>
+    <hr>
+    <p><span>v-cloak</span></p>
+    <div id="app">
+        <div>{{msg}}</div>
+    </div>
+
+    <script>
+        // vue的基本使用  1.需要提供标签填充数据
+        //2引入vue.js  
+        //3 可以使用vue语法做功能
+        //4吧vue提供的数据放到标签里
+        var vm = new Vue({
+            // el元素的挂载位置，可以是css选择器，也可以是DOM元素
+            el: "#app",
+            //data模型数据
+            data: {
+                msg: "你好,vue"
+            },
+			
+			
+        })
+    </script>
+</body>
+
+</html>

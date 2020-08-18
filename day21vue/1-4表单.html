@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="message" />
+			<textarea rows="3" cols="5" v-model="message">
+				
+			</textarea>
+			<p>状况单选</p>
+			<input  type="radio" value="健康" id="jiangkang" v-model="choose">
+			<label for="jiangkang">健康</label>
+			<input type="radio" value="危险" id="weixian" v-model="choose">
+			<label for="weixian">危险</label>
+			<h3>选择了: {{ choose }}</h3>
+
+		</div>
+		<script type="text/javascript">
+			let app=new Vue({
+				el:"#app",
+				data:{
+					message:"测试数据",
+					choose:"健康"
+				}
+			})
+		</script>
+	</body>
+</html>

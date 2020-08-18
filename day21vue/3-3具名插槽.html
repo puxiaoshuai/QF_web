@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<p>具名slot插槽比如一个导航栏，3个地方定义3个插槽==================</p>
+		 <template id="box">
+			 <div style="border: 1px solid red;">
+				<slot name="left"><span>左边</span></slot>
+				<slot name="center"><span>我是标题</span></slot>
+				<slot name="right"><span>右边</span></slot>
+			 </div>
+			
+		 </template>
+		<div id="app">
+			
+			<myitem>
+				<button slot="left">返回</button>
+			</myitem>
+
+		</div>
+		<script type="text/javascript">
+			let app=new Vue({
+				el:"#app",
+				methods:{
+					
+				},
+				components:{
+					myitem:{
+						template:"#box"
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

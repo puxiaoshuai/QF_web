@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<p>父组件想访问子组件使用$children []  或    $refs</p>
+		<p>子组件想访问父组件，使用$parent</p>
+		<template id="box">
+			<div>
+			<p>我子组件哦</p>
+			<p>{{name1}}</p>
+			</div>
+		</template>
+		<div id="app">
+			<div>
+				<son v-bind:name1="name" ref="hi" ></son>
+				<son ></son>
+				<button type="button" v-on:click="btn1">点击</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let app=new Vue({
+				el:"#app",
+				components:{
+					son:{
+						template:"#box",
+						methods:{
+							showMessage:function(){
+								alert("子组件中的方法")
+							}
+						},
+						props:{
+							name1:String,
+							default:"默认值"
+						},
+					
+					},
+				},
+				data:{
+					name:"蒲小帅"
+				},
+				methods:{
+					btn:function(){
+						console.log(this.$children)
+						this.$children[0].showMessage()
+					},
+					btn1:function(){
+						console.log(this.$refs.hi.name1);
+					}
+				}
+				
+			})
+		</script>
+	</body>
+</html>

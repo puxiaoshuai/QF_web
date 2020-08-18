@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>父子组件</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<text1></text1>
+		</div>
+		<script type="text/javascript">
+			//组件构造器
+			let son = Vue.extend({
+				template: `
+				 <div>
+				  <h1>我是标题</h1>
+				  <p>呵呵呵</p>
+				 </div>
+				 `
+			})
+			let father = Vue.extend({
+				template: `<div>
+			 				  <h1>我是标开始</h1>
+							  <text3></text3>
+							  <p>哈哈哈结束</p>
+			 				 </div>
+			 				 `,
+				// 注册了子组件
+				components: {
+					text3: son
+				}
+			})
+			let app = new Vue({
+				el: "#app",
+				components: {
+					text1: father,
+				}
+			})
+		</script>
+	</body>
+</html>

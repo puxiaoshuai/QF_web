@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<p>分离的写法:1.使用script标签，type="text/template" ,并使用id进行绑定</p>
+		<p>分离的写法:2.使用template标签，并使用id进行绑定</p>
+		<p>组件内部是不能访问vue实例中的数据的</p>
+		<div id="app">
+			<mytext ></mytext>
+			<mytext1></mytext1>
+		</div>
+		<!-- 下方是模板 -->
+		<template id="a2">
+			<div>
+				<h3>{{title}}</h3>
+			</div>
+		</template>
+
+		<script id="a1" type="text/template">
+			<div>
+			    <h1>我是标题</h1>
+			 </div>
+		</script>
+		<script type="text/javascript">
+			Vue.component("mytext", {
+				template: "#a1",
+				
+			})
+			Vue.component("mytext1", {
+				template: "#a2",
+				
+				// 这个data必须是函数，为什么呢？组件复用的时候，为了避免数据的共享，所以需要返回新的数据，需要是个函数
+				data(){
+				  	return{
+						title:"我是数据啦"
+					}
+				}
+			})
+			let app = new Vue({
+				el: "#app"
+			})
+		</script>
+	</body>
+</html>

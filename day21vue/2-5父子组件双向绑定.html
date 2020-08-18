@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<p>先定义组件名，设置模板，设置props要传递的参数，并规定类型，然后使用，并传值</p>
+		<p>需求,父组件传值给子组件，然后子组件中有个输入框，绑定了其中一个值，会提示<span style="color: red;">避免直接修改
+		需要使用data进行间接赋值</span></p>
+	<template id="text1">
+		<div>
+			<p>{{dnumber1}}</p>
+			<input  v-model="dnumber1" />
+			<p>{{number2}}</p>
+		</div>
+		
+	</template>
+	
+
+		<div id="app">
+			<mytext v-bind:number1="num1"  v-bind:number2="num2">
+				
+			</mytext>
+		
+		</div>
+		<script type="text/javascript">
+			let app=new Vue({
+				el:"#app",
+				data:{
+					num1:1,
+					num2:0,
+				},
+				components:{
+				
+					mytext:{
+						template:"#text1",
+						//传递的参数限制为数字
+						props:{
+							number1:Number,
+							number2:Number
+						},
+						//把接收到的数据在进行处理
+						data(){
+							return {
+								dnumber1:this.number1,
+								dnumber2:this.number2
+							}
+						}
+					},
+					
+				}
+			})
+		</script>
+	</body>
+</html>
