@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <p>
+       给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+   </p>
+  <script>
+       let str_data="[{()}]"
+      console.log("是否满足", isMatch(str_data))
+
+       function isMatch (str_data) {
+        let arr=str_data.split("")
+        let stack1=[]
+       for (let index = 0; index < arr.length; index++) {
+           const element = arr[index];
+           if(element==="["){
+            stack1.push("]")
+           }else if(element==="{"){
+               stack1.push("}")
+           }else if(element==="("){
+               stack1.push(")")
+           }else if(stack1.pop()!=element) {
+                 return false
+           }
+           
+           }
+           return stack1.length===0
+         }
+       
+     
+       
+       
+       
+
+  </script>
+</body>
+</html>

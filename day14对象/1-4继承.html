@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>三个注意点</p>
+    <p>es6中类没得变量提升，所以必须先定义类在实例化对象</p>
+    <p>类中共有的属性和方法必须加this</p>
+    <p></p>
+    <script>
+       class Father{
+           constructor(x,y){
+               this.x=x;
+               this.y=y
+           }
+           sum(){
+               console.log( this.x+this.y)
+           }
+           say(){
+               return "我是爸爸"
+               
+           }
+       }
+       class Son extends Father{
+           //调用父类的构造函数
+          constructor(x,y){
+              //super必须在this的前面
+             super(x,y)
+              this.x=x;
+              this.y=y;
+            
+          }
+          say(){
+             // console.log("我是儿子");
+             //调用父类的方法
+             console.log(super.say());    
+              
+          }
+          reduce(){
+             console.log(this.x-this.y);
+             
+          }
+       }
+       let son=new Son(10,2)
+       son.sum()
+       son.say()
+       son.reduce()
+
+    </script>
+</body>
+</html>
