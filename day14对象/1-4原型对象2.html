@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<div id="1">
+		
+	</div>
+    <script>
+        //在自己类中找不到就到原型中去找
+         function MyClass() {
+           //this.name="我是自己类的name"
+           }
+           MyClass.prototype.name="我是原型中的name1"
+           let car=new MyClass()
+           console.log(car.name);
+		   //从自己的类中找寻找，原型不算
+           console.log(car.hasOwnProperty("name"));
+		   console.log(car)
+		   //原型对象中也有原型。自身中有，在自身找，没有到原型的原型中找
+		   console.log("你好")
+		   console.log("niahoa");
+		   
+		   
+		   
+           
+
+
+
+    </script>
+</body>
+</html>

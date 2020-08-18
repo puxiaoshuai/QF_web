@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(){
+				this.name="蒲小帅"
+			}
+			//重写toString()
+			
+			let p=new Person()
+			//放到原型上去修改，就每个person实例都可以了
+			Person.prototype.toString=function(){
+				return "我是一个"+this.name
+			}
+			console.log(p.toString())
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function fun()
+			// {
+			// 	alert("我是func")
+			// }
+			//call和apply这两个方法都是函数对象的方法，需要函数对象来进行调用
+			//当对函数进行call和apply进行调用函数执行
+			//call和apply将一个对象指定为第一个参数，改变this的指向,null表示不改变
+			//fun()
+			//fun.apply()
+			//fun.apply()
+			function sayName(name,age){
+				console.log("name"+name,"age"+age)
+			}
+			function Person(name,age){
+				this.name=name;
+				this.age=age
+			}
+			let p=new Person("蒲小帅","27")
+			sayName.call(p,p.name,p.age)
+			sayName.apply(p,[p.name,p.age])
+			
+		</script>
+	</body>
+</html>

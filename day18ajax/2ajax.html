@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+<body>
+    <img src="../images/1.jpg" draggable="true" alt="">
+    <script>
+        const instance=new XMLHttpRequest()
+        instance.open("get","/ajax/demo_post.asp",true)
+        instance.send()
+        instance.onreadystatechange=function(){
+            if(instance.readyState==="4"&&instance.status==="200"){
+                console.log(instance.responseText);
+                
+            }
+            else{
+                console.log(instance.status);
+                
+            }
+        }
+
+    </script>
+</body>
+</html>
