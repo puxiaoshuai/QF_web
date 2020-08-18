@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         img {
-            position: absolute;
+			position: absolute;
             width: 100px;
             height: 100px;
         }
@@ -16,17 +16,27 @@
 </head>
 
 <body>
+	<div id="box"  style="width: 300px;height: 300px;background-color: red;"></div>
     <img src="../images/2.jpg" alt="">
+	<p>这个鼠标移动是针对body的，因为事件冒泡，所以在红色区域也能进行滚动,现在
+	我们让她不能在红色区域滚动</p>
     <script>
         let img = document.querySelector('img')
+		let box=document.getElementById("box")
+		
         document.addEventListener("mousemove", function(e) {
-
+            event.stopPropagation()
             var x = e.pageX
             var y = e.pageY
                 // 不要忘记px，-50的目的让鼠标在图片中间
             img.style.left = x - 50 + "px";
             img.style.top = y - 50 + "px";
-        })
+        },true)
+		box.addEventListener("mousemove",function(event){
+			event=event ||window.event
+			alert("1")
+			 event.stopPropagation()
+		},true)
     </script>
 </body>
 

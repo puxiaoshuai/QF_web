@@ -72,10 +72,13 @@
         //第三个参数为flase时，处在冒泡事件，son =》father>body >html>doc
         var son = document.querySelector(".son")
         son.addEventListener("click", function() {
+            event.stopPropagation()
+          
             alert("son")
         }, false)
         var father = document.querySelector(".father")
         father.addEventListener("click", function() {
+            event.stopPropagation()
             alert("father")
         }, false)
     </script>

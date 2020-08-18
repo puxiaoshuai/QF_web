@@ -10,7 +10,7 @@
 
 <body>
     <input type="text" value="输入信息">
-    <button>点击发送</button>
+    <button >点击发送</button>
     <script>
         let input = document.querySelector("input")
         let btn = document.querySelector("button")
@@ -26,7 +26,6 @@
                 let timer = setInterval(() => {
                     num--;
                     btn.innerHTML = "还剩" + num + "秒";
-
                     if (num === 0) {
                         clearInterval(timer)
                         btn.disabled = false;

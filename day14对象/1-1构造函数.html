@@ -17,6 +17,7 @@
     <p>静态成员，在构造函数本身上添加成员 如 Star.sex="男"，静态成员智能通过构造函数来访问</p>
 
     <script>
+        //加new 是构造函数， 没有就是普通的函数
         // 创建对象 1.new Object()
         //创建对象2 a={} 字面量
         //创建对象 3 构造函数是一种特殊的函数，用来初始化对象，即对成员变量赋初始值，它总和new 一起使用，我们可以把对象中一些公共属性和方法抽取出来，封装到这个函数里
@@ -29,8 +30,13 @@
 
             }
         }
+        function  Dog (){ 
+
+         }
         let star = new Star("蒲小帅", 19)
         let star1 = new Star("李四", 19)
+        let dog=new Dog()
+        
 
         console.log(star.sing === star1.sing);
     </script>

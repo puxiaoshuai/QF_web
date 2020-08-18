@@ -23,13 +23,14 @@
             // }
             //不变的方法，定义带prototyoe
         }
-        Star.prototype.sing = function() {
-            console.log("我会唱歌")
+        Star.prototype.sing = function(msg) {
+            console.log("我会唱歌"+msg)
         }
         let star = new Star("蒲小帅", 19)
         let star1 = new Star("李四", 19)
-
-        console.log(star.sing === star1.sing);
+         star.sing('puxiaos')
+         star1.sing("fjsdkjf")
+    
     </script>
 </body>
 

@@ -22,7 +22,7 @@ function Example(param) {
             <p>现在的数值 ：{count}</p>
             <p>{age}</p>
             <button onClick={() => {
-                addCount(count + 1)
+                addCount((count)=>count+1)
             }}>点击我</button>
         </div>
     )
