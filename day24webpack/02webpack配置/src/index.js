@@ -8,3 +8,11 @@ console.log("age",age);
 // 引入css
 
 require("./css/normal.css")
+//
+import Vue from 'vue'
+new Vue({
+	el:"#app",
+	data:{
+		msg:"我是VUE"
+	}
+})

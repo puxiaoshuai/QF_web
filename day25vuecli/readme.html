@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>全局安装3 npm install -g @vue/cli</p>
+		<h3>创建项目 vue create xxx</h3>
+		<p>全局安装2 npm install -g @vue-cli-init </p>
+		 <h4>创建项目 vue init webpack myproject</h4>
+		 <p>runtime-compiler ?runtime-only区别在于main。js中注册的方式</p>
+		 <p>vue使用render返回的，所所以是runtime_only</p>
+		 <br>
+		 <p>vue ui  启动项目管理</p>
+		 <p>vue-router</p>
+		 <p>导入 调用Vue.use(xx)</p>
+		 <p>创建路由实例，并传入路由映射配置，</p>
+		 <p>vue实例中挂载创建路由实例</p>
+		 <p>去掉hash,添加mode=:history</p>
+		 <p>router-link tag="button"就是把a标签换成了button</p>
+		 <p>router-link  replace="true"</p>
+		 <p>routerlink  active-class</p>
+		 <p>代码中跳转 this.$router.push("/home")</p>
+		 <p style="color: red;">this.$router以导航跳转为任务</p>
+		 <p style="color: red;">this.$route以 获取内容为任务</p>
+		 <h4>动态路由</h4>
+		 <p>路由懒加载？分包</p>
+		 <p>cosnt home=()=>import("../xx")</p>
+		  <h3>嵌套路由</h3>
+		 <hr>
+		 <p>参数传递，切换路由时，传递参数</p>
+		 <p>1. 动态路由传参的形式， /router/id</p>
+		  <p>代码中跳转 this.$router.push("/home")</p>
+		 <p>2.使用query方式传递，形成 ？id=xx</p>
+		 <p>:to="{path:"xx",query:{name:xxx,age:xxx}}"</p>
+		  <p>代码中跳转 this.$router.push({
+			  path:"/xxx",
+			  query:{
+				  name:xx,
+				  age:xxx
+			  }
+		  })</p>
+		  <p>什么是导航守卫？就是全局监听导航的监听 router.beforeEach() next必须调用</p>
+		  <p>keep-alive  包裹缓存，为了能记录tab切换下选择的那个，使用组件守卫进行赋值
+			  include：  字符串或正则表达式，只有名称匹配的组件会被缓存
+			    exclude： 字符串或正则表达式，名称匹配的组件不会被缓存》</p>
+	     <p>组件类路由守卫</p>
+	  	</body>
+</html>

@@ -6,8 +6,14 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
-		publicPath:"dist/"
+		publicPath: "dist/"
 	},
+	// mode: 'development',
+	resolve: {
+	    alias: {
+	      'vue$': 'vue/dist/vue.esm.js' // 用 webpack 1 时需用 'vue/dist/vue.common.js'
+	    }
+	  },
 	module: {
 		rules: [{
 				test: /\.css$/,
@@ -19,21 +25,33 @@ module.exports = {
 					}
 				]
 			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				use: [{
-					loader: 'url-loader',
-					options: {
-						limit: 8192
-					}
-				}]
-			},
+			// {
+			// 	test: /\.(png|jpg|gif)$/,
+			// 	use: [{
+			// 		loader: 'url-loader',
+			// 		options: {
+			// 			limit: 8192
+			// 		}
+			// 	}]
+			// },
 			{
 				test: /\.(png|jpg|gif)$/,
 				use: [{
 					loader: 'file-loader',
-					options: {}
+					options: {
+						limit: 18192
+					}
 				}]
+			},
+			{
+				test: /\.m?js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
 			}
 		]
 	}
