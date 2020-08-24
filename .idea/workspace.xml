@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0af3bcb-7ede-436b-86ba-89257a5137c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day21vue/3-4作用域插槽.html" beforeDir="false" afterPath="$PROJECT_DIR$/day21vue/3-4作用域插槽.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/src/css/normal.css" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/src/css/normal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/02webpack配置/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/02webpack配置/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24webpack/tag.md" beforeDir="false" afterPath="$PROJECT_DIR$/day24webpack/tag.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day25vuecli/readme.html" beforeDir="false" afterPath="$PROJECT_DIR$/day25vuecli/readme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day25vuecli/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/day25vuecli/readme.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,25 +25,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day25vuecli/readme.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            <state relative-caret-position="540">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/About.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day25vuecli/my_tab/package.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -65,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="1110">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -79,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="630">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -88,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="630">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -150,15 +141,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/day25vuecli/hi-vue/package.json" />
         <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js" />
-        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue" />
         <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue" />
         <option value="$PROJECT_DIR$/day25vuecli/readme.html" />
+        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="296" />
-    <option name="y" value="246" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="232" />
+    <option name="y" value="206" />
     <option name="width" value="1440" />
     <option name="height" value="780" />
   </component>
@@ -185,44 +176,7 @@
               <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="QF_web" type="462c0819:PsiDirectoryNode" />
               <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="hi-vue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="hi-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="hi-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="hi-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="hi-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="readme_files" type="462c0819:PsiDirectoryNode" />
+              <item name="my_tab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
@@ -240,6 +194,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -300,7 +255,10 @@
       <workItem from="1591578656460" duration="124000" />
       <workItem from="1595507077459" duration="598000" />
       <workItem from="1596021166673" duration="188000" />
-      <workItem from="1597821352632" duration="1701000" />
+      <workItem from="1597821352632" duration="3189000" />
+      <workItem from="1597997400392" duration="15000" />
+      <workItem from="1598235997362" duration="365000" />
+      <workItem from="1598253071775" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="react   andt">
       <created>1576681528725</created>
@@ -344,17 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1595507246791</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vue路由">
+      <created>1597823194838</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823194838</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28533000" />
+    <option name="totallyTimeSpent" value="30412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="778" y="251" width="1440" height="780" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19486082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14391144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -367,7 +331,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.046728972" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34204793" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,14 +346,10 @@
     <MESSAGE value="提交" />
     <MESSAGE value="添加" />
     <MESSAGE value="dom" />
-    <option name="LAST_COMMIT_MESSAGE" value="dom" />
+    <MESSAGE value="vue路由" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue路由" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day11webapi/1-1webapi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day11webapi/1-2操作元素修改属性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270" />
@@ -598,8 +558,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/readme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/About.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HMessage.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HNews.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/User.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -611,48 +614,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/About.vue">
+    <entry file="file://$PROJECT_DIR$/day25vuecli/my_tab/package.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HNews.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/User.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HMessage.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/readme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

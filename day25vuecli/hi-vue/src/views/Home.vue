@@ -1,13 +1,17 @@
 <template>
   <div class="home">
-    <div>
-		<HelloWorld msg="Welcome to Your Vue.js App"/>
-		<router-link to="/home/news">新闻</router-link>
-		<span>|</span>
-		<router-link to="/home/message">消息</router-link>
-
-	</div>
-	      <router-view/>
+	  <div>
+	  	<HelloWorld msg="Welcome to Your Vue.js App"/>
+	  	<router-link to="/home/news">新闻</router-link>
+	  	<span>|</span>
+	  	<router-link to="/home/message">消息</router-link>
+	  		 
+	  </div>
+	  <router-view>
+		  
+	  </router-view>
+    
+	     
 
   </div>
 </template>

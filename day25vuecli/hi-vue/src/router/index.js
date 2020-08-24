@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 const Home =()=>import("../views/Home.vue")
 const News =()=>import("../views/HNews.vue")
 const Message =()=>import("../views/HMessage.vue")
+const Page404 =()=>import("../views/Page404.vue")
 Vue.use(VueRouter)
 const routes = [
 	{
@@ -39,7 +40,7 @@ const routes = [
 
 
 	{
-		path: '/about/',
+		path: '/about',
 		name: 'About',
 		meta:{
 			title:"关于"
@@ -59,6 +60,17 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () => import( /* webpackChunkName: "about" */ '../views/User.vue')
+	},
+	{
+		path: '*',
+		name: 'Page404',
+		meta:{
+			title:"用户"
+		},
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: Page404
 	}
 ]
 

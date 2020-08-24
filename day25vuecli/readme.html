@@ -12,21 +12,21 @@
 		 <p>runtime-compiler ?runtime-only区别在于main。js中注册的方式</p>
 		 <p>vue使用render返回的，所所以是runtime_only</p>
 		 <br>
-		 <p>vue ui  启动项目管理</p>
+		 <p>vue ui  启动项目管理GUI</p>
 		 <p>vue-router</p>
 		 <p>导入 调用Vue.use(xx)</p>
 		 <p>创建路由实例，并传入路由映射配置，</p>
 		 <p>vue实例中挂载创建路由实例</p>
 		 <p>去掉hash,添加mode=:history</p>
 		 <p>router-link tag="button"就是把a标签换成了button</p>
-		 <p>router-link  replace="true"</p>
+		 <p>router-link  replace="true" 就是替换覆盖，返回的时候就不会一直返回了，</p>
 		 <p>routerlink  active-class</p>
 		 <p>代码中跳转 this.$router.push("/home")</p>
 		 <p style="color: red;">this.$router以导航跳转为任务</p>
 		 <p style="color: red;">this.$route以 获取内容为任务</p>
 		 <h4>动态路由</h4>
 		 <p>路由懒加载？分包</p>
-		 <p>cosnt home=()=>import("../xx")</p>
+		 <p>const home=()=>import("../xx")</p>
 		  <h3>嵌套路由</h3>
 		 <hr>
 		 <p>参数传递，切换路由时，传递参数</p>
@@ -45,6 +45,7 @@
 		  <p>keep-alive  包裹缓存，为了能记录tab切换下选择的那个，使用组件守卫进行赋值
 			  include：  字符串或正则表达式，只有名称匹配的组件会被缓存
 			    exclude： 字符串或正则表达式，名称匹配的组件不会被缓存》</p>
-	     <p>组件类路由守卫</p>
+	     <p>组件内路由守卫</p>
+		 <p>资源文件的别名配置 在 webpack.base。conf中进行配置的resolve中的alias进行配置</p>
 	  	</body>
 </html>
