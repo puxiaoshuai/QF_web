@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>axios网络请求</p>
+    <p></p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import {request} from '../network/request'
 
+//拦截器  请求成功，失败的拦截，  响应成功，失败
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  created() {
+    request({
+     url:"banners"
+    }).then(res=>{
+      console.log("数据111111",res);
+      
+    }).catch(e=>{
+     console.log("异常",e);
+     
+    })
+  },
+ 
 }
 </script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>你好</title>
+	</head>
+	<body>
+		<p>回调</p>
+		<script type="text/javascript">
+			
+			function show(name,callback){
+				let res="你好,"+name
+				callback(res)
+			}
+			show("蒲小帅",(res)=>{
+				console.log(res);
+			})
+		</script>
+	</body>
+	
+</html>
