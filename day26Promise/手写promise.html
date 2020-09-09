@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>手写promise</p>
+		<script type="text/javascript">
+			const PENDING="PENDING"
+			const SUCCESS="SUCCESS"
+			const FAIL="FAIL"
+			class Promise{
+				constructor(executor) {
+					//默认状态
+				    this.status=PENDING;
+					//默认成功值
+					this.value=undefined;
+					//默认失败的原因
+					this.reason=undefined;
+					//存放成功的回调
+					this.onSuccessCallbacks=[];
+					//存放失败的回调
+					this.onFailCallBacks=[];
+					//成功调用，状态改变
+					let resolve=(value)=>{
+						if(this.status===PENDING){
+							this.status=SUCCESS
+							this.value=value
+						}
+						this.onSuccessCallbacks.forEach(fn=>fn())
+					}
+					//失败调用
+					let reject=(reason)=>{
+						if(this.status===PENDING){
+							this.status=FAIL;
+							this.reason=reason;
+						}
+						this.onFailCallBacks.forEach(fn=>fn())
+					}
+					try{
+						executor(resolve,reject)
+					}catch(e){
+						reject(e)
+						//TODO handle the exception
+					}
+					
+				}
+				then(onSuccess,onFail){
+					if(this.status===SUCCESS){
+						onSuccess(this.value)
+					}
+					if(this.status===FAIL){
+						onFail(this.reason)
+					}
+					if(this.status===PENDING){
+						this.onSuccessCallbacks.push(()=>{
+							onSuccess(this.value)
+						})
+						this.onFailCallBacks.push(()=>{
+							onFail(this.reason)
+						})
+					}
+				}
+			}
+			const p=new Promise((resolve,reject)=>{
+				setTimeout(()=>{
+					resolve("成功")
+				},1000)
+				
+			}).then(data=>{
+				console.log(data);
+			})
+		</script>
+	</body>
+</html>

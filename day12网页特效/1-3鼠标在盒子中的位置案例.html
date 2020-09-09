@@ -30,17 +30,24 @@
     <div class="box">
 
     </div>
-    <p></p>
+    <p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
     <script>
         let box = document.querySelector(".box");
-        let p = document.querySelector("p")
+       let p1=document.getElementById("p1")
+		 let p2=document.getElementById("p2")
+		  let p3=document.getElementById("p3")
+		
         box.onmousemove = function(e) {
             let f_w = e.pageX
             let f_h = e.pageY
+			//返回元素相对带有定位的父元素左侧方的偏移量
             let s_w = box.offsetLeft
             let s_h = box.offsetTop
-            p.innerHTML = "在盒子中点击的位置:(" + (f_w - s_w) + "," + (f_h - s_h) + ")"
-
+            p1.innerHTML = "在盒子中点击的位置:(" + (f_w - s_w) + "," + (f_h - s_h) + ")"
+            p2.innerHTML="page:(" + f_w+ "," + f_h + ")"
+			p3.innerHTML="offest:(" + s_w+ "," + s_h + ")"
         }
     </script>
 </body>
