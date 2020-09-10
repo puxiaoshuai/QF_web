@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <p>
+        我们知道，变量根据作用域的不同分为两种：全局变量和局部变量。
+    </p>
+    <p>
+        函数内部可以访问全局变量和局部变量。</p>
+    <p>
+        函数外部只能访问全局变量，不能访问局部变量。
+    </p>
+    <p>
+
+    当函数执行完毕，本作用域内的局部变量会销毁。
+    </p>
+    
+    <p style="color: red;">
+        简单理解就是：如果这个作用域可以访问另外一个函数内部的局部变量，那就产生了闭包（此时，你可以把闭包理解成是一种现象）；而另外那个作用域所在的函数称之为闭包函数。注意，这里强调的是访问局部变量哦。
+    </p>
+    <p>闭包的作用：延伸变量的作用范围</p>
+    <script>
+        function A() {  
+            let a=100
+            function B() {
+                 console.log(a)
+              }
+              //B()
+              return B
+              
+        }
+    
+        let c=A()
+        c()
+       
+        
+    </script>
+</body>
+
+</html>

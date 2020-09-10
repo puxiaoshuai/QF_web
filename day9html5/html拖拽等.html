@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" style="width: 100px;height: 100px;background-color: red" draggable="true"></div>
+    <div class="box1" style="margin-top: 400px;;width: 200px;height: 200px;background-color: blue;"></div>
+    <script>
+         let box=document.querySelector(".box")
+         let temp=box
+         box.ondragstart=function(e){
+             console.log("开始拖拽");   
+         }
+         box.ondragleave=function(e){
+             console.log("拖拽离开");
+             
+         }
+         box.ondragend = function (e) {
+            temp = null;
+         console.log('拖拽结束...');
+          console.log("---------------");
+    }
+
+      box.ondrag = function (e) {
+          console.log('拖拽');
+    }
+   
+    var two = document.querySelector('.box1');
+
+    //目标元素的拖拽事件
+
+    // 当被拖拽元素进入时触发
+    two.ondragenter = function () {
+        console.log("来了.");
+    }
+
+    // 当被拖拽元素离开时触发
+    two.ondragleave = function () {
+
+        console.log("走了..");
+    }
+
+    // 当拖拽元素在 目标元素上时，连续触发
+    two.ondragover = function (e) {
+        //阻止拖拽事件的默认行为
+        e.preventDefault(); //【重要】一定要加这一行代码，否则，后面的方法 ondrop() 无法触发。
+
+        console.log("over...");
+    }
+
+    // 当在目标元素上松开鼠标是触发
+    two.ondrop = function () {
+        console.log("松开鼠标了....");
+        two.appendChild(temp)
+    }
+    </script>
+</body>
+</html>

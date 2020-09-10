@@ -9,18 +9,42 @@
 </head>
 
 <body>
-    <ul>
-        <li>我们搜读师范好梦呢</li>
-        <li>我们搜读师范好梦呢</li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-        <li>ahahh </li>
-    </ul>
+    <form action="">
+        <fieldset>
+            <legend>表单类型</legend>
+            <label for="">
+                邮箱<input type="email" name="" id="">
+            </label>
+            <label for="">
+                颜色<input type="color" name="" id="">
+            </label>
+            <label for="">
+                文件<input type="file" name="" id="">
+            </label>
+        
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset>
+            <legend>表单属性</legend>
+            <label for="">
+                用户名：<input type="text" placeholder="例如：smyhvae" autofocus name="userName" autocomplete="on" required/>
+            </label>
+    
+            <label for="">
+                电话：<input type="tel" pattern="1\d{10}"/>
+            </label>
+    
+            <label for="">
+                multiple的表单: <input type="file" multiple>
+            </label>
+    
+            <!-- 上传文件-->
+            <input type="file" name="file" multiple/>
+    
+            <input type="submit"/>
+        </fieldset>
+    </form>
 </body>
 
 </html>
