@@ -5,22 +5,22 @@ const Car =()=>import("../views/Car.vue")
 const Profile =()=>import("../views/Profile.vue")
 const routes = [
   {
-    name:"Home",
+    name:"home",
     path:"/home",
     component:Home
   },
  {
-   name:"Cate",
+   name:"cate",
    path:"/cate",
    component:Cate
  },
   {
-    name:"Car",
+    name:"car",
     path:"/car",
     component:Car
   },
  {
-   name:"Profile",
+   name:"profile",
    path:"/profile",
    component:Profile
  }

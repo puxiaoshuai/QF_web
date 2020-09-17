@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色切换</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: bisque;
+
+        }
+        .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="change">切换颜色</button>
+        <div class="box" v-bind:class="{active:is_red}"></div>
+        <button @:click="show">控制显隐</button>
+        <div v-if="is_show" class="box">
+
+        </div>
+        <p>v-bind缩写 :</p>
+        <p>v-on缩写  @</p>
+    </div>
+    <script>
+        let vue=new Vue({
+            el:"#app",
+            data:{
+                is_red:true,
+                is_show:true,
+            },
+            methods: {
+               change:function(){
+                   this.is_red=!this.is_red
+               },
+               show:function(){
+                   this.is_show=!this.is_show
+               }
+            },
+        })
+    </script>
+</body>
+</html>

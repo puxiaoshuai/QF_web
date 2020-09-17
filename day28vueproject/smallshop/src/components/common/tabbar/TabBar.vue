@@ -1,5 +1,6 @@
 <template>
   <div class="tabbar">
+    <!-- tabbar背景插槽 -->
     <slot></slot>
   </div>
 </template>

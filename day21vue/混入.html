@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>混入</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <template id="box">
+      <p>我是模板</p>
+    </template>
+    <div id="app">
+         <myitem></myitem>
+    </div>
+    <script>
+		const myMixin={
+			
+			created:function(){
+				
+			},
+			methods:function(){
+				nihao:function(){
+					
+				}
+			}
+		}
+        let vm=new Vue({
+            el:"#app",
+            data:{
+
+            },
+            components:{
+                "myitem":{
+                    template:"#box"
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
   <div id="app">
      <router-view></router-view>
      <mainbar></mainbar>
-     <p>哈哈哈</p>
+     
   </div>
 </template>
 <script>
@@ -16,5 +16,8 @@ export default {
 }
 </script>
 <style>
-  @import url('assets//css/normalize.css');
+  @import url('./assets/css/normalize.css');
+  #app{
+    width: 100%;
+  }
 </style>

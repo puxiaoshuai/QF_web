@@ -2,11 +2,10 @@
   <div class="tabbar_item" v-on:click="choose">
     <div v-if="!isActive">
       <slot name="item_icon">
-
       </slot>
     </div>
     <div v-else>
-      <slot name="item_icon-active">
+      <slot name="item_icon_active">
       </slot>
     </div>
     <div :style="activeStyle">
@@ -16,7 +15,7 @@
 </template>
 <script>
   export default {
-    name: "TabBarItem",
+    name: "TabItem",
     // data() {
     //   return {
     //     isActive: isActive
@@ -30,6 +29,7 @@
         return this.isActive?{color:this.activeColor}:{}
       }
     },
+    //接收参数path,并默认显示红色
     props:{
       path:String,
       activeColor:{
@@ -39,7 +39,6 @@
     },
     methods:{
       choose:function(){
-        
         this.$router.replace(this.path)
       }
     }
