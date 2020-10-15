@@ -12,22 +12,24 @@
 		<p>其实就是父组件对子组件的展示的样式不满意，就拿子组件的数据过来，自己整</p>
 		 <template id="box">
 			<slot v-bind:data="books"> <div style="border: 1px solid red;">
-				 <!-- 此处的books是来自子组件作用域的数据 -->
+				 <!-- 此处的books是来自子组件作用域的数据 --> 
 				<ul v-for="item in books">
 					<li>{{item}}</li>
 				</ul>
 			 </div>
 			 </slot>
-			
 		 </template>
 		<div id="app">
 			
+			<!-- 儿子组件 -->
 			<myitem></myitem>
-             <myitem></myitem>
+			<!-- 儿子组件 -->
+			 <myitem></myitem>
+			 <!-- 对这个儿子组件不满意，我自己来进行修噶 -->
 			<myitem >
 				<!-- 获取子组件中的 -->
 				<div slot-scope="slot">
-					<span v-for="item in slot.data">{{item}}-</span>
+					<span style="color: red;" v-for="item in slot.data">{{item}}-</span>
 				</div>
 			</myitem>
 

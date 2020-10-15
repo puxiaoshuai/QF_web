@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+//导出了一个默认的实例，
 export default {
   name: 'about',
   created:function(){

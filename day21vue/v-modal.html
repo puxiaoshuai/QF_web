@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <p>v-model主要是用来进行form表单中输入的绑定</p>
+     <div id="app">
+          <form action="">
+              <span>姓名</span>
+               <input type="text" v-model="data.name" placeholder="">
+               <span>性别</span>
+               <input type="radio" id="man" value="One" v-model="data.sex">
+               <label for="man">男</label>
+               <input type="radio" id="woman" value="One" v-model="data.sex">
+               <label for="woman">女</label>
+               <span>兴趣</span>
+               <input type="checkbox" value="zuqiu" v-model="data.ins">
+               <label for="zuqiu"></label>
+               <input type="checkbox" value="lanqiu" v-model="data.ins">
+               <label for="lanqiu"></label>
+          </form>
+     </div>
+     <script>
+         let vm=new Vue({
+             el:"#app",
+             data:{
+                 data:{
+                     name:"",
+                     sex:"",
+                     ins:""
+                 }
+             },
+             methods: {
+                 
+             },
+         })
+     </script>
+</body>
+</html>

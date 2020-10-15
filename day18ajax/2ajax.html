@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>ajax</title>
+    <script src="../js公共文件/jquery.min.js"></script>
 </head>
 <body>
     <img src="../images/1.jpg" draggable="true" alt="">
     <script>
-        const instance=new XMLHttpRequest()
-        instance.open("get","/ajax/demo_post.asp",true)
-        instance.send()
-        instance.onreadystatechange=function(){
-            if(instance.readyState==="4"&&instance.status==="200"){
-                console.log(instance.responseText);
-                
-            }
-            else{
-                console.log(instance.status);
-                
-            }
-        }
+        // const instance=new XMLHttpRequest()
+        // instance.open("get","https://weatherapi.market.xiaomi.com/wtr-v3/weather/all?latitude=110&longitude=112&isLocated=true&locationKey=weathercn%3A101010100&days=15&appKey=weather20151024&sign=zUFJoAR2ZVrDy1vF3D07&romVersion=7.2.16&appVersion=87&alpha=false&isGlobal=false&device=cancro&modDevice=&locale=zh_cn",true)
 
+        // instance.send()
+        // instance.onreadystatechange=function(){
+        //     if(instance.readyState==="4"&&instance.status==="200"){
+        //         console.log(instance.responseText);
+                
+        //     }
+        //     else{
+        //         console.log(instance.status);
+                
+        //     }
+        // }
+       $(document).ready(function () {
+              $.ajax({
+                  type: "get",
+                  url: "https://www.v2ex.com/api/topics/hot.json",
+                  dataType:'json',
+                  success: function (response) {
+                      console.log("数据",response);
+                      
+                  }
+              });
+       });
     </script>
 </body>
 </html>

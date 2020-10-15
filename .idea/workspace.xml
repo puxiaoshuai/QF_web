@@ -1,115 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0af3bcb-7ede-436b-86ba-89257a5137c7" name="Default Changelist" comment="">
+    <list default="true" id="e0af3bcb-7ede-436b-86ba-89257a5137c7" name="Default Changelist" comment="vue路由">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day27vuex/hivuex/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/day27vuex/hivuex/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day27vuex/hivuex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/day27vuex/hivuex/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day27vuex/hivuex/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day27vuex/hivuex/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day27vuex/hivuex/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day27vuex/hivuex/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day27vuex/hivuex/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day27vuex/hivuex/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day21vue/2-5父子组件双向绑定.html" beforeDir="false" afterPath="$PROJECT_DIR$/day21vue/2-5父子组件双向绑定.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day21vue/混入.html" beforeDir="false" afterPath="$PROJECT_DIR$/day21vue/混入.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <ignored path=".idea/misc.xml" />
-    <ignored path=".idea/modules.xml" />
-    <ignored path=".idea/QF_web.iml" />
-    <ignored path=".idea/vcs.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/actionCreaters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/actionType.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="54" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/User.vue">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day25vuecli/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,170 +26,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/index.js" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/admin.less" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/header/index.js" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/footer/index.js" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/admin.js" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/styles/common.less" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.less" />
-        <option value="$PROJECT_DIR$/day22react/react简介.html" />
-        <option value="$PROJECT_DIR$/day22react/reactdemo1/my-app/src/components/nav/index.js" />
-        <option value="$PROJECT_DIR$/day2css基础/7选择器权重.html" />
-        <option value="$PROJECT_DIR$/day2css基础/9综合案例.html" />
-        <option value="$PROJECT_DIR$/day2css基础/11标签显示模式.html" />
-        <option value="$PROJECT_DIR$/day2css基础/12导航栏.html" />
-        <option value="$PROJECT_DIR$/day2css基础/13css背景.html" />
-        <option value="$PROJECT_DIR$/day2css基础/14魔兽世界.html" />
-        <option value="$PROJECT_DIR$/day2css基础/16背景驸着.html" />
-        <option value="$PROJECT_DIR$/CSS3/CSS3学习记录.html" />
-        <option value="$PROJECT_DIR$/阿西河/布局.html" />
-        <option value="$PROJECT_DIR$/阿西河/1.html" />
-        <option value="$PROJECT_DIR$/day3盒子模型/双飞翼布局.html" />
-        <option value="$PROJECT_DIR$/day3盒子模型/圣杯布局.html" />
-        <option value="$PROJECT_DIR$/day3盒子模型/flex布局实现双飞翼.html" />
-        <option value="$PROJECT_DIR$/day10移动端/响应式布局.html" />
-        <option value="$PROJECT_DIR$/day12网页特效/3-2sessionStorage.html" />
-        <option value="$PROJECT_DIR$/算法/字符串[{(.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/package.json" />
-        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js" />
-        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue" />
-        <option value="$PROJECT_DIR$/day25vuecli/readme.html" />
-        <option value="$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="182" />
-    <option name="width" value="1821" />
-    <option name="height" value="921" />
-  </component>
+  <component name="ProjectId" id="1hdAvqLbhjGAoPBhLG53t5gE5WD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_demo_all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_demo_all" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_demo_all" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_demo_all" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="redux01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_demo_all" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="redux01" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="reactdemo1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="reactdemo3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day22react" type="462c0819:PsiDirectoryNode" />
-              <item name="reacthooksdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day23reactnext" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day24webpack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day25vuecli" type="462c0819:PsiDirectoryNode" />
-              <item name="my_tab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="day26Promise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QF_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QF_web" type="462c0819:PsiDirectoryNode" />
-              <item name="算法" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../黑马小程序" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -299,7 +49,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\WebStorm2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -310,18 +62,7 @@
       <recent name="F:\QF_web\day22react\reactdemo1\my-app\public" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -358,6 +99,17 @@
       <workItem from="1599012095866" duration="99000" />
       <workItem from="1599016523590" duration="301000" />
       <workItem from="1599017731005" duration="1164000" />
+      <workItem from="1600330831301" duration="209000" />
+      <workItem from="1600331134352" duration="290000" />
+      <workItem from="1600331513259" duration="7000" />
+      <workItem from="1600332102531" duration="29000" />
+      <workItem from="1600332194196" duration="2000" />
+      <workItem from="1600332377161" duration="12000" />
+      <workItem from="1600332410606" duration="1224000" />
+      <workItem from="1600333652868" duration="2496000" />
+      <workItem from="1600391453462" duration="2652000" />
+      <workItem from="1600665013896" duration="5511000" />
+      <workItem from="1600676153243" duration="1162000" />
     </task>
     <task id="LOCAL-00001" summary="react   andt">
       <created>1576681528725</created>
@@ -408,38 +160,24 @@
       <option name="project" value="LOCAL" />
       <updated>1597823194838</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="vue">
+      <created>1600332712547</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600332712547</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32073000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="4" y="182" width="1821" height="921" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14365882" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19284803" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Typescript/hello.js" />
+        <option value="$PROJECT_DIR$/Typescript/接口.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="react   andt" />
@@ -447,279 +185,33 @@
     <MESSAGE value="添加" />
     <MESSAGE value="dom" />
     <MESSAGE value="vue路由" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue路由" />
+    <MESSAGE value="vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day11webapi/2-11留言板.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="29" column="72" lean-forward="true" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-1删除节点.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-2复制节点.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-3动态生成表格.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-4三中动态创建元素的区别.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-5事件高级.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-6事件对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-7阻止冒泡的两种方式.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-8事件委托.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/3-9跟随鼠标事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-1键盘事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-3BOM.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-4定时器.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-5倒计时.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-6js执行机制.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-5短信倒计时.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day14对象/1-1构造函数.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day14对象/1-2原型.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day14对象/1-3对象原型.html" />
-    <entry file="file://$PROJECT_DIR$/day12网页特效/3-2sessionStorage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day7CSS高级技巧/4精灵技术.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-7location.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-9navigator对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day11webapi/4-10history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day12网页特效/1-1元素偏移offset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day12网页特效/1-7淘宝滚动案例.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day12网页特效/3-1移动端触摸事件.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="15" selection-start-line="15" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/readme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/About.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/my_tab/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../黑马小程序/02-代码/02-项目/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HMessage.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/算法/字符串[{(.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react简介.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/reactdemo3/readme.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/HNews.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/views/User.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/hi-vue/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day25vuecli/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/actionCreaters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/actionType.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day22react/react_demo_all/src/pages/redux01/store/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="369" y="20" key="CommitChangelistDialog2" timestamp="1600332711480">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="369" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600332711480" />
+    <state x="499" y="272" key="FileChooserDialogImpl" timestamp="1600673857164">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="499" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600673857164" />
+    <state x="465" y="126" key="SettingsEditor" timestamp="1600333635126">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="465" y="126" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600333635126" />
+    <state x="680" y="425" key="VCS.ChangelistChooser" timestamp="1600332686717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="680" y="425" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600332686717" />
+    <state x="335" y="205" key="Vcs.Push.Dialog.v2" timestamp="1600332716197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="335" y="205" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600332716197" />
+    <state x="594" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600332658210">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="594" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600332658210" />
   </component>
 </project>

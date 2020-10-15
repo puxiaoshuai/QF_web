@@ -8,21 +8,28 @@
 </head>
 <body>
     <template id="box">
-      <p>我是模板</p>
+        <div>
+            <p>我是模板</p>
+            <button @click="hi">din</button>
+        </div>
+
     </template>
     <div id="app">
-         <myitem></myitem>
+         <myitem>
+
+         </myitem>
+         <button @click="hi">点击我</button>
     </div>
     <script>
 		const myMixin={
 			
 			created:function(){
-				
+
 			},
-			methods:function(){
-				nihao:function(){
-					
-				}
+			methods:{
+              hi:function () {
+                  console.log("你好11a")
+              }
 			}
 		}
         let vm=new Vue({
@@ -32,7 +39,14 @@
             },
             components:{
                 "myitem":{
-                    template:"#box"
+                    template:"#box",
+                    mixin:[myMixin]
+                },
+
+            },
+            methods: {
+                hi:function (){
+                    console.log("你好")
                 }
             }
         })

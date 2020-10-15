@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尚硅谷JS高级</title>
+</head>
+<body>
+    <p>基本类型 5种</p>
+    <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>bool</li>
+        <li>undefiend</li>
+        <li>null</li>
+    </ul>
+    <p>对象类型</p>
+     <ul>
+         <li>Object</li>
+         <li>Func</li>
+         <li>Arr</li>
+     </ul>
+     <p>typeof 可以用来判断 undefined，数值，字符串，布尔值，function 不能判断object和arr,null  </p>
+     <p>回调函数，dom事件回调函数，定时器回调函数，定义了函数，但是没有调用，他们触发了</p>
+     <p style="color: red;">IIFE</p>
+     <p>就是立即执行函数</p>
+     <p>函数this指向</p>
+     <p>1. 以函数的形式调用时，this永远都是window
+        2. 以方法的形式调用时，this就是调用方法的对象
+        3. 以构造函数的形式调用时，this就是新创建的对象
+        4. 使用call和apply调用时，this就是指定的那个对象
+        5. 在全局作用域中this代表window</p>
+    <script>
+        //prompt("请输入","我是")
+        // let data=confirm("确定?")
+        // alert(data)
+        let a="测"
+        alert(a??true)
+    </script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 		name:"App",
 		data(){
 			return {
-				id:"121"
+				id:"我是新的id"
 			}
 		}
 	}

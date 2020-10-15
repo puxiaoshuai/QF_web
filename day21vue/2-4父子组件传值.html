@@ -9,17 +9,22 @@
 		<p>prop传递的对象有很多</p>
 		<p>父传子，驼峰标识有问题。props使用驼峰的话，对应  v-bind:a-xxx</p>
 		<p>子传父，this.$emit("itemclick",item)发送，在子组件绑定@ itemclick="sonadd", 在父方中进行获取</p>
+		<!-- app中定义了一个 son组件 -->
 		<div id="app">
-			<son @itemclick="sonadd" v-bind:sbooks="books" ></son>
+			<!-- 从app中获取到books的值，然后传递给子组件，使用v-bind:xx进行传递在子组件中使用props进行接收 -->
+			<!-- fatherclick在父类中的方法进行关联，sendlick就是一个发射接收的中间键 -->
+			<son @sendlick="fatherclick" v-bind:sbooks="books" ></son>
 		</div>
-	
+	    <!-- son的模板 ，sbooks就是从son组件中定义的sbooks中进行传递的,-->
 		<template id="son">
 			<div style="border-width: 1px;border-color: red;border: solid;">
 				<div>我是子组件</div>
 				<p>{{sbooks}}</p>
+				<!-- 遍历子组件中的值 -->
 				<ul v-for="item in sbooks">
-					<li @click="onadd(item)">{{item}}</li>
+					<li @click="sonclick(item)">{{item}}</li>
 				</ul>
+				<!-- 获取子组件中的sname值 -->
 				<p>{{sname}}</p>
 			</div>
 			
@@ -30,7 +35,7 @@
 				template:"#son",
 				//props传递的类型有很多
 				//props:["sbooks"],
-				//下面的方式还可以限定类型
+				//下面的方式还可以限定类型，
 				props:{
 					sbooks:Array,
 					//没有传的时候，就有默认值，传了就是是什么就是什么
@@ -41,13 +46,13 @@
 						//required:true
 					}
 				},
-				
 				methods:{
-					onadd:function(item){
-						//还要传给父组件
+					//定义子类中的方法，在子类的模板中进行关联
+					sonclick:function(item){
+						//还要传给父组件,
 						console.log(item)
-						//
-						this.$emit("itemclick",item)
+						//发送事件中间件
+						this.$emit("sendlick",item)
 					}
 				}
 				
@@ -63,8 +68,7 @@
 					son
 				},
 				methods:{
-					sonadd:function(a){
-						
+					fatherclick:function(a){
 						console.log("父组件接收",a);
 						}
 				}
