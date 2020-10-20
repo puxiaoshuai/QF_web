@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图表预览效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .modal{
+            display: none;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(87, 87, 87,0.4);
+            z-index: 1;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            
+
+        }
+        .modalcontent{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: red;
+            margin-top: 50px;
+        
+
+        }
+        .colse{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #img1,.modal:hover{
+         cursor: pointer;
+        }
+        @keyframes big{
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .modalcontent{
+            animation: big 1s;
+        }
+        
+    </style>
+</head>
+<body>
+     <img id="img1" src="../images/1.jpg" alt="" style="width: 100px;height: 100px;">
+     <div class="modal">
+        <span class="colse">x</span>
+         <div class="modalcontent">
+             
+             <img style="width: 300px;height: 300px;" class="img-modal" id="img2" alt="">
+         </div>
+     </div>
+     <script>
+          let image1=document.getElementById("img1")
+          let modal=document.querySelector(".modal")
+          let modalcontent=document.querySelector(".modalcontent")
+          let closespan=document.querySelector(".colse")
+          let imgmodal=document.getElementById("img2")
+          image1.onclick=function(){
+              modal.style.display="block"
+              imgmodal.src=image1.src
+              imgmodal.style.width="300px"
+          }
+          closespan.onclick=function(){
+              modal.style.display="none"
+          }
+     </script>
+</body>
+</html>

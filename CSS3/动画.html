@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        @-webkit-keyframes run{
+            /* from{
+                background-color: red;
+            }
+            to{
+                background-color: green;
+            } */
+            30%{
+                background-color: green ;left: 200px ;top:100px;
+            }
+            60%{
+                background-color: purple;left: 200px ;top:100px;
+            }
+            100%{
+                background-color: blue;left: 200px ;top:100px;
+            }
+        }
+         @keyframes run{
+            /* from{
+                background-color: red;
+            }
+            to{
+                background-color: green;
+            } */
+            30%{
+                background-color: green ;left: 200px ;top:100px;
+            }
+            60%{
+                background-color: purple;left: 200px ;top:100px;
+            }
+            100%{
+                background-color: blue;left: 200px ;top:100px;
+            }
+        }
+        div:hover{
+            animation: run 3s;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>

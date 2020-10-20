@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒体查询</title>
+    <style>
+        .box{
+            height: 100px;
+            background-color: red;
+        }
+       
+        @media screen and (max-width:1000px) {
+            .box{
+                background-color: blue;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .box{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>
+        all	用于所有多媒体类型设备
+        print	用于打印机
+       screen	用于电脑屏幕，平板，智能手机等。
+        speech	用于屏幕阅读器 
+    </p>
+    <div class="box">
+
+    </div>
+</body>
+</html>

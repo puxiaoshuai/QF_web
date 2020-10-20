@@ -14,6 +14,36 @@
             text-align: center;
             height: 40px;
         }
+        .box1{
+            border: 2px solid rgb(251, 137, 137);
+            border-radius: 100px;
+        }
+        .box2{
+            width: 300px;
+            height: 20px;
+            border:15px solid transparent;
+	        padding:10px 20px;
+            border-image: url("../images/border.png") 20 20 round;
+        }
+        .box3{
+            width: 400px;
+            height: 200px;
+            background-image:url('../images/img_flwr.gif'),url('../images/paper.gif');
+            background-repeat: no-repeat,repeat;
+            background-size: auto,30px;
+            /* 顺序有讲究 */
+            background-position:bottom  right ,   left top;
+            padding: 30px;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            /* to top right 翻译就是  发射到右上， */
+            /* background-image: linear-gradient(45deg,rgb(226, 98, 98),#FFF,rgb(163, 248, 130)); */
+            /* 重复性 */
+            background-image: repeating-linear-gradient(45deg,rgb(226, 98, 98) 10%,#FFF 20%,rgb(163, 248, 130) 20%);
+            /* 径向渐变 radial-gradient(circle, red, yellow, green); */
+        }
     </style>
 </head>
 <body>
@@ -27,6 +57,21 @@
           <li>web字体和图标</li>
           <li>css3过渡动画个交互效果</li>
           <li>媒体查询</li>
+          <div class="box1">
+               圆角
+          </div>
+          <h3>border-image</h3>
+          <div class="box2">
+             
+          </div>
+          <h3>background-image</h3>
+          <div class="box3">
+            强大的CSS3选择器强大的CSS3选择器强大的CSS3选择器强大的CSS3选择器
+          </div>
+          <h3>线性渐变 to  right top 控制方向</h3>
+          <div class="box4">
+
+          </div>
       </ul>
       <p></p>
     </div>
