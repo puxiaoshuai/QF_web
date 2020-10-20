@@ -20,15 +20,76 @@ header{
 }
 section{
     background-color: white;
-    height: 100px;
+   
     .content{
         height: 100%;
+        padding-top: 20px;
+        height: 65px;
+       
         .search{
+            height: 43px;
+           .logo{
             float: left;
             width: 172px;
             height: 43px;
-           background:url("../image/iconall_index.png") no-repeat   0 -836px;
-            
+            background:url("../image/iconall_index.png") no-repeat   0 -836px;
+           }
+           .input_search{
+               display: flex;
+               margin-left: 320px;
+               width: 400px;
+               height: 40px;
+               background-color: #2270BE;
+               border: 1px solid rgb(209, 209, 209);
+
+               .inputtext{
+                   flex: 1;
+                   border: none;
+                   padding-left: 10px;
+                   outline: none;
+               }
+               .inputtext::-webkit-input-placeholder{
+                   color: rgb(173, 173, 173);
+                   font-size: 14px;
+               }
+               .searchbtn{
+                   width: 47px;
+                   height: 38px;
+                   i{
+                       
+                       margin-left: 14px;
+                       line-height: 38px;
+                       color:#fff;
+                       font-size: 20px;
+                   }
+               }
+           }
+        }
+        .tags  {
+            margin-top: 10px;
+            ul:nth-child(1){
+                width: 240px;
+                
+            }
+            ul:nth-child(2){
+                width: 90px;
+               
+            }
+            ul:nth-child(1),ul:nth-child(2){ 
+                float: left;
+                border-right: 1px solid rgb(233, 233, 233);
+                >li{
+                    float: left;
+                    padding: 0 8px;
+                    margin-bottom: 5px;
+                    color: #252525;
+                    font-weight: 500;
+                    font-size: 14px;
+                   
+
+                }
+            }
+         
         }
     }
 }

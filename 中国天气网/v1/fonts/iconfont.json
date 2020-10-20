@@ -1,0 +1,37 @@
+{
+  "id": "1932811",
+  "name": "爱音乐",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5270852",
+      "name": "收 藏-产品详情",
+      "font_class": "shoucang",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "4275555",
+      "name": "查看MV",
+      "font_class": "chakanMV",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "2506198",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "13338914",
+      "name": "音乐",
+      "font_class": "yinle",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

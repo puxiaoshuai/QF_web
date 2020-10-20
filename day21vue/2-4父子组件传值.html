@@ -13,12 +13,13 @@
 		<div id="app">
 			<!-- 从app中获取到books的值，然后传递给子组件，使用v-bind:xx进行传递在子组件中使用props进行接收 -->
 			<!-- fatherclick在父类中的方法进行关联，sendlick就是一个发射接收的中间键 -->
-			<son @sendlick="fatherclick" v-bind:sbooks="books" ></son>
+			<son @sendlick="fatherclick" v-bind:sbooks="books" title="我是标题" ></son>
 		</div>
 	    <!-- son的模板 ，sbooks就是从son组件中定义的sbooks中进行传递的,-->
 		<template id="son">
 			<div style="border-width: 1px;border-color: red;border: solid;">
 				<div>我是子组件</div>
+				<p>回家发货单{{title}}</p>
 				<p>{{sbooks}}</p>
 				<!-- 遍历子组件中的值 -->
 				<ul v-for="item in sbooks">
@@ -37,6 +38,7 @@
 				//props:["sbooks"],
 				//下面的方式还可以限定类型，
 				props:{
+					title:String,
 					sbooks:Array,
 					//没有传的时候，就有默认值，传了就是是什么就是什么
 					sname:{
