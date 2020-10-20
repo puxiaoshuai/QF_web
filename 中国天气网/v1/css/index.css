@@ -1,0 +1,36 @@
+header {
+  height: 30px;
+  background-color: #043567;
+}
+
+header .nav .nav_left {
+  float: left;
+  width: 720px;
+}
+
+header .nav .nav_right {
+  float: right;
+}
+
+header .nav .nav_left a, header .nav .nav_right a {
+  color: white;
+  margin-left: 8px;
+  line-height: 30px;
+}
+
+section {
+  background-color: white;
+  height: 100px;
+}
+
+section .content {
+  height: 100%;
+}
+
+section .content .search {
+  float: left;
+  width: 58px;
+  height: 56px;
+  background: url("../image/index.png") no-repeat -184px 0px;
+}
+/*# sourceMappingURL=index.css.map */
