@@ -20,6 +20,7 @@ header .nav .nav_left a, header .nav .nav_right a {
 
 section {
   background-color: white;
+  margin-bottom: 20px;
 }
 
 section .content {
@@ -128,5 +129,204 @@ section .content .tags ul:nth-child(1) li, section .content .tags ul:nth-child(2
   margin-bottom: 5px;
   font-weight: 500;
   font-size: 14px;
+}
+
+.contentback {
+  height: 100vh;
+  background-color: #F3F4F5;
+}
+
+.contentback .page {
+  min-width: 1000px;
+}
+
+.contentback .page .bannerimg {
+  padding-top: 20px;
+}
+
+.contentback .page .pleft {
+  margin-top: 20px;
+  width: 70%;
+  float: left;
+}
+
+.contentback .page .pleft .styleOne {
+  background-color: white;
+}
+
+.contentback .page .pleft .styleOne .styleOneleft {
+  float: left;
+  padding: 0px 20px;
+  width: 300px;
+}
+
+.contentback .page .pleft .styleOne .styleOneleft .banner img {
+  width: 100%;
+}
+
+.contentback .page .pleft .styleOne .styleOneleft .banner .bannertv {
+  height: 50px;
+  background-color: #002470;
+}
+
+.contentback .page .pleft .styleOne .styleOneleft .banner .bannertv span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contentback .page .pleft .styleOne .styleOneleft > img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight {
+  float: left;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight .maincontent ul a {
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(1) a, .contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(4) a, .contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(7) a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #091727;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(1) a:hover, .contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(4) a:hover, .contentback .page .pleft .styleOne .styleOneRight .maincontent ul :nth-child(7) a:hover {
+  color: orange;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight .newlist {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #ececec;
+}
+
+.contentback .page .pleft .styleOne .styleOneRight .newlist ul li {
+  margin-top: 8px;
+}
+
+.contentback .page .pright {
+  float: right;
+  height: 440px;
+  margin-top: 20px;
+  width: 28%;
+  background-color: #FFF;
+}
+
+.contentback .page .pright .weathertop {
+  position: relative;
+  height: 40px;
+  background-color: #043567;
+}
+
+.contentback .page .pright .weathertop :nth-child(1) {
+  line-height: 40px;
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.contentback .page .pright .weathertop :nth-child(2) {
+  color: #fff;
+  margin-left: 30px;
+}
+
+.contentback .page .pright .weathertop img {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+}
+
+.contentback .page .pright .citybar :nth-child(1) {
+  margin-left: 16px;
+  margin-top: 20px;
+}
+
+.contentback .page .pright .citybar :nth-child(2) {
+  float: right;
+  display: block;
+  font-size: 12px;
+  margin-right: 120px;
+  margin-top: 16px;
+}
+
+.contentback .page .pright .centerc {
+  margin: 40px 10px;
+  height: 100px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.contentback .page .pright .w40 {
+  margin: 0px 20px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #2f458d;
+  border: 1px solid #2f458d;
+}
+
+.contentback .page .pright .zsList {
+  background-color: red;
+  margin: 10px 12px;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.contentback .page .pright .zsList .zli1, .contentback .page .pright .zsList .zli2, .contentback .page .pright .zsList .zli3, .contentback .page .pright .zsList .zli4 {
+  position: relative;
+  width: 64px;
+  height: 100%;
+  float: left;
+  background-color: #6381A1;
+}
+
+.contentback .page .pright .zsList .zli1 span, .contentback .page .pright .zsList .zli2 span, .contentback .page .pright .zsList .zli3 span, .contentback .page .pright .zsList .zli4 span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #cacaca;
+}
+
+.contentback .page .pright .zsList .zli1 .icon {
+  margin-top: 10px;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
+  background: url("../image/indexImg_gl.png") no-repeat -320px -414px;
+}
+
+.contentback .page .pright .zsList .zli2 .icon {
+  margin-top: 10px;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
+  background: url("../image/indexImg_gl.png") no-repeat -428px -416px;
+}
+
+.contentback .page .pright .zsList .zli3 .icon {
+  margin-top: 10px;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
+  background: url("../image/indexImg_gl.png") no-repeat -371px -415px;
+}
+
+.contentback .page .pright .zsList .zli4 .icon {
+  margin-top: 10px;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
+  background: url("../image/indexImg_gl.png") no-repeat -471px -415px;
 }
 /*# sourceMappingURL=index.css.map */
