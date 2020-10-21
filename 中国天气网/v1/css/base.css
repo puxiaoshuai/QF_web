@@ -24,11 +24,13 @@ button {
 }
 /*取消链接的下划线*/
 a {
-    color: #666;
+    font-size: 14px;
+    color: rgb(53, 53, 53);
     text-decoration: none;
 }
 
 a:hover {
+    font-size: 14px;
     color: #ee842f;;
 }
 
