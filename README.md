@@ -108,4 +108,5 @@ ctx.cookies.set(
         );
         ctx.cookies.get()来获取
 koa-views 中间件  ejs是个著名并强大的模板引擎
+[![Bkk37V.png](https://s1.ax1x.com/2020/10/22/Bkk37V.png)](https://imgchr.com/i/Bkk37V)
 

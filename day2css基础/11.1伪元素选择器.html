@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: blueviolet;
+            position: relative;
+        }
+        .box::after{
+            content: ">>";
+            display: block;
+            position: absolute;
+            right: 0px;
+            top:50%;
+            transform:translateY(-50%)
+            
+
+        }
+        .tudou{
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .tudou::before{
+            content:"";
+            width: 100%;
+            height: 100%;
+           
+            display: none;
+            position: absolute;
+           
+            background: url('../images/播放.png') rgba(0, 0, 0, .4) no-repeat center;
+            
+        }
+        .tudou:hover::before{
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>伪元素选择器</p>
+    <div class="box">
+        你好欢迎
+    </div>
+    <p>伪元素选择器表跟标签选择器权重都是1,div::after权重却是2，因为前面还有个div也是1，所以 div+::after是2</p>
+    <p>伪元素选择器常用   遮罩层,配合字体图标  ，清除浮动</p>
+    <div class="tudou">
+        <img src="../images/1.jpg" alt="">
+    </div>
+</body>
+</html>

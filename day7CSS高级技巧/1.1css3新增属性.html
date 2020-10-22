@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[value]{
+            color: red;
+        }
+        input[src="2"]{
+            color: aqua;
+        }
+        .img1{
+            filter: blur(10px);
+        }
+        .box1{
+            margin: 0 auto;
+            width: 200px;
+            height: 300px;
+           margin-bottom: 20px;
+            background-color: rgb(163, 163, 163);
+            /* 谁要过渡给谁加， transition 变化属性，时间，曲线，何时开始 */
+            transition: all .5s;
+        }
+        .box1:hover{
+            box-shadow: 4px 4px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>1属性选择器</好>
+    <input type="text" src="1" value="请输入用户名">
+    <input type="text" src="2" value="111111">
+    <h1>2结构伪类选择器</h1>
+    <p>就是 nth-child等</p>
+    <h1>3伪元素选择器 after before等</h1>
+    <h1>4盒子模型-border-box, 不会没magin等撑开</h1>
+    <div style="width: 100px;height: 100px;background-color: red;padding: 10px;">
+          宽高100,pading10就变成了120px了
+    </div>
+    <div style="width: 100px;height: 100px;background-color: red;padding: 10px;box-sizing: border-box;">
+        宽高100,pading10,border-size:border-box就是会被撑开了
+  </div>
+   <h1>5图片的模糊处理 filter</h1>
+   <img class="img1" src="./iamges/index.png"  alt="">
+   <h1>6calc计算 calc(100% - 100px)</h1>
+   <h1>7 过渡 transtion</h1>
+   <div class="box1">
+       <img src="../images/2.jpg" style="width: 200px; height: 200px;" alt="">
+   </div>
+
+
+</body>
+</html>
