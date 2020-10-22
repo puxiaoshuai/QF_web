@@ -151,6 +151,7 @@ section {
     .page {
 
         min-width: 1000px;
+        
 
         .bannerimg {
             padding-top: 20px;
@@ -197,9 +198,7 @@ section {
                 }
 
                 .styleOneRight {
-
                     float: left;
-
                     .maincontent {
                         ul {
 
@@ -248,9 +247,9 @@ section {
                 .styletowleft {
                     width: 300px;
                     padding: 10px 20px;
-
+                    float: left;
                     .header {
-
+                        width: 300px;
                         :nth-child(1) {
                             float: left;
                             font-size: 18px;
@@ -258,7 +257,6 @@ section {
                         }
 
                         :nth-child(2) {
-                            float: right;
                             font-size: 14px;
                             margin-right: 20px;
                             color: rgb(70, 70, 70);
@@ -395,13 +393,34 @@ section {
                         }
                     }
                 }
+                .styletowright{
+                    margin-top: 10px;
+                    float: left;
+                    .header {
+                         width: 340px;
+                        :nth-child(1) {
+                            float: left;
+                            font-size: 18px;
+                            color: rgb(30, 37, 66);
+                        }
+
+                        :nth-child(2) {
+                            float: right;
+                            font-size: 14px;
+                            margin-right: 20px;
+                            color: rgb(70, 70, 70);
+                        }
+
+                    }
+
+                }
             }
         }
 
         .pright {
            
             float: right;
-            height: 440px;
+            
             margin-top: 20px;
             width: 30%;
             background-color: #FFF;

@@ -240,6 +240,11 @@ section .content .tags ul:nth-child(6) li {
 .contentback .page .pleft .styletow .styletowleft {
   width: 300px;
   padding: 10px 20px;
+  float: left;
+}
+
+.contentback .page .pleft .styletow .styletowleft .header {
+  width: 300px;
 }
 
 .contentback .page .pleft .styletow .styletowleft .header :nth-child(1) {
@@ -249,7 +254,6 @@ section .content .tags ul:nth-child(6) li {
 }
 
 .contentback .page .pleft .styletow .styletowleft .header :nth-child(2) {
-  float: right;
   font-size: 14px;
   margin-right: 20px;
   color: #464646;
@@ -358,9 +362,30 @@ section .content .tags ul:nth-child(6) li {
   background: url("../image/indexImg_gl.png") -402px -260px;
 }
 
+.contentback .page .pleft .styletow .styletowright {
+  margin-top: 10px;
+  float: left;
+}
+
+.contentback .page .pleft .styletow .styletowright .header {
+  width: 340px;
+}
+
+.contentback .page .pleft .styletow .styletowright .header :nth-child(1) {
+  float: left;
+  font-size: 18px;
+  color: #1e2542;
+}
+
+.contentback .page .pleft .styletow .styletowright .header :nth-child(2) {
+  float: right;
+  font-size: 14px;
+  margin-right: 20px;
+  color: #464646;
+}
+
 .contentback .page .pright {
   float: right;
-  height: 440px;
   margin-top: 20px;
   width: 30%;
   background-color: #FFF;
