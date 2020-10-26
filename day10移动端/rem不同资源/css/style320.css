@@ -1,0 +1,12 @@
+.box{
+    display: flex;
+    flex-direction: column;
+
+}
+.item1{
+    height: 100px;
+    background-color: red;
+}.item2{
+    height: 100px;
+    background-color: green;
+}

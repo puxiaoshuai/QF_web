@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    width: 750px;
+    margin: 0 auto;
+
+    
+}
+ul li{
+    float: left;
+    width: 93.75px;
+    height: 30px;
+    background-color: green;
+    list-style: none;
+    line-height: 30px;
+    text-align: center;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .container{
+            background-color: ghostwhite;
+        }
+        [class^="col"]{
+            height: 100px;
+            padding: 4px;
+            box-sizing: border-box;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>bootstrap需要为页面内容和栅格系统包裹 .container容器，他已经预定义好了这个类，</p>
+        <p>container类</p>
+        <img src="../images/image1.png" alt="">
+        <p>通栏不设置container,否则设置</p>
+        <img src="../images/boot2.png" alt="">
+    </div>
+    <h1>栅格 共12分，小于12 有空白，大于12，多余的会换行显示</h1>
+    <div class="container box">
+        <!-- 超大屏占3分  中等屏幕 4611  平板 -->
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-1 col-xs-1">1</div>
+        <div class="col-lg-3 col-md-6 col-sm-4 col-xs-1">2</div>
+        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-5">3</div>
+        <div class="col-lg-3 col-md-1 col-sm-3 col-xs-5">4</div>
+       </div>
+    </div>
+    <h1>列嵌套</h1>
+    <p>列嵌套最好价格1行row,这样取消父元素的padding值</p>
+    
+    <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                     <div class="row">
+                         <div class="col-lg-6">
+
+                         </div>
+                         <div class="col-lg-6">
+                             
+                        </div>
+                     </div>
+              </div>
+              <div class="col-lg-4">
+                  
+            </div>
+            <div class="col-lg-4">
+                  
+            </div>
+          </div>
+    </div>
+</body>
+</html>

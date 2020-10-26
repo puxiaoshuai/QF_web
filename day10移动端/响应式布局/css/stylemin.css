@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    width: 100%; 
+}
+ul li{
+    float: left;
+    list-style: none;
+    height: 30px;
+    background-color: green;
+    line-height: 30px;
+    width: 93.75px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+      .box {
+        height: 200px;
+        background-color: gold;
+        margin:  0 auto;
+      }
+      @media screen and (max-width: 767px) {
+        .box {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .box {
+          width: 750px;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .box {
+          width: 970px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .box {
+          width: 1170px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>响应式需要一个父级作为布局容器，来配合子元素进行变化</p>
+    <p>平时 超小屏幕 《768px, width=100%</p>
+    <p>小屏幕 平板 大于等于768，width=750</p>
+
+    <p>>992px，w=970px</p>
+    <p>大桌面显示器》1200，w=1170px</p>
+    <p>请在控制台查看</p>
+    <div class="box"></div>
+    <h3>快去使用bootstrap吧</h3>
+  </body>
+</html>
