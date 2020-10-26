@@ -1,0 +1,194 @@
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+@media screen and (min-width:1280px){
+    .container{
+        width: 1280px;
+    }
+}
+.container {
+    header{
+        padding-left: 0px;
+        .logo{
+            background-color: rgb(146, 146, 246);
+            // 图片不进行搜房
+            img{
+                display: block;
+                margin:  0 auto;
+                max-width: 100%;
+
+            }
+            span{
+                display: block;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+            }
+        }
+    }
+    .nav{
+        background-color: #eee;
+        border-bottom: 1px solid #ccc;
+        ul{
+            li{
+               a{
+                  
+                   text-decoration: none;
+                   display: block;
+                   height: 50px;
+                   text-align: center;
+                   line-height: 50px;
+                   font-size: 16px;
+                   color: #555;
+               }
+               a:hover{
+                   background-color: white;
+                   color: #333;
+               }
+               a::before{
+                //    垂直居中
+                   vertical-align: middle;
+                   padding-right: 5px;
+               }
+            }
+        }
+    }
+    // 当进入小屏幕的时候 <
+    @media screen and (max-width:991px) {
+        .nav{
+            li{
+                float: left;
+                width:20%;
+               
+            }
+           
+            
+        }
+        .public{
+            img{
+                width: 100px !important;
+            }
+        }
+      
+
+    }
+     // 当进入小屏幕的时候 <
+     @media screen and (max-width:767px) {
+        .nav{
+            li{
+                float: left;
+                width:20%;
+            }
+        }
+        .public{
+            h3{
+                font-size: 14px;
+            }
+           
+        }
+
+    }
+    article{
+        padding-left: 0px;
+        ul {
+           li{
+                float: left;
+                width: 25%;
+                height: 133px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+               a{
+                    
+                    position: relative;
+                     display: block;
+                     width: 100%;
+                     height: 100%;
+                     
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    p{
+                        position: absolute;
+                        bottom: 0px;
+                        height: 30px;
+                        margin: 0px;
+                        width: 100%;
+                        text-align: left;
+                        padding-left: 10px;
+                        line-height: 30px;
+                        color: white;
+                        font-size: 12px;
+                        background-color: rgba($color: #000, $alpha: 0.5);
+                    }
+                 }
+            }
+            li:nth-child(1){
+                width: 50%;
+                height: 266px;
+                padding-left: 0px;
+                 a{
+                    display: block;
+                     width: 100%;
+                     height: 100%;
+                   img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                   p{ 
+                        text-align: left;
+                        color: white;
+                        font-size: 20px;
+                        background-color: rgba($color: #000, $alpha: 0.5);
+                    }
+                }
+            
+            }
+            
+        }
+    }
+    .public{
+        margin-top: 20px;
+      border-top: 1px solid #999;  
+      div[class^="row"]{
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(207, 207, 207); 
+      }
+      span{
+          color: #888;
+      }
+      img{
+          margin-top: 10px;
+          width: 100%;
+          vertical-align: middle;
+      }
+        
+    }
+    aside{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            padding: 20px;
+            margin-top: 40px;
+            border: 1px solid rgb(221, 221, 221);
+            h3{
+                font-size: 18px;
+                color: rgb(56, 56, 180);
+            }
+            p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; //2行
+                -webkit-box-orient: vertical;
+
+            }
+        }
+    }
+
+}

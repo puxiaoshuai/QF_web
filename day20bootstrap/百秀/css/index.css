@@ -1,0 +1,185 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.container header {
+  padding-left: 0px;
+}
+
+.container header .logo {
+  background-color: #9292f6;
+}
+
+.container header .logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.container header .logo span {
+  display: block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.container .nav {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.container .nav ul li a {
+  text-decoration: none;
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  color: #555;
+}
+
+.container .nav ul li a:hover {
+  background-color: white;
+  color: #333;
+}
+
+.container .nav ul li a::before {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .container .nav li {
+    float: left;
+    width: 20%;
+  }
+  .container .public img {
+    width: 100px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container .nav li {
+    float: left;
+    width: 20%;
+  }
+  .container .public h3 {
+    font-size: 14px;
+  }
+}
+
+.container article {
+  padding-left: 0px;
+}
+
+.container article ul li {
+  float: left;
+  width: 25%;
+  height: 133px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.container article ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container article ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+.container article ul li a p {
+  position: absolute;
+  bottom: 0px;
+  height: 30px;
+  margin: 0px;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 30px;
+  color: white;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container article ul li:nth-child(1) {
+  width: 50%;
+  height: 266px;
+  padding-left: 0px;
+}
+
+.container article ul li:nth-child(1) a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container article ul li:nth-child(1) a img {
+  width: 100%;
+  height: 100%;
+}
+
+.container article ul li:nth-child(1) a p {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .public {
+  margin-top: 20px;
+  border-top: 1px solid #999;
+}
+
+.container .public div[class^="row"] {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.container .public span {
+  color: #888;
+}
+
+.container .public img {
+  margin-top: 10px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.container aside img {
+  width: 100%;
+  height: 100%;
+}
+
+.container aside .content {
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid #dddddd;
+}
+
+.container aside .content h3 {
+  font-size: 18px;
+  color: #3838b4;
+}
+
+.container aside .content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/*# sourceMappingURL=index.css.map */
