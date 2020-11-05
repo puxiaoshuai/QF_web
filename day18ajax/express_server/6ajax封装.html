@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+
+        ajax({
+            url: "./TestXHR.aspx",              //请求地址
+            type: "POST",                       //请求方式
+            data: { name: "super", age: 20 },        //请求参数
+            dataType: "json",
+            success: function (response, xml) {
+                // 此处放成功后执行的代码
+            },
+            fail: function (status) {
+                // 此处放失败后执行的代码
+            }
+        });
+    </pre>
+    <p>在readystatechange事件中，先判断响应是否接收完成，然后判断服务器是否成功处理请求，xhr.status 是状态码，状态码以2开头的都是成功，304表示从缓存中获取，上面的代码在每次请求的时候都加入了随机数，所以不会从缓存中取值，故该状态不需判断</p>
+    <h3>post中， xhr.setRequestHeader("Content-Type","application/json")要放在open后面</h3>
+    <p>上面是我们想封装好之后需要传递的参数</p>
+    <p>ajax封装</p>
+    <p>使用 encodeURIComponent() 对 URI 进行编码：</p>
+    <script>
+        function ajax(options) {
+            options=options || {} //如果没定义的options对象的话，就 使用{}
+            console.log(options);
+            //默认get,
+            options.type=(options.type || "GET").toUpperCase()
+            //默认是使用json格式
+            options.dataType=options.dataType || "json"
+            //处理 data数据格式
+            let params=formatParams(options.data)
+            if(window.XMLHttpRequest){
+                var xhr=new XMLHttpRequest()
+            }else{
+                var xhr=new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4){
+                    var status=xhr.status;
+                    if(status>=200&& status<300){
+                        options.success && options.success(xhr)
+                    }else{
+                        options.fail&&options.fail(xhr)
+                    }
+                }
+            }
+            // 连接和发送，根据get和 post进行判断
+            if(options.type==="GET"){
+                     //params { name: "super", age: 20 } 被处理成 name=super&age=20
+                   
+                     
+                     xhr.open("GET",options.url+"?"+params,true)
+                     xhr.send()
+            }else if(options.type==="POST"){
+                console.log("地址",params);
+                xhr.open("POST",options.url,true)
+                // 
+                xhr.setRequestHeader("Content-Type","application/json")
+                xhr.send(params)
+            }
+            
+          }
+          function formatParams(data) { 
+              var arr=[]
+              for (const name in data) {
+                  if (data.hasOwnProperty(name)) {
+                      const element = data[name];
+                    arr.push(encodeURIComponent(name)+"="+encodeURIComponent(element))
+                  }
+              }
+              //这个处理只要是防止缓存
+              arr.push(("v=" + Math.random()).replace(".","")); 
+              let newarr=arr.join("&") 
+              return newarr   
+           }
+        //   ajax({
+        //       url:"http://localhost:3000/form",
+        //       data:{"name":"普肖帅","age":"27"},
+        //       success:function(res){
+        //           console.log("请求成功数据",res.responseText);
+                  
+        //       },
+        //       fail:function(e){
+        //           console.log("请求失败的数据",e);
+                  
+        //       }
+
+        //   })
+          ajax({
+              url:"http://192.168.4.122:3000/json",
+              data:{"name":"法撒旦","age":"加水费"},
+              type:"POST",
+              success:function(res){
+                  console.log("请求成功数据",res.responseText);
+                  
+              },
+              fail:function(e){
+                  console.log("请求失败的数据",e);
+                  
+              }
+
+          })
+    </script>
+</body>
+</html>

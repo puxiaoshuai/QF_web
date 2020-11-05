@@ -12,6 +12,8 @@
 			//重写toString()
 			
 			let p=new Person()
+			console.log(p);
+			
 			//放到原型上去修改，就每个person实例都可以了
 			Person.prototype.toString=function(){
 				return "我是一个"+this.name
