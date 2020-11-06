@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>作用域</h5>
+    <p>
+        作用域链：内部函数访问外部函数的变量，采用的是链式查找的方式来决定取哪个值，这种结构称之为作用域链。查找时，采用的是就近原则。
+
+        代码举例：
+
+        var num = 10;
+
+        function fn() {
+        // 外部函数
+        var num = 20;
+
+        function fun() {
+        // 内部函数
+        console.log(num);
+        }
+        fun();
+        }
+        fn();
+        打印结果：20。
+    </p>
+    <script>
+        console.log(1 === 1.0);
+    </script>
+</body>
+
+</html>

@@ -15,7 +15,8 @@
      <p>寄生构造函数</p>
      <hr>
      <p>继承就要使用到原型链</p>
-
+     <h3>(8)什么对象能作为构造函数，能具有原型属性prototype</h3>
+     <p>所有Function的实例对象 (如：function,Array，Object......等数据类型) ，能够new出属于他们自己的实例，能够具有原型属性prototype</p>
     <script>
         // 早期对象的创建
        let person=new Object()
@@ -63,7 +64,28 @@
      console.log(c===d);//true
      //他们是相等的，
      
-     
+     var a=1;
+     var a=2;
+     //不能重复 
+    //  let b="1"
+    //  let b="12"
+    // 递归
+    function add1(m,n){
+        if(m===n){
+          return m+n
+        }else if(m>n){    
+            //5,10
+            // 5+6+7+8+9
+            return  add1(n+1,m)
+        }
+        else if(n>m){
+            //5,10 6
+            return  add1(m+1,n)
+        }
+    }
+    let all1=add1(2,4)
+    console.log(all1);
+    
      
 
     

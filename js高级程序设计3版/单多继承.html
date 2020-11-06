@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        1.修改this指向：单继承基本实现
+        2.多继承，多次调用call,或者apply
+    </p>
+    <script>
+    //    单继承
+    function  Father(name,age) {
+         this.name=name;
+         this.age=age;
+      }
+      function  Mother(height) {
+         this.height=height;
+         
+      }
+      function  Son(name,age,aihao,h) {
+          Father.call(this,name,age)
+          //Mother.call(this,h)
+          Mother.apply(this,[h])
+          this.aihao=aihao
+        }
+        let s=new Son("大道","12","打篮球",1718)
+        console.log(s);
+        
+
+
+    </script>
+</body>
+</html>

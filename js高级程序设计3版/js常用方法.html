@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let app=["1","2","张"]
+//  some只要1个为true就是true
+ let a=app.some(function (item,index,arr) {
+     return item==="张"
+   })
+ console.log(a);//true
+ let b=app.every(function (item,index,app) {
+     return item==="张"
+   })
+   console.log(b);//false
+   let name=[1,3,4,6]
+    let all=  name.reduce(function (all,cru,index) {
+        console.log("总数",all);
+        console.log("当前",cru);
+        
+        
+       return all+=cru
+     })
+     console.log("总数",all);
+     
+ 
+    </script>
+</body>
+</html>

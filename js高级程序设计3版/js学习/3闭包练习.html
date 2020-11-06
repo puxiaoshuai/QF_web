@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        (1)已知函数中定义了一个变量n, 由于作用域的原因，我们无法在外面访问到此变量，现在请通过闭包实现从函数外部访问此变量。
+        (2)更进一步，请实现功能：能在函数外部设置此变量的值
+    </p>
+    <p>1.写一个网页，网页中写5个button, 通过for循环遍历所有按钮，给每个按钮加上一个点击事件，点击后弹出按钮文本值，在点击事件中不允许使用this,不允许使用let。【使用闭包+自执行匿名函数】</p>
+     <button>按钮1</button>
+     <button>按钮2</button>
+     <button>按钮3</button>
+     <button>按钮4</button>
+     <button>按钮5</button>
+    <script>
+        function outfunc() {
+            let n = 1000
+
+            function setV(v) {
+                n = v
+            }
+
+            function getV() {
+                return n
+            }
+            return {
+                get: getV,
+                set: setV
+            }
+
+        }
+        let my=outfunc()
+        my.set("设置的值,闭包访问")
+        console.log(my.get());
+        let buttons=document.querySelectorAll("button")
+        //在外部访问， 点击事件内的变量
+        for(let i=0;i<buttons.length;i++ ){
+            buttons[i].onclick=function(){
+            alert(this.innerText)
+          }
+        }
+    </script>
+</body>
+
+</html>

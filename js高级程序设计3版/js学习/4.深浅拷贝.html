@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>深浅拷贝</p>
+    <p>for in 浅拷贝不推荐</p>
+    <p>Object.assgin()浅拷贝推荐</p>
+    <p>深拷贝就是用浅拷贝for in 进行递归</p>
+    <script>
+        const obj1 = {
+            name: "蒲小帅",
+            info: {
+                "desc": "测试数据"
+            }
+        }
+        const obj2 = {}
+        // for (const key in obj1) {
+        //     if (obj1.hasOwnProperty(key)) {
+        //         obj2[key]=obj1[key]
+
+        //     }
+        // }
+        Object.assign(obj2, obj1)
+        console.log('obj2-assgin', JSON.stringify(obj2));
+        //obj2的name会存在新的内存中，info的堆内存地址却是在同一个地址中
+        obj1.info.desc = "修改了测试数据"
+        obj1.name = "修改名字，呵呵呵"
+        console.log("obj2-修改了数据", JSON.stringify(obj2));
+        //重要
+        const obj3 = {
+            name: 'qianguyihao',
+            age: 28,
+            desc: 'hello world',
+        };
+
+        const obj4 = {
+            name: '许嵩',
+            sex: '男',
+        };
+
+        // 浅拷贝：把 obj3 赋值给 obj4。这一行，是关键代码。这行代码的返回值也是 obj2
+        Object.assign(obj4, obj3);//相同的字段会覆盖，其他的字段会叠加
+
+        console.log(JSON.stringify(obj4));
+        //深拷贝
+        let one={
+            "name":"蒲小帅",
+            info:{
+                des:"测试数据"
+            }
+        }
+        let tow={}
+        deepCopy(tow,one)
+        console.log(tow);
+        one.info.des="我是修改的数据啦啦啦啦,数据不会变了"
+        console.log(tow);
+        
+
+        function deepCopy(newibj,oldobj) { 
+            //遍历老的对象
+            for (const k in oldobj) {
+                if (oldobj.hasOwnProperty(k)) {
+                    //判断对象属性是不是 数组或者 对象，还是其他
+                    let item=oldobj[k]
+                    if(item instanceof Array){
+                        //
+                        newibj[k]=[]
+                        deepCopy(newibj[k],item)
+                    }else if(item instanceof Object){
+                        newibj[k]={}
+                        deepCopy(newibj[k],item)
+                    }else{
+                        newibj[k]=item
+                    }
+                    
+                }
+            }
+         }
+         var xx="niha"
+         console.log(window.xx);
+         
+
+    </script>
+</body>
+
+</html>

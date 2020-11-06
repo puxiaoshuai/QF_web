@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>基本数据类型：按值操作，</p>
+    <img src="img/2.png" alt="">
+    <p>引用类型：操作按堆内存的地址(引用地址操作的)</p>
+    <img src="img/1.png" alt="">
+    <h3>面试题</h3>
+    <pre>
+        let a={n:1}
+        let b=a;
+        a.x= a = {n:2}
+        console.log(a.x)
+        console.log(b)
+    </pre>
+    <p>a=b=3,意思就是a=3,b=3</p>
+    <img src="img/3.png" alt="">
+    <p>解析:let a={n:1}进栈，创建值存储空间A，为{n:1},然后对应a变量存储空间A，并关联，let b=a进栈,b关联值存储空间A,a.x=a={n:2}，进栈，a.x={n:2},a增加属性x为{n:2}
+        a={n:2},a关联到了值存储空间AAAFFF111,所以 a.x就是undefund,结果如图
+    </p>
+    <p>练习题</p>
+    <pre>
+        let n=[10,20]
+        let m=n;
+        let x=m;
+        m[0]=100;
+        x=[30,40]
+        x[0]=200;
+        m=x;
+        m[1]=300;
+        n[2]=400;
+        console.log(n,m,x);
+    </pre>
+    <img src="img/4.png" alt="">
+    <script>
+        // let a=12;
+        // let b=a;
+        // b=13;
+        // console.log(a);//12
+        // // 
+        // let n={"name":"珠峰"}
+        // let m=n;
+        // m.name="培训"
+        // console.log(n.name);//培训
+        //新的
+        let n=[10,20]
+        let m=n;
+        let x=m;
+        m[0]=100;
+        x=[30,40]
+        x[0]=200;
+        m=x;
+        m[1]=300;
+        n[2]=400;
+        console.log(n,m,x);
+    </script>
+</body>
+</html>
