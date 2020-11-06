@@ -16,7 +16,6 @@
      <hr>
      <p>继承就要使用到原型链</p>
 
-     <p></p>
     <script>
         // 早期对象的创建
        let person=new Object()
@@ -43,6 +42,8 @@
     function Dog(){
 
     }
+    console.log("11",Dog);
+    
     Dog.prototype={
         name:"小花狗",
         age:"2"
@@ -50,6 +51,21 @@
     let dog=new Dog()
     dog.age="3"
     console.log(dog);
+    // studengt
+    function Teacher(){
+      name:"张三"   
+     }
+     let tea=new Teacher()
+     let c=tea.__proto__
+     let d=Teacher.prototype
+     console.log(c);
+     console.log(d);
+     console.log(c===d);//true
+     //他们是相等的，
+     
+     
+     
+
     
 
        

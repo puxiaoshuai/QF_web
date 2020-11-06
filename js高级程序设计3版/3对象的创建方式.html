@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>对象的创建方式</title>
 </head>
 <body>
-    1.使用字面量创建，创建多个对象代码重复
-    2.工厂模式创建s
-    3.构造函数模式
-    4.原型模式
-    5.原型模式+构造函数s
-    6.动态原型
-    7.寄生构造
+    <ul>
+        <li>
+            1.使用字面量创建(单例模型)，创建多个对象代码重复
+        </li>
+        <li>2.工厂模式创建， 内部使用返回obj,</li>
+         <li>3.构造函数模式   函数+new（任何函数，只要通过 new 操作符来调用，那它就可以作为构造函数）</li>
+         <li>4.原型模式  prototype所有属性+new</li>
+         <li> 5.原型模式+构造函数  构造函数+原型+new</li>
+         <li> 6.动态原型 判断+原型</li>
+         <li>7.寄生构造  工厂+new</li>
+    </ul>
+    
+    
+    <p>理解：</p>
+    <p>原型：每一个构造函数都一个属性，prototype,作用:实例共享属性和方法</p>
+    <p>prototype通过调用构造函数创建的对象叫原型对象</p>
+    <p>每个原型对象也是对象，他也有自己原型，就形成了一个原型链</p>
+    <img src="13.png" alt="">
+    <h3>原型链的继承</h3>
     <script>
         // 工厂模式
        function createCar(name,size){
+           //内部使用了object
            let obj=new Object()
            obj.name=name,
            obj.size=size
@@ -34,7 +47,7 @@
                console.log("我是"+this.name+this.age);
            }
        }
-       //工厂模式要进行new  
+       //工厂模式要进行new,这样才能 与构造函数生效  
        let person2=new Person("普肖帅",12)
        person2.sayHi()
        //原型模式

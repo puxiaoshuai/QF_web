@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>属性类型，定义对象属性能否进行删除遍历等</p>
+    <p>定义多个属性</p>
+    <script>
+        //现在对象的创建，对象字面量
+        let student = {
+            name: "蒲小帅",
+            sayhi: function () {
+                alert(this.name)
+            }
+        }
+        //    数据属性
+        Object.defineProperty(student, "age", {
+            value: "27",
+            configurable: false, //能否通过delete删除属性进行重新定义
+            enumerable: false, //能否通过for-in进行循环遍历
+            writable: false, //能否修改属性的值
+        })
+        console.log("student", student);
+        let teacher = {}
+        Object.defineProperties(teacher, {
+            name: {
+                value: "浦东",
+                configurable: false, //能否通过delete删除属性进行重新定义
+                enumerable: false, //能否通过for-in进行循环遍历
+                writable: false, //能否修改属性的值
+            },
+            age: {
+                value: "11",
+                configurable: false, //能否通过delete删除属性进行重新定义
+                enumerable: false, //能否通过for-in进行循环遍历
+                writable: false, //能否修改属性的值
+            }
+
+        })
+        console.log(teacher);
+    </script>
+</body>
+
+</html>

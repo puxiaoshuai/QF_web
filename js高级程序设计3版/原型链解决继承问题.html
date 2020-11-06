@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>js是基于对象的，没得类的概念，所有要实现继承，不要使用js的原型prototype机制或者使用applay和call的方法</p>
+    <p>子类通过prototype =父类,从而实现继承</p>
+    <script>
+        function Father(){
+            this.name="蒲大",
+            this.age="32"
+        }
+        Father.prototype.getAge=function(){
+            return this.age
+        }
+        function Son(){
+            this.age=18
+        }
+        Son.prototype=new Father()
+        let son=new Son()
+        console.log("儿子",son);
+        console.log(son.name); //蒲大
+        console.log(son.age); //18
+        console.log(son.getAge()); //18
+        
+        
+        
+    </script>
+</body>
+</html>
