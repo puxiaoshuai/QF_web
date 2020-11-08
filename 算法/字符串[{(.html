@@ -9,10 +9,13 @@
        给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
    </p>
   <script>
-       let str_data="[{()}]"
+       let str_data="[]"
       console.log("是否满足", isMatch(str_data))
 
        function isMatch (str_data) {
+           if(str_data.length===0){
+               return false
+           }
         let arr=str_data.split("")
         let stack1=[]
        for (let index = 0; index < arr.length; index++) {

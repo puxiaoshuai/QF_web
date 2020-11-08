@@ -27,11 +27,13 @@
         //     }
         // }
         Object.assign(obj2, obj1)
+        console.log("obj1",JSON.stringify(obj1));
+        
         console.log('obj2', JSON.stringify(obj2));
         //obj2的name会存在新的内存中，info的堆内存地址却是在同一个地址中
-        obj1.info.desc = "修改了测试数据"
-        obj1.name = "修改名字，呵呵呵"
-        console.log("obj2", JSON.stringify(obj2));
+        obj2.info.desc = "修改了测试数据"
+        obj2.name = "修改名字，呵呵呵"
+        console.log("obj1", JSON.stringify(obj1));
         //重要
         const obj3 = {
             name: 'qianguyihao',
