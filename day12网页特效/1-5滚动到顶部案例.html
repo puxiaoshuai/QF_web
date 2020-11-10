@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    html,
+    body {
+      height: 1000%;
+      /* 颜色渐变 */
+      background: -webkit-linear-gradient(
+        top left,
+        rgb(209, 87, 87),
+        #fff,
+        rgba(236, 83, 12, 0.267)
+      );
+    }
+    span {
+      position: fixed;
+      bottom: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      right: 20px;
+      display: none;
+    }
+  </style>
+  <body>
+    <span id="b" onclick="toTop()">回到顶部</span>
+    <script>
+      let HTML = document.documentElement;
+      let Spn = document.getElementById("b");
+      // 当超过两屏，
+      window.onscroll = function () {
+        //一屏高度，
+        let heitht = HTML.clientHeight;
+    
+        //卷曲的高度
+        let scrheitht = HTML.scrollTop;
+       
+
+        if (scrheitht > 2 * heitht) {
+          Spn.style.display = "block";
+        } else {
+          Spn.style.display = "none";
+        }
+      };
+      function toTop() {
+          Spn.style.display="none"
+        //   放在图标一直在
+          window.onscroll=null
+        let step = 1000;
+        let timer = setInterval(() => {
+          let curT = HTML.scrollTop;
+          if(curT===0){
+              clearInterval(timer)
+              return
+          }
+          curT -= step;
+          HTML.scrollTop=curT;
+
+        }, 17);
+      }
+    </script>
+  </body>
+</html>

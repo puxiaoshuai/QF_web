@@ -1,6 +1,8 @@
 <template>
     <div>
         {{msg}}
+        <p>{{$route.params.id}}</p>
+        <p>{{$route.params.title}}</p>
     </div>
 </template>
 

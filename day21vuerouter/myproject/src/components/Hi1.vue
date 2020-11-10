@@ -2,6 +2,7 @@
     <div>
         {{msg}}
         <p>接收参数.{{$route.params.name}}</p>
+        
     </div>
 </template>
 

@@ -78,7 +78,10 @@
 						item.num++
 					},
 					move(item){
-						item.num--
+						if(item.num!==0){
+							item.num--
+						}
+						
 					},
 					del(index){
 						this.books.splice(index,1)

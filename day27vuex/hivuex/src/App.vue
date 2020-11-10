@@ -10,11 +10,11 @@
     <p></p>
     <button v-on:click="add">+</button>
     <button @click="del">-</button>
-   
+
     <p>显示使用@store.state.xx</p>
     <p>这是 gettters</p>
     <p>{{$store.getters.ping}}</p>
-    <br>
+    <br />
     <p>下面是姓名</p>
     <p style="color:red">{{$store.state.student.name}}</p>
     <button @click="modify">修改</button>
@@ -29,7 +29,6 @@
     <p>==========</p>
     <hello></hello>
   </div>
-  
 </template>
 <script>
 import Home from "./views/Home.vue";
@@ -46,26 +45,25 @@ export default {
   },
   methods: {
     add: function() {
-      this.message++,
-      this.$store.commit("add1")
+      this.message++, 
+      this.$store.commit("add1");
     },
     del: function() {
       this.message--;
-       this.$store.commit("del1")
+      this.$store.commit("del1");
     },
-    modify:function () {
-      this.$store.commit("name_up")
-      },
-      modify1:function () {
-            this.$store.dispatch("name_up_1",{"age":27})
-        },
-        modifyA:function () {
-           this.$store.commit("modifyschool",{"name":"你好啊"})
-          },
-          mofifyAtime:function () {
-            this.$store.dispatch("mofi",{"name":"延时数据"})
-            }
-    
+    modify: function() {
+      this.$store.commit("name_up");
+    },
+    modify1: function() {
+      this.$store.dispatch("name_up_1", { age: 27 });
+    },
+    modifyA: function() {
+      this.$store.commit("modifyschool", { name: "你好啊" });
+    },
+    mofifyAtime: function() {
+      this.$store.dispatch("mofi", { name: "延时数据" });
+    }
   }
 };
 </script>

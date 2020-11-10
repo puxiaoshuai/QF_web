@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="1single.js"></script>
+</head>
+<body>
+    <p>单例设计模式</p>
+    <p>表现形式就是一个对象</p>
+    <p>作用把描述同一件事物的属性和特征进行分组和归类，避免全局变量的冲突和污染</p>
+    <p>高级单例模式，在给命名空间赋值的时候，不直接赋值给一个对象，而是先执行匿名函数，形成一个个私有作用域</p>
+    <p>模式的好处，可以控制内容暴露给外部使用，在 fn进行返回（模块化实现的一种思想）</p>
+    <br>
+    <p>团队协作开发的时候，会把产品分模块，每个人负责不同的模块，</p>
+    <p>每个模块中公用的部分进行提取封装，后期在想实现这些功能，直接调用引用即可</p>
+    <script>
+   var nameSpace=(function () {
+        var v=12;
+        function fn() { 
+           name1:"蒲小帅"
+           console.log("打印了");
+        }
+        return{
+         fn1:fn
+       }
+     })()
+    console.log(nameSpace);
+    nameSpace.fn1()
+    console.log(nameSpace.fn1);
+    
+      
+    </script>
+</body>
+</html>
