@@ -15,7 +15,9 @@
     <p>实例成员就是构造函数通过this添加的成员， 比如代码中的 name,age,</p>
     <p>实例成员只能通过实例化对象来访问</p>
     <p>静态成员，在构造函数本身上添加成员 如 Star.sex="男"，静态成员智能通过构造函数来访问</p>
-
+    <p style="color: red;">构造函数不写return，会默认返回创建的实例，如果return返回的是基本值，任然返回的是创建的实例，如果返回的是引用类型，那么就会覆盖创建的实例对象</p>
+    <p>尽量不适用return返回值</p>
+    <p>new Person()执行的时候，如果不需要传参数，new Person还是构造函数，不写括号一样的，还是是创建实例的意思</p>
     <script>
         //加new 是构造函数， 没有就是普通的函数
         // 创建对象 1.new Object()
@@ -29,6 +31,7 @@
                 console.log("我会唱歌");
 
             }
+            return "你好，我是建军节"
         }
         function  Dog (){ 
 
@@ -36,9 +39,19 @@
         let star = new Star("蒲小帅", 19)
         let star1 = new Star("李四", 19)
         let dog=new Dog()
+        console.log("测试数据",star);
         
 
         console.log(star.sing === star1.sing);
+        function Fn(){
+
+        }
+        let f=new Fn()
+        
+        console.log( f instanceof Fn);
+        console.log( f instanceof Array);
+        console.log( f instanceof Object);
+        // 万物皆对象
     </script>
 </body>
 

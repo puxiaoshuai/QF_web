@@ -6,6 +6,9 @@
 		 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
 	<style type="text/css">
+	    .box{
+			color: pink;
+		}
 		 .active{
 			 background-color: red;
 		 }
@@ -15,7 +18,7 @@
 			<button v-on:click="turn" type="button">
 				点击
 			</button>
-			<div style="width: 100px;height: 100px;" v-bind:class="{active:isActive}" class="box">
+			<div style="width: 100px;height: 100px;" class="box" v-bind:class="{active:isActive}" >
 				
 			</div>
 		</div>
@@ -24,7 +27,7 @@
 		  let vm=new Vue({
 			  el:"#app",
 			  data:{
-				  isActive:true
+				  isActive:false
 			  },
 			  methods:{
 				  turn:function(){
