@@ -10,7 +10,7 @@
     <template id="box">
         <div>
             <p>我是模板</p>
-            <button @click="hi">din</button>
+            <button @click="hi">点击执行hi</button>
         </div>
 
     </template>
@@ -24,11 +24,11 @@
 		const myMixin={
 			
 			created:function(){
-
+             
 			},
 			methods:{
               hi:function () {
-                  console.log("你好11a")
+                 alert("你好，我是混入的hi方法")
               }
 			}
 		}
@@ -40,13 +40,13 @@
             components:{
                 "myitem":{
                     template:"#box",
-                    mixin:[myMixin]
+                    mixins:[myMixin]
                 },
 
             },
             methods: {
                 hi:function (){
-                    console.log("你好")
+                    alert("你好,我是根原来的方法")
                 }
             }
         })

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实例组件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js公共文件/jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+           <p>{{message}}</p>
+    </div>
+    <script>
+        let app=new Vue({
+            el:"#app",
+            data:{
+                message:"你好我是vue"
+            },
+            mounted() {
+                $("#app").html("我是jq");
+            },
+        })
+        
+    </script>
+</body>
+</html>

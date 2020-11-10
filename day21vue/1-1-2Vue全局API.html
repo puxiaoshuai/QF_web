@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <p>在了解了基本的指令之后</p>
+    <p>更多操作看代码</p>
+    <div class="box1" style="border: 1px solid red;">
+        <h1>Vue.directive自定义指令</h1>
+        <ul>
+            <li>
+               el: 指令所绑定的元素，可以用来直接操作DOM。
+            </li>
+            <li>
+               binding: 一个对象，包含指令的很多信息。
+            </li>
+            <li>
+               vnode: Vue编译生成的虚拟节点
+               
+            </li>
+        </ul>
+    </div>
+    <div style="border: 1px solid red;">
+       <h1>Vue.extend构造器</h1>
+       <p>能用标签展示，也能挂到普通标签上</p>
+       <xiaoshuai></xiaoshuai>
+       <div id="xiaoshuai">
+
+       </div>
+    </div>
+     <div style="border: 1px solid red;">
+       <h1>Vue.set全局操作</h1>
+       <p>Vue.set 的作用就是在构造器外部操作构造器内部的数据、属性或者方法</p>
+       
+    </div>
+    <div style="border: 1px solid red;">
+        <h1>模板的制作有两种方式</h1>
+        <p>参考2-3组件模板抽离</p>
+        
+     </div>
+     <div style="border: 1px solid red;">
+        <h1>全局组件和局部组件，</h1>
+        <p>Vue.component({})进行添加</p>
+        
+     </div>
+    <div id="app">
+      <h3 v-puxiaoshuai="color">{{number}}</h3>
+      <button @click="add">+1</button>
+      <button onclick="addnor()">普通+1</button>
+    </div>
+    <script>
+        //  自定义指令
+        Vue.directive("puxiaoshuai",function (el,binding,vnode) {
+        
+            el.style.color=binding.value
+          })
+        // 定义外部数据
+        let outData={
+                number:1,
+                color:"red"
+        } 
+       
+        let app=new Vue({
+            el:"#app",
+            // 引用外部数据
+            data:outData,
+            methods: {
+                add:function(){
+                    //this.number++ //这是个内部的写法
+                    //outData.number++; //改变外部的方式1
+                    //app.number++;//改变外部数据的方式2
+                      Vue.set(outData,"number",4)   //改变外部数据的方式3
+                }
+
+            },
+        })
+        function  addnor(){
+            // 
+            Vue.set(outData,"number",4)
+        }
+
+          //构造器
+          let authorEx= Vue.extend({
+              template:"<p>我是构造出来的{{name}}</p>",
+              data:function () {
+                  return {
+                    name:"小帅啊啊"
+                  }
+                }
+          })
+        //   进行挂载
+          new authorEx().$mount("xiaoshuai")
+        //   也可以对id选择器进行挂载
+          new authorEx().$mount("#xiaoshuai")
+    </script>
+</body>
+</html>

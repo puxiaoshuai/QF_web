@@ -12,6 +12,7 @@
 				
 			</textarea>
 			<p>状况单选</p>
+			<!-- input v-model 跟数据进行绑定，然后 -->
 			<input  type="radio" value="健康" id="jiangkang" v-model="choose">
 			<label for="jiangkang">健康</label>
 			<input type="radio" value="危险" id="weixian" v-model="choose">
@@ -24,7 +25,7 @@
 				el:"#app",
 				data:{
 					message:"测试数据",
-					choose:"健康"
+					choose:"危险"
 				}
 			})
 		</script>

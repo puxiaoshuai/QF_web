@@ -11,7 +11,7 @@
 		<p style="color:red">1.子组件模板要进行slot包裹，2，v-bind:xx定义数据，3，在子组件中使用  slot-scope="solt"拿到插槽以及他的值</p>
 		<p>其实就是父组件对子组件的展示的样式不满意，就拿子组件的数据过来，自己整</p>
 		 <template id="box">
-			<slot v-bind:data="books"> <div style="border: 1px solid red;">
+			<slot v-bind:msg="books"> <div style="border: 1px solid red;">
 				 <!-- 此处的books是来自子组件作用域的数据 --> 
 				<ul v-for="item in books">
 					<li>{{item}}</li>
@@ -19,17 +19,20 @@
 			 </div>
 			 </slot>
 		 </template>
+
+		 <!-- 根 -->
 		<div id="app">
 			
 			<!-- 儿子组件 -->
 			<myitem></myitem>
 			<!-- 儿子组件 -->
 			 <myitem></myitem>
+
 			 <!-- 对这个儿子组件不满意，我自己来进行修噶 -->
 			<myitem >
-				<!-- 获取子组件中的 -->
+				<!-- 获取子组件中的 ,核心代码-->
 				<div slot-scope="slot">
-					<span style="color: red;" v-for="item in slot.data">{{item}}-</span>
+					<span style="color: red;" v-for="item in slot.msg">{{item}}-</span>
 				</div>
 			</myitem>
 

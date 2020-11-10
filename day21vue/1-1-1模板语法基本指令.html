@@ -30,7 +30,10 @@
     <div id="app">
         <div>{{msg}}</div>
     </div>
-
+    <div id="app1">
+        <div>{{msg}}</div>
+    </div>
+    <p>常见指令，v-if v-elseif v-else v-show v-modal v-on  v-text  v-html v-pre v-once</p>
     <script>
         // vue的基本使用  1.需要提供标签填充数据
         //2引入vue.js  
@@ -43,6 +46,12 @@
             data: {
                 msg: "你好,vue"
             },	
+        })
+        var vm1=new Vue({
+            el:"#app1",
+            data:{
+                msg:"年后"
+            }
         })
     </script>
 </body>
