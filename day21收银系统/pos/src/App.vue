@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <leftNav></leftNav>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import leftNav from './components/common/leftNav'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    leftNav
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style  scoped>
+  #app{
+    min-width: 800px;
+  }
+  .main{
+    float: left;
+    width: 95%;
+    background-color: #eff2f7;
+    height: 100%;
+    overflow: auto;
+  }
 </style>
+
