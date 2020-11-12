@@ -5,15 +5,18 @@ const MoudA = {
     school: "school is moduleA"
   },
   mutations: {
+    //p是传递的参数
     modifyschool(state, p) {
       console.log(p);
       state.school = "你好，修改的名字" + p.name
     }
   },
   actions: {
+    //如果是耗时的就在actions中定义
     mofi(com, p) {
       console.log(com);
       setTimeout(() => {
+        //提交 mutaions中的方法
         com.commit("modifyschool", p)
       }, 1000)
 

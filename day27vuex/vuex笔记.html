@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuex笔记</title>
+</head>
+<body>
+    <ul>
+        <li>state 存储初始化数据的</li>
+         <p>访问state两种方式</p>
+         <span style="color: red;">1.使用$store.state.xxx获取</span>
+         <span style="margin-left: 20px;color: rebeccapurple;">2.使用 mapstate,在computerd方法中...mapstate(['count']) </span>
+        <li>mutations数据改变调用</li>
+        <span style="color: red;">1.使用this.$store.commit("add"),add在mutations中定义的</span>
+        <span style="margin-left: 20px;color: rebeccapurple;">2.使用 mapMutations,在methods方法中导入...mapMutations(['add',"addN"]),并在点击事件中使用this.add() </span>
+        <li>actions 异步任务在actions中进行做</li>
+        <span style="color: red;">1.使用this.$store.dispatch("add"),add在actions中定义的，并在add内部进行 context.commit("xx"),xx为mutations中的方法</span>
+        <span style="margin-left: 20px;color: rebeccapurple;">2.使用 mapActions,在methods方法中导入...mapActions(['add',"addN"]) ,并在点击事件中使用this.add()</span>
+        <li>module,每个模块用于自己的state,mutation，action</li>
+        <li>getter,类似单个组件中 计算的属性,对数据进行加工，形成新的数据</li>
+        <span style="color: red;">1.使用this.$store.getters.名称</span>
+        <span style="margin-left: 20px;color: rebeccapurple;">2.使用 mapGetters,在methods方法中导入...mapGetters(['xx']) ,直接使用{{xx}}进行渲染</span>
+    </ul>
+</body>
+</html>

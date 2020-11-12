@@ -22,6 +22,6 @@ export default createStore({
   modules: {
     shop:MoudA
   },
-  //类似单个组件中 计算的属性
+  //类似单个组件中 计算的属性,对数据进行加工，形成新的数据
   getters
 })

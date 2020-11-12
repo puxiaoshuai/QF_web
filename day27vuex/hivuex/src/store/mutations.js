@@ -5,7 +5,7 @@ export default{
         del1(state){
           state.message--
         },
-        //异步这样调用也没错，但是dev工具识别不了，不好调试
+        //异步这样调用也没错，但是dev工具识别不了，不好调试，异步最好在 actions中去调用
         name_up(state,p){
           console.log("数据",p);
           setTimeout(()=>{
