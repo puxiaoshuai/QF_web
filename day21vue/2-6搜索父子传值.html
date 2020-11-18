@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<div id="app">
+            <input type="text" placeholder="请输入书名" v-model="name" >
+            <button v-on:click="add(name)">确定</button>
+            <son  @sonoutlick="fatherclick"  v-bind:movies="books"  ref="sonv"></son>
+        </div>
+		<template id="son">
+            <div>
+
+            
+		   <ul>
+               <li v-on:click="sonclick(item)"  v-for="item in movies1">{{item}}</li>
+           </ul>
+           
+           <p>{{filtername}}</p>
+        </div>
+		</template>
+		<script type="text/javascript">
+		//局部组件
+			const son={
+				template:"#son",
+				//props传递的类型有很多
+				//props:["sbooks"],
+				//下面的方式还可以限定类型，
+				props:{
+                    movies:Array,
+                    name:String
+                },
+                data(){
+                    return {
+                        movies1:this.movies,
+                        seachname:this.name,
+                    }
+                },
+				methods:{
+					getName(name){
+                         this.seachname=name;
+                    },
+                    sonclick(name){
+                     this.$emit("sonoutlick",name)
+                    }
+                },
+                computed: {
+                    filtername(){
+                        let arr=this.movies1.filter(item=>item===this.seachname)
+                        if(arr.length===0){
+                           return "没有书籍"
+                        }else{
+                            return arr[0]
+                        }
+                        
+                    }
+                },
+				
+			}
+			let app=new Vue({
+				el:"#app",
+				data:{
+                    name:"",
+					books:["三国演义","羊皮卷","周大生"],
+					
+				},
+				//注册子组件
+				components:{
+					son
+				},
+				methods:{
+					add(name){
+                        //getName在父组件获取值
+                        this.$refs.sonv.getName(name)
+                    },
+                    fatherclick(name){
+                       this.name=name
+                        
+                    }
+				}
+				
+			})
+		</script>
+	</body>
+</html>

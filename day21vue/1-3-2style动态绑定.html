@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<div id="app">
+            <div :style="{fontSize: '50px' }" >{{message}}</div>
+            <div :style="{fontSize: fsize +'px' }" >{{message}}</div>
+            <div :style="{fontSize: fsize1  }" >{{message}}</div>
+            <p>两种方式，1class,2数组形式</p>
+		</div>
+		<script type="text/javascript">
+		  let vm=new Vue({
+			  el:"#app",
+			  data:{
+                message:"来绑定我",
+                fsize:50,
+                fsize1:"50px"
+			  },
+			  methods:{
+				
+			  }
+		  })
+		</script>
+	</body>
+</html>

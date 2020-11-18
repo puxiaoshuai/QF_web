@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<style type="text/css">
+	    .active{
+            background-color: red;
+        }
+	</style>
+	<body>
+		<div id="app">
+			  <ul>
+                  <li v-bind:class="{active:index===current}" v-on:click="add(index)" v-for="(m,index) in movies" v-model="dex">
+                      {{m}}
+                  </li>
+              </ul>
+		</div>
+		<script type="text/javascript">
+		  let vm=new Vue({
+			  el:"#app",
+			  data:{
+                 movies:["海尔","大王","周结款","欧销售"],
+                
+                 current:0,
+			  },
+			  methods:{
+				add(index){
+                    this.current=index
+                }
+			  }
+		  })
+		</script>
+	</body>
+</html>
