@@ -18,6 +18,7 @@
 			<input type="radio" value="危险" id="weixian" v-model="choose">
 			<label for="weixian">危险</label>
 			<h3>选择了: {{ choose }}</h3>
+			<p>{{dataarr}}</p>
 
 		</div>
 		<script type="text/javascript">
@@ -25,9 +26,12 @@
 				el:"#app",
 				data:{
 					message:"测试数据",
-					choose:"危险"
+					choose:"危险",
+					dataarr:[1,2,3]
 				}
 			})
+			app.message="测试数据111"
+            app.dataarr=[2,3,12]
 		</script>
 	</body>
 </html>

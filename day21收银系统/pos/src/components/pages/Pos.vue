@@ -140,7 +140,7 @@ export default {
       type0Goods: [],
       type1Goods: [],
       type2Goods: [],
-      type3Goods: []
+      type3Goods: [],
     };
   },
   created() {

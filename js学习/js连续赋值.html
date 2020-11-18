@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>let a=b=c=d=100,如果在一个函数内有连续性的赋值，当此函数执行后，变量生成 </p>
+   <p>从右到左赋值，d=100,c=d,b=c, let a=b,bcd，没加关键字就默认提升到了全局变量</p>
+    <script>
+      
+          function a() {
+            let  b=c=d=f=1001
+          }
+          a()
+          console.log("数据",c);
+          
+
+    </script>
+</body>
+</html>

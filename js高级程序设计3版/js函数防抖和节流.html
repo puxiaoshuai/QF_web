@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖和节流</title>
+    <style>
+        body{
+            background-color: rebeccapurple;
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.cnblogs.com/youma/p/10559331.html">参考文章1</a>
+    <a href="https://blog.csdn.net/zuorishu/article/details/93630578">参考文章2</a>
+    <p>函数防抖，将多次执行变为最后一次执行，n秒内高频触发，就重新计算时间，以最后一次为准</p>
+    <p>函数节流，就是将多次执行变成每隔一段时间去执行，n秒内只执行一次。</p>
+    <p>案例请看源代码</p>
+
+    <script>
+        //防抖案例
+        function fangdou(fn,delay) {
+            var timer=null;//创建一个计时器
+            return function() { 
+                //计时器存在就清除他，新建一个计时器，这样就会到最后进行
+                if(timer !== null){
+                    clearTimeout(timer);
+                }
+                timer=setTimeout(fn,delay);
+             };
+          }
+          function handle1(){
+              console.log(Math.random());
+              
+          }
+         // window.addEventListener('scroll', fangdou(handle1, 1000));
+          //节流
+          function  jieliu(fn,deplay) {  
+              //记录第一次时间
+              let pretime=Date.now();
+              return function () {
+                  let nowtiem=Date.now()
+                  //如果两次时间大于设置的就进行请求，基本是固定的时间间隔，n秒内执行一次
+                  if(nowtiem-pretime>=deplay){
+                      fn.apply(this,arguments)
+                    pretime=Date.now()
+                  }
+                }
+          }
+          function handle2(){
+              console.log(Math.random(),"节流执行");
+              
+          }
+          window.addEventListener('scroll', jieliu(handle2, 3000));
+          
+    </script>
+</body>
+</html>

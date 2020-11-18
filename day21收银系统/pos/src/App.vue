@@ -25,6 +25,8 @@ export default {
     width: 95%;
     background-color: #eff2f7;
     height: 100%;
+
+    
     overflow: auto;
   }
 </style>
