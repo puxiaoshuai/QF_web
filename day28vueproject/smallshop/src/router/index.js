@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 const Home =()=>import("../views/Home.vue")
 const Cate =()=>import("../views/Cate.vue")

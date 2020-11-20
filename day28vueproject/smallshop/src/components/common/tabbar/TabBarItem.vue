@@ -1,6 +1,7 @@
 <template>
   <div class="tabbar_item" v-on:click="choose">
     <div v-if="!isActive">
+      <!-- 如果是选中的话，展示item -->
       <slot name="item_icon">
       </slot>
     </div>
@@ -23,18 +24,19 @@
     // },
     computed:{
       isActive(){
+        // 判断是否存在这个路由
         return this.$route.path.indexOf(this.path)!==-1
       },
       activeStyle(){
         return this.isActive?{color:this.activeColor}:{}
       }
     },
-    //接收参数path,并默认显示红色
+    //接收参数path,并默认显示红蓝色色
     props:{
       path:String,
       activeColor:{
         type:String,
-        default:"red"
+        default:"blue"
       }
     },
     methods:{
@@ -55,12 +57,12 @@
     display: flex;
     flex-direction: column;
   }
-
-  .tabbar_item img {
+ .tabbar_item img {
     width: 24px;
     height: 24px;
     margin-top: 4px;
   }
+  
 
 
 </style>

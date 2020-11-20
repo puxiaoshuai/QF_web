@@ -1,6 +1,6 @@
 <template>
   <div class="tabbar">
-    <!-- tabbar背景插槽 -->
+    <!--tabitem插槽 -->
     <slot></slot>
   </div>
 </template>
@@ -10,18 +10,16 @@
     name: "TabBar"
   }
 </script>
-
 <style scoped>
   .tabbar {
+    height: 49px;
     display: flex;
-    background-color: #F6F6F6;
+    background-color: red;
     position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
     box-shadow: 0px -2px 1px rgba(223, 223, 223, 0.4);
-
   }
-
 
 </style>

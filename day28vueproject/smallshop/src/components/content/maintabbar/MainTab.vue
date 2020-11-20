@@ -1,18 +1,18 @@
 <template>
   <tab-bar>
     <tabbar-item path="/home">
-      <img slot="item_icon" src="../../../assets/img/1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/2.png" alt />
+      <img slot="item_icon" src="../../../assets/img/tabbar/home1.png" alt />
+      <img slot="item_icon_active" src="../../../assets/img/tabbar/home2.png" alt />
       <div slot="item_text">首页</div>
     </tabbar-item>
     <tabbar-item path="/cate">
-      <img slot="item_icon" src="../../../assets/img/1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/2.png" alt />
+      <img slot="item_icon" src="../../../assets/img/tabbar/type_1.png" alt />
+      <img slot="item_icon_active" src="../../../assets/img/tabbar/type2.png" alt />
       <div slot="item_text">分类</div>
     </tabbar-item>
     <tabbar-item path="/car">
-      <img slot="item_icon" src="../../../assets/img/1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/2.png" alt />
+      <img slot="item_icon" src="../../../assets/img/tabbar/gouwu1.png" alt />
+      <img slot="item_icon_active" src="../../../assets/img/tabbar/gouwu2.png" alt />
       <div slot="item_text">购物车</div>
     </tabbar-item>
     <tabbar-item path="/profile">
@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style scoped>
-
+ 
 </style>
