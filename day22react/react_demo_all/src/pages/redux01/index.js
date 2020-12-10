@@ -4,14 +4,14 @@ import './index.css'
 import store from './store/index'
 import axios from 'axios'
 
-import { ChangInputAction, AddItemAction, DelItemAction } from './store/actionCreaters'
+import { ChangInputAction, AddItemAction, DelItemAction, DoneItemAction } from './store/actionCreaters'
 export default class Tolist extends Component {
     constructor(props) {
         super(props)
        //获取 仓库中的默认值
         this.state = store.getState()
-        this.changInput=this.changInput.bind(this)
-        this.clickbtn=this.clickbtn.bind(this)
+        // this.changInput=this.changInput.bind(this)
+        // this.clickbtn=this.clickbtn.bind(this)
         
         //订阅
         this.storeChange=this.storeChange.bind(this)
@@ -46,6 +46,10 @@ export default class Tolist extends Component {
         // alert(this.state.inputValue)
         
     }
+    donebtn(index){
+        const action=DoneItemAction(index)
+        store.dispatch(action)
+    }
     del=(index)=>{
         const action =DelItemAction(index)
         store.dispatch(action)
@@ -54,6 +58,8 @@ export default class Tolist extends Component {
         this.setState(store.getState())
     }
     render() {
+        
+
         return (
             <div className="box">
                 <Input style={{width:'240px',marginRight: '20px'}} 
@@ -66,10 +72,13 @@ export default class Tolist extends Component {
   
                   <List
                       header={<div><h3>明天的代办事项</h3></div>}
-                      
                       bordered
                       dataSource={this.state.list}
-                      renderItem={(item,index) => (<List.Item>{item}<Icon onClick={this.del.bind(this,index)} style={{backgroundColor:"#FFF"}} type="delete" /></List.Item>)}
+                      renderItem={(item,index) => {
+                          return item.done?<List.Item  style={{"text-decoration":"line-through"}} >{item.title}<Icon onClick={this.del.bind(this,index)} style={{backgroundColor:"#FFF"}} type="delete" /></List.Item>:
+                        <List.Item  >{item.title}<Button onClick={this.donebtn.bind(this,index)} type="primary" style={{marginLeft:'10px',marginRight:'10px'}}>完成</Button><Icon onClick={this.del.bind(this,index)} style={{backgroundColor:"#FFF"}} type="delete" /></List.Item>
+
+                      }}
                   />
                   
                </div>

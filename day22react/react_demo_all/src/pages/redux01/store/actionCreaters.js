@@ -1,4 +1,4 @@
-import { CHANG_INPUT, ADD_ITEM,DEL } from "./actionType"
+import { CHANG_INPUT, ADD_ITEM,DEL, DONE } from "./actionType"
 
 export const ChangInputAction=(value)=>({
     type:CHANG_INPUT,
@@ -9,5 +9,9 @@ export const AddItemAction=()=>({
 })
 export const DelItemAction=(index)=>({
     type:DEL,
+    index:index
+})
+export const DoneItemAction=(index)=>({
+    type:DONE,
     index:index
 })
