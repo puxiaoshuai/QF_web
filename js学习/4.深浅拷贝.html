@@ -12,6 +12,10 @@
     <p>for in 浅拷贝不推荐</p>
     <p>Object.assgin()浅拷贝推荐</p>
     <p>深拷贝就是用浅拷贝for in 进行递归</p>
+    <!-- 
+        浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。
+        但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。
+     -->
     <script>
         const obj1 = {
             name: "蒲小帅",
@@ -76,9 +80,7 @@
                         newibj[k]={}
                         deepCopy(newibj[k],item)
                     }else{
-                        newi
-                        
-                        bj[k]=item
+                        newibj[k]=item
                     }
                     
                 }

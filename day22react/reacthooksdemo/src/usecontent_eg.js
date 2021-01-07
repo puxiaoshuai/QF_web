@@ -12,8 +12,6 @@ function Example(param) {
     // 数组解构  ,addCount  名字随便取的
     //多状态声明
     const [count, addCount] = useState(10)
-   
-    
   
     return (
         <div>
