@@ -31,12 +31,12 @@
                 // 不要忘记px，-50的目的让鼠标在图片中间
             img.style.left = x - 50 + "px";
             img.style.top = y - 50 + "px";
-        },true)
+        },false)
 		box.addEventListener("mousemove",function(event){
 			event=event ||window.event
 			alert("1")
 			 event.stopPropagation()
-		},true)
+		},false)
     </script>
 </body>
 

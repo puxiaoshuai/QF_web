@@ -22,6 +22,14 @@
             left: 100px;
             top: 100px;
         }
+        .gradson {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(89, 61, 211);
+            left: 100px;
+            top: 100px;
+        }
     </style>
 </head>
 
@@ -40,9 +48,14 @@
     <p>有的事件是没有冒泡的，比如 onblur,onfacus,onmouseenter onmouseleave</p>
     <div class="father">
         <div class="son">
+            <div class="gradson">
 
+            </div>
         </div>
     </div>
+    <p>true,捕获阶段从顶到下，谁有就用谁的，不向下执行了。</p>
+    <p>false,冒泡阶段，从自身向上，不阻止就会上面的也会执行</p>
+    
     <script>
         let btn = document.querySelector("button")
             // 事件类型是字符串，且不带on
@@ -55,31 +68,47 @@
             alert("第二个监听")
             btn.removeEventListener('click', fn)
         }
-        //=======================================
+        //1.=======================================
         //dom事件流注意：js代码中智能执行捕获或者冒泡其中的一个阶段
         //onclick和 attachEvent(ie)只能得到冒泡事件
         //3.捕获阶段若添加了addEventListener 第三个参数如果是true，则处在捕获阶段，
-        //doc ->html>body>father>son ,一层一层下来，谁添加了事件就执行，没有就继续向下
+        //doc ->html>body>father>son ,一层一层下来，如下，先执行父亲的，在执行孩子的，在执行孙子的.如果使用 event.stopPropagation()进行事件阻止，那么后面的就在执行
+        
         // var son = document.querySelector(".son")
         // son.addEventListener("click", function() {
-        //     alert("son")
+        //     alert("孩子")
+        // }, true)
+        // var gradson = document.querySelector(".gradson")
+        // gradson.addEventListener("click", function() {
+        //     alert("孙子内容")
         // }, true)
         // var father = document.querySelector(".father")
         // father.addEventListener("click", function() {
-        //         alert("father")
+        //         event.stopPropagation()
+        //         alert("父亲")
         //     }, true)
+         
         //以上的情况就是father先捕获到，先执行
-        //第三个参数为flase时，处在冒泡事件，son =》father>body >html>doc
+        //==============================================================
+        //第三个参数为flase时，处在冒泡事件，son =》father>body >html>doc，如果event.stopPropagation()进行事件阻止，那么后面的就在执行
+        //
         var son = document.querySelector(".son")
         son.addEventListener("click", function() {
             event.stopPropagation()
           
             alert("son")
         }, false)
+        //上面设置了false,就是事件冒泡先从自己执行
         var father = document.querySelector(".father")
         father.addEventListener("click", function() {
             event.stopPropagation()
             alert("father")
+        }, false)
+        var gradson = document.querySelector(".gradson")
+        gradson.addEventListener("click", function() {
+            //event.stopPropagation()
+          
+            alert("孙子")
         }, false)
     </script>
 </body>

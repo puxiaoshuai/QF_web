@@ -24,6 +24,8 @@
     <script>
         let ul = document.querySelector("ul")
         ul.addEventListener('click', function(e) {
+            console.log(e);
+            
             e.target.style.backgroundColor = "pink"
                 //alert("冒泡到ul，显示了")
         })

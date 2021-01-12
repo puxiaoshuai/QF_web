@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            width: 10%;
+            
+            float: left;
+            background-color: rgb(255, 168, 37);
+            box-shadow: 1px 1px 10px rgb(155, 155, 155);
+
+        }
+        .left ul li{
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .left ul li a{
+            display: block;
+            text-decoration: none;
+            color: white;  
+        }
+        .left ul li a:hover{
+            background-color: green;
+            color: black;  
+        }
+        .left ul li a:visited{
+            background-color: green;
+            color: black;  
+        }
+        .right{
+            float: left;
+        
+            width: 90%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body  style="height: 100%;">
+     <div class="left">
+         <ul>
+             <li><a href="#">菜单1</a></li>
+             <li><a href="#">菜单1</a></li>
+             <li><a href="#">菜单1</a></li>
+             <li><a href="#">菜单1</a></li>
+             <li><a href="#">菜单1</a></li>
+             <li><a href="#">菜单1</a></li>
+         </ul>
+     </div>
+     <div class="right">
+           给div设置height高度100%，高度为0，原因是100%属性继承自父类，父类没得高度，他也没得高度，所有最后给html设置100%,
+           <p></p>
+     </div>
+     <script>
+         if(true){
+             var color="blue"
+         }
+         alert(color)
+         console.log(new Date().toDateString());
+         
+     </script>
+</body>
+</html>

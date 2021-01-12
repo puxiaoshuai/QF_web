@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{ 
+		width: 300px;
+        height: 150px;
+        background-color: #FFF;
+        margin: 100px auto;
+        /* 上边的黑色用 边框宽度填充 */
+		border-width: 150px 0 0 0;
+		border-style: solid;
+		border-color: #000;
+		border-radius: 50%;
+        position: relative;
+        box-shadow: 1px 1px 10px rgb(180, 180, 180);
+        animation: run 2s linear infinite;
+    }
+    .box::before{
+        content: "";
+        position: absolute;
+        /* 这个是中心点 */
+        top: -75px;
+        left: 0;
+        width: 45px;
+        height: 45px;
+        background-color: #000;
+        /* 52.5x2+45=150，这就是半径 */
+        border: 52.5px solid #FFF;
+        border-radius: 50%;
+    }
+    .box::after{
+        content: "";
+        position: absolute;
+        /* 这个是中心点 */
+        top: -75px;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        /* 52.5x2+45=150，这就是半径 */
+        border: 52.5px solid #000;
+        border-radius: 50%;
+    }
+    @keyframes run {
+        from {transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+    }
+    </style>
+</head>
+<body>
+     <p>1</p>
+     <div class="box">
+          
+     </div>
+</body>
+</html>

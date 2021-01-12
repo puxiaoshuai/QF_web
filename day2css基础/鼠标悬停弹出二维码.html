@@ -11,20 +11,20 @@
             position: relative;
         }
         a:hover{
-            color: red;
-            
+            color: red;   
         }
-        .weixin::after {
+    .weixin::after {
 	content: url("../images/二维码.png");
 	position: absolute;
 	left: 0px;
-	top: -135px;
-   
+    top: -145px;
     border: 5px solid rgb(88, 20, 20);
-    
-
-	
+    display: none;
 }
+.weixin:hover::after {
+    display: block;
+}
+
 
 
     </style>
