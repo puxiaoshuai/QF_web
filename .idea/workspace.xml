@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e0af3bcb-7ede-436b-86ba-89257a5137c7" name="Default Changelist" comment="vue路由">
+      <change afterPath="$PROJECT_DIR$/Typescript/tsconfig/hi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day21vue/2-5父子组件双向绑定.html" beforeDir="false" afterPath="$PROJECT_DIR$/day21vue/2-5父子组件双向绑定.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day21vue/混入.html" beforeDir="false" afterPath="$PROJECT_DIR$/day21vue/混入.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/Typescript/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/Typescript/hello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript/hello.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Typescript/hello.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript/接口.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript/接口.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day14对象/1-5重写tostring.html" beforeDir="false" afterPath="$PROJECT_DIR$/day14对象/1-5重写tostring.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/common/tabbar/TabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/common/tabbar/TabBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/common/tabbar/TabBarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/common/tabbar/TabBarItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/content/maintabbar/MainTab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/day28vueproject/smallshop/src/components/content/maintabbar/MainTab.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day28vueproject/smallshop/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day28vueproject/smallshop/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/仿造简书/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/仿造简书/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +45,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>state</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +73,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="D:\WebStorm2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\WebStorm202022\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -110,6 +133,8 @@
       <workItem from="1600391453462" duration="2652000" />
       <workItem from="1600665013896" duration="5511000" />
       <workItem from="1600676153243" duration="1162000" />
+      <workItem from="1607604934460" duration="3427000" />
+      <workItem from="1607680090441" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="react   andt">
       <created>1576681528725</created>
@@ -175,9 +200,21 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/Typescript/hello.js" />
-        <option value="$PROJECT_DIR$/Typescript/接口.js" />
+        <option value="$PROJECT_DIR$/Typescript/tsconfig/hi.js" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="react   andt" />
@@ -189,6 +226,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="vue" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="816" y="373" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607606045294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="816" y="373" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.92.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607606045294" />
     <state x="369" y="20" key="CommitChangelistDialog2" timestamp="1600332711480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

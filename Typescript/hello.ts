@@ -8,10 +8,10 @@ class Site{
 let obj=new Site();
 obj.namex()
 //字符串
-let name:string="我是字符串"
-console.log(name);
-let name1:number="我是数字"
-console.log(name1);
+// let name:string="我是字符串"
+// console.log(name);
+// let name1:number="我是数字"
+// console.log(name1);
 let name2:boolean=false
 console.log(name2);
 let name3:number[]=[2,1]
@@ -26,3 +26,10 @@ console.log(c);
 let x:any[]=[1,"哈"]
 console.log(x)
 
+// 特殊类型 void null undefined ,any（都可以）
+function log():void{
+    console.log("没有返回值");
+}
+// null.undefied是所以类型的子类
+
+let user: number[]=[1,2,3]

@@ -7,8 +7,8 @@ const Profile =()=>import("../views/Profile.vue")
 const routes = [
   {
     name:"home",
-    path:"/home",
-    component:Home
+    path:"/",
+    component:Home,
   },
  {
    name:"cate",

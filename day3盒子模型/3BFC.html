@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC</title>
+    <style>
+        .inner{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .outer{
+             /* 设置浮动  */
+             /* float: left; */
+             /* 设置成行内块 */
+            /* display: inline-block; */
+            /*  */
+             overflow: hidden;
+             border:10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p>BFC是css中一个隐含的属性，可以为一个元素开启BFC,他就变成了一个独立的布局区域</p>
+    <p>开启后的BFC的元素，1.不会被浮动元素所覆盖2.开启BFC子元素和父元素外边距不会重叠3.可以包含浮动的子元素，不会塌陷</p>
+    <p>BFC开启的方式</p>
+    <ul>
+        <li>1.设置浮动(不推荐)</li>
+        <li>2.设置成行内块display: inline-block;(不推荐)</li>
+        <li>3.将元素的overflow设置成 overflow  hidden(推荐)，我擦，这不就是清除浮动的方式之一吗</li>
+         
+    </ul>
+    <p style="color: red;">参考day4浮动下7清除浮动.html</p>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>

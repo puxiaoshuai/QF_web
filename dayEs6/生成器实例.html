@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //异步编程  文件操作，网络操作等
+        //1s输入 111,2s后输入222，3s后输出 333
+        //地狱回调
+        // setTimeout(() => {
+        //     console.log(111);
+        //     setTimeout(() => {
+        //         console.log(222);
+        //         setTimeout(() => {
+        //             console.log(333);
+        //         }, 3000);
+        //     }, 2000);
+        // }, 1000);
+        function one() {
+            setTimeout(() => {
+                console.log("111");
+                iter.next()
+            }, 1000);
+          }
+          function tow() {
+            setTimeout(() => {
+                console.log("222");
+                iter.next()
+            }, 2000);
+          }
+          function three() {
+            setTimeout(() => {
+                console.log("333");
+                iter.next()
+            }, 3000);
+          }
+          function *run() {
+               yield one()
+               yield tow()
+               yield three()
+            }
+            let iter=run()
+            iter.next()
+            // 这样就没得地狱回调了。
+    </script>
+</body>
+
+</html>

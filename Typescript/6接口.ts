@@ -1,4 +1,4 @@
-//定义接口
+//定义接口,解决内联类型
 interface IPersom{
     fname:string,
     lname:string,
@@ -35,5 +35,5 @@ console.log(computer.go);
 var a:any=CDB.go;
 console.log(a());
 
-
+// 鸭子变型法 ，可选属性 ？，只读属性 readonly
 

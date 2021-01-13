@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>for ... of </p>
+    <ul>
+        <li>arr</li>
+        <li>args</li>
+        <li>set</li>
+        <li>map</li>
+        <li>string</li>
+        <li>typedArray</li>
+        <li>Nodelist</li>
+    </ul>
+    <script>
+        let person={
+            name:"蒲小帅",
+            age:123,
+            aihao:["大屏","测试"],
+           
+        }
+        for (const iterator of person.aihao) {
+               console.log(iterator);
+        }
+        for (const key in person) {
+            if (Object.hasOwnProperty.call(person, key)) {
+                const element = person[key];
+                console.log(element);
+                
+            }
+        }
+        //自定义遍历数据 person是不不能用 for of  ,如何能？
+      
+        
+
+    </script>
+</body>
+</html>

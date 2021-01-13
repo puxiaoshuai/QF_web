@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: background-color 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="ad">
+
+    </div>
+    <script>
+        let div=document.getElementsByClassName("ad")[0]
+        div.addEventListener("click",function(){
+            //箭头函数，指向申明式所在作用域
+            setTimeout(()=>{
+                this.style.background="red"
+            },2000)
+        })
+    </script>
+</body>
+</html>

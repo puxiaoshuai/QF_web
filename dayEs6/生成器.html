@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 生成器特殊的函数 -->
+    <!-- 异步编程 纯函数回调 -->
+    <script>
+     function  *add(arg){
+         console.log("add参数",arg);
+        console.log("hello 生成器1");
+        let one=yield  "哈哈哈"
+        console.log(one);
+        console.log("hello 生成器2");
+        let tow= yield "黑盒红"
+        console.log(tow);
+        console.log("hello 生成器3");
+   }
+   let iter=add("AAA")
+    // console.log(iter);
+    iter.next("测试")
+    iter.next("我是第二个next")
+    // 作为上一个返回的结果
+    iter.next("我是第三个next")
+    // for (const iterator of iter) {
+    //          console.log(iterator);
+    // }
+    </script>
+</body>
+</html>

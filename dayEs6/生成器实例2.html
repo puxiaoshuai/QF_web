@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 模拟获取 用户数据==》订单数据===》商品数据 -->
+    <script>
+        function getUser() {
+            setTimeout(() => {
+                let person = {
+                    "name": "蒲小帅",
+                    "id": 12
+                }
+                console.log("获取用户",person.id);
+                iter.next(person.id)
+            }, 1000);
+        }
+        function getShop(id) {
+            setTimeout(() => {
+                let shop = {
+                    "name": "订单",
+                    "id": 232
+                }
+                if(id===12){
+                    console.log("获取成功");
+                    iter.next(shop.id)
+                }else{
+                    console.log('获取失败');
+                }
+            }, 2000);
+        }
+        function getFood(id) {
+            setTimeout(() => {
+                let foods = [
+                    {
+                        "name": "商品",
+                        "id": 23
+                    }, {
+                        "name": "商品",
+                        "id": 23
+                    }
+                ]
+                if(id===232){
+                    console.log("开始进行商品获取");
+                    iter.next(foods)
+                }
+
+            }, 3000);
+        }
+        function  *add() {
+            let id= yield getUser()
+            //把用户idid传给了订单 
+            let dingdanid= yield getShop(id)
+            let foods=yield getFood(dingdanid)
+            console.log("成功获取商品",foods);
+          }
+          let iter=add()
+        //   开始获取
+          iter.next()
+    </script>
+</body>
+
+</html>

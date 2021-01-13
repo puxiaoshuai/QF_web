@@ -1,25 +1,25 @@
 <template>
   <tab-bar>
-    <tabbar-item path="/home">
-      <img slot="item_icon" src="../../../assets/img/tabbar/home1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/tabbar/home2.png" alt />
-      <div slot="item_text">首页</div>
-    </tabbar-item>
-    <tabbar-item path="/cate">
-      <img slot="item_icon" src="../../../assets/img/tabbar/type_1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/tabbar/type2.png" alt />
-      <div slot="item_text">分类</div>
-    </tabbar-item>
-    <tabbar-item path="/car">
-      <img slot="item_icon" src="../../../assets/img/tabbar/gouwu1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/tabbar/gouwu2.png" alt />
-      <div slot="item_text">购物车</div>
-    </tabbar-item>
-    <tabbar-item path="/profile">
-      <img slot="item_icon" src="../../../assets/img/1.png" alt />
-      <img slot="item_icon_active" src="../../../assets/img/2.png" alt />
-      <div slot="item_text">我的</div>
-    </tabbar-item>
+    <tab-bar-item path="/">
+      <template slot="item_icon"><img   src="../../../assets/img/tabbar/home1.png"/></template>
+     <template slot="item_icon_active">  <img  src="../../../assets/img/tabbar/home2.png"  /></template>
+     <template slot="item_text">         <div >首页</div></template>
+    </tab-bar-item>
+    <tab-bar-item path="/cate">
+      <template slot="item_icon"><img   src="../../../assets/img/tabbar/home1.png"/></template>
+     <template slot="item_icon_active">  <img  src="../../../assets/img/tabbar/home2.png"  /></template>
+     <template slot="item_text">         <div >首页</div></template>
+    </tab-bar-item>
+    <tab-bar-item path="/car">
+      <template slot="item_icon"><img   src="../../../assets/img/tabbar/home1.png"/></template>
+     <template slot="item_icon_active">  <img  src="../../../assets/img/tabbar/home2.png"  /></template>
+     <template slot="item_text">         <div >首页</div></template>
+    </tab-bar-item>
+    <tab-bar-item path="/profile">
+      <template slot="item_icon"><img   src="../../../assets/img/tabbar/home1.png"/></template>
+     <template slot="item_icon_active">  <img  src="../../../assets/img/tabbar/home2.png"  /></template>
+     <template slot="item_text">         <div >首页</div></template>
+    </tab-bar-item>
   </tab-bar>
 </template>
 

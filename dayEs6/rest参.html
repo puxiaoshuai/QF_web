@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./接口.js"></script>
 </head>
 <body>
-    <p>查看控制台</p>
-    <p>npm install -g ts-node </p>
-    <p>执行  ts-node  xxx.ts</p>
+    <p>es5获取参数 arguments,es6使用 rest  ...args</p>
+    <script>
+        function App(...args) {
+            console.log(args);
+          }
+          App("1",2)
+    </script>
 </body>
 </html>

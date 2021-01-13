@@ -1,7 +1,8 @@
 <template>
   <div class="tabbar_item" v-on:click="choose">
+    
     <div v-if="!isActive">
-      <!-- 如果是选中的话，展示item -->
+     
       <slot name="item_icon">
       </slot>
     </div>
@@ -15,6 +16,7 @@
   </div>
 </template>
 <script>
+
   export default {
     name: "TabItem",
     // data() {
@@ -24,7 +26,8 @@
     // },
     computed:{
       isActive(){
-        // 判断是否存在这个路由
+        // 判断是否存在这个路由, home-> item1(home)=true
+        console.log("路由",this.$route.path);
         return this.$route.path.indexOf(this.path)!==-1
       },
       activeStyle(){
@@ -48,7 +51,7 @@
   }
 </script>
 
-<style scoped>
+<style >
   .tabbar_item {
     flex: 1;
     text-align: center;
@@ -57,7 +60,7 @@
     display: flex;
     flex-direction: column;
   }
- .tabbar_item img {
+ .tabbar_item  > img {
     width: 24px;
     height: 24px;
     margin-top: 4px;

@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-<style> 
-@font-face
-{
-	font-family: myFirstFont;
-	src: url('Sansation_Light.ttf')
-		,url('Sansation_Light.eot'); /* IE9 */
-}
-
-div
-{
-	transform: skew(-20deg,1deg);
-}
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>字体</title>
+	<style>
+		@font-face {
+			/* 自己定义个名字 ,在其他地方调用*/
+			font-family: "myfont";
+			/* 服务器的字体路径: ; */
+			src: url('./font/xxx');
+		}
+		p{
+			/* 按顺序优先使用 */
+			font-family: 'Courier New', Courier, monospace;
+			/* font-family: myfont; */
+		}
+		
+	</style>
 </head>
 <body>
+	<!-- 
+		font-size:px
+		em当前元素的一个font-size
+		rem:根元素的一个font-size
+		font-family 字体族
+		可选值：
+		serif 衬线字体
+		sans-serif 非衬线字体
+		monospace 等宽字体
 
-<p><b>注意:</b> Internet Explorer 9 只支持 .eot 格式的字体.</p>
-
-<div>
-使用 CSS3,网站终于可以使用字体以外的预先选择“合法”字体
-</div>
-
+	 -->
+	 <p>紫铜数据</p>
 </body>
 </html>
