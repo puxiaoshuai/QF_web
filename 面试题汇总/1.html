@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>如何删除变量，删除一个属性</p>
+    <p>js变量分为两种，一种是全局变量，一种是局部变量。
+        全局变量，在js文件的任意地方都可以使用，它的生命周期就是js文件使用的周期。
+        局部变量，它在所属的方法，或者说是它在自己属于的对象里面才存在，这个对象或者方法被解析过了，它就自动没有了。
+        所以如果你要销毁变量，如果是全局变量，那么你需要覆盖它，如果是局部变量你只要等待它所在的方法结束，它就自动销毁了。
+        将变量赋值为undefined 如果是个对象的属性，可以使用delete删除某对象属性或者方法</p>
+    <script>
+        //第一
+        var b = 0;
+        for (let i = 0, j = 0; i <= 10, j < 6; j++, i++) {
+            b = i + j;
+        }
+        console.log(b);
+        //第二个
+        function test1() {
+            console.log(this);
+        }
+        test1.call({ name: 1 })
+        test1.call(Object)
+        test1.call(null) //window
+        test1.call(undefined)//window
+        //第三个
+        function test3(x, y, z) {
+            arguments[2] = 10;
+            arguments[1] = 5
+            console.log(x);
+            console.log(y);
+            console.log(z);
+        }
+        test3(1, 2)
+        //什么是强制缓存
+        //删除重复数字
+
+        var str = "11223355";
+        var res = str.replace(/(.).*\1/g, "$1")
+        console.log(res);
+        //分别按 total,name,time进行排序
+        const arr=[{total:10,name:"张三",time:"2018-10-11"},
+        {total:80,name:"李四",time:"2018-2-11"},{total:2,name:"王麻子",time:"2019-10-11"}]
+        // function sortTotal(a,b) {
+        //     return  a.total - b.total
+        // }
+        // arr.sort(sortTotal)
+        // function sortname(a,b) {
+        //     return  a.name.localeCompare(b.name,"zh-CN")
+        // }
+        // arr.sort(sortname)
+        function sortname(a,b) {
+            return new Date( a.time) > new Date(b.time)?1:-1
+        }
+        arr.sort(sortname)
+        console.log(arr);
+        //数组去重
+        //1set 2.循环进行 splice去重 ，for indexof  ,includes,fliter
+        //遍历对象的方法
+        //forin   objects.keys.object.values ,,getOwnPropertyNames
+    </script>
+</body>
+
+</html>
