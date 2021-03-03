@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>每一个函数都有一个prototype属性<span style="color: red;">(注意这里不是实例)</span>,他默认指向 一个object对象(原型对象)</p>
+    <p>原型对象中有一个属性constructor,他指向函数对象</p>
+    <p>给原生对象添加属性(一般是方法),那么实例对象自动拥有原型中添加的属性</p>
+    <hr>
+    <h2>显示原型和隐式原型</h2>
+        <p>每个函数func都要一个prototype,显示原型</p>
+        <p>每个实例对象都要个__proto__隐式原型</p>
+        <p style="color: red;">对象的隐式原型值等于对应构造函数的显式原型的值</p>
+        <h1>总结</h1>
+        <p>函数的prototype属性，在定义函数式自动添加的，默认是一个空的object对象</p>
+        <p>对象的__proto__属性，创建对象时自动添加的，默认值为构造函数的prototype属性值</p>
+    <script>
+        function Fun(){}
+        console.log("fun===>",Fun);
+        console.log("Fun.prototype===>",Fun.prototype);
+        //给原生对象添加属性
+        Fun.prototype.test=function () { console.log("测试");  }
+        let func=new Fun()
+        //实例对象自动拥有原型中添加的属性方法
+        console.log(func.test);
+        // =========================
+        //对象的隐式原型值等于对应构造函数的显式原型的值
+        console.log(Fun.prototype===func.__proto__);
+        //面试题
+        function A(){
+
+        }
+        A.prototype.n=1
+        var b=new A()
+        A.prototype={
+            n:2,
+            m:3,
+        }
+        var c=new A()
+        console.log(b.n,b.m,c.n,c.m);//1,un,2,3
+        
+           
+        
+    </script>
+</body>
+</html>

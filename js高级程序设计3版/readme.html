@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js高级程序设计第三版</title>
 </head>
+
 <body>
     <p>js==>es+dom+bom</p>
-    <p>script中  defer="defer"延迟执行</p>
+    <p>script中 defer="defer"延迟执行</p>
+    <script>
+        function Person1() {
+        }
+        Person1.prototype.name = "西瓜"
+        Person1.prototype.job = "工程师"
+        let person1 = new Person1()
+        console.log(person1);
+        console.log(person1.constructor===Person1);//true,还是person
+        function Teacher(){
+
+        }
+        Teacher.prototype={
+            //constructor:Teacher,
+            name:"普肖帅",
+            job:"软件工程"
+        }
+        let thacher1=new Teacher()
+        console.log(thacher1);
+        console.log(thacher1.constructor===Teacher);//false,指向了object
+        //如果 constructor 的值真的很重要，可以像下面这样特意将它设置回适当的值。 constructor:Teacher,
+        
+        
+    </script>
 </body>
+
 </html>
