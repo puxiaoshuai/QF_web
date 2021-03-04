@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-           
+           *{
+               color: red;
+           }
+           h4{
+               color: gold;
+           }
         </style>
 </head>
 <body>
@@ -18,7 +23,7 @@
          </div>
      </div>
      <p>更多使用 权重值来判断， </p>
-      <p>通用为 0, 标签为1，类为10，id为100，行内为1000</p>
+      <p>通用为 0, 标签为1，类为10,(属性权重也为10)，id为100，行内为1000</p>
       <p>举例 ：#box p .tt   权重值为 111</p>
       <p>举例 ：#box .tt   权重值为 110</p>
       <p>所以是上面111生效</p>
@@ -30,5 +35,11 @@
       不推荐使用id选择器，一次选择一个
       团队约定，少用id,通配符，不使用没有语义的标签
 
+      <p style="color: rebeccapurple;">通配符权重是0,继承没有权重，为null,0>null</p>
+      <article>
+          <h4>蒲小帅<span>哈哈哈</span></h4>
+      </article>
+      <p>写样式的时候涉及权重，要写很多的，可以使用预处理器来进行权重的书写，less</p>
+        
 </body>
 </html>

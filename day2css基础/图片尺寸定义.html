@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .box>img{
+            max-width: 100%;
+            min-width: 80%;
+        }
+        .box1{
+            width: fit-content;
+            margin:  0 auto;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>有的时候，图片尺寸太大，但是我们的div盒子大小没那么大，怎么展示图片出来呢</p>
+    <p>比如下面的图片是500x500,但是我的div只有300x300px,只有就使用 max-width,min-width进行来宽度限制</p>
+    <div class="box">
+        <img src="../images/banner.jpg" alt="">
+    </div>
+    <p>width: -webkit-fill-available;
+        height: -webkit-fill-available让宽高进行全部充满，实现flex的特效</p>
+        <div class="box1">
+            <p  class="cen" style="color: red;">fit-content  内容自动适应宽度，让元素居中显示的效果。结合magin auto</p>
+        </div>
+        <script>
+           let arr=[]
+           let name="1111"
+           
+
+        </script>
+</body>
+</html>
