@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击我加载数据</button>
+    <script>
+        let btn = document.querySelector("#btn")
+
+        function FangDou(fn, depaly) {
+            var timer = null
+            return function () {
+                if (timer !== null) {
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(fn, depaly)
+            }
+        }
+        function toast() {
+           console.log("网络加载中"); 
+        }
+        function JieLiu(fn,deplay){
+            var pretime=Date.now()
+            return function(){
+                let nowtime=Date.now()
+                if(nowtime-pretime>=deplay){
+                    fn.call(this,arguments)
+                    pretime=Date.now()
+                }
+            }
+        }
+        btn.addEventListener("click",  JieLiu(toast, 3000))
+        //btn.addEventListener("click",  FangDou(toast, 2000))
+    </script>
+</body>
+
+</html>

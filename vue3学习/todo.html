@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <template id="list">
+        <div>
+            <p>请输入代办事项</p>
+            <ul>
+                <!-- <li v-for="(item, index) in list" :key="index">
+                     {{item}}
+                     <button v-on:click="del(index)">删除</button>
+                 </li> -->
+                <itemli v-for="(item, index) in list" :key="index" v-bind:item="item" v-bind:index="index"></itemli>
+            </ul>
+            <input v-model="input_value" type="text" placeholder="请输入" />
+            <button v-on:click="add">添加</button>
+        </div>
+    </template>
+    <template id="mli">
+        <li>
+            {{index}}-{{item}}
+        </li>
+    </template>
+    <div id="app">
+
+    </div>
+    <script>
+        const app = Vue.createApp({
+            template: "#list",
+            data() {
+                return {
+                    number: 0,
+                    input_value: "",
+                    list: ["上班"]
+                }
+            },
+            methods: {
+                add() {
+                    if (this.input_value === "") {
+                        alert("请输入内容")
+                    } else {
+                        this.list.push(this.input_value)
+                        this.input_value = ""
+                    }
+                },
+                del(index) {
+                    this.list.splice(index, 1)
+                }
+            },
+            beforeCreate() {
+                console.log('beforeCreate')
+            },
+            created() {
+                console.log('created')
+            },
+            beforeMount() {
+                console.log('beforeMount')
+            },
+            mounted() {
+                console.log('mounted')
+            },
+        })
+        app.component("itemli", {
+            //定义参数
+            props: ["item", 'index'],
+            template: "#mli"
+        })
+
+        let vm = app.mount("#app")
+        console.log(vm);
+      //  方法methods：只要页面重新渲染，就会重新执行方法
+//计算属性computed: 当计算属性依赖的内容发生变更时，才会重新执行计算
+    </script>
+</body>
+
+</html>

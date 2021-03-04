@@ -30,6 +30,59 @@
 
          </div>
      </div>
-     <p>This paragraph has <sapn>测试</sapn> in it.</p>
+     <script>
+         //数组扁平化
+         function test(arr){
+              
+              let temparr=[]
+              arr.map((item,index)=>{ 
+                  if(Array.isArray(item)){
+                      temparr=temparr.concat(test(item))
+                  }else{
+                  
+                     temparr.push(item)
+                  }
+              })  
+              return temparr
+         }
+         let arr=[2,4,[33,41,1,[5,6]],10]
+        
+         console.log( test(arr));
+         //reduce
+         let arr1=[1, [2, 3, [4, 5]]]
+         function flatten(arr){
+           return arr.reduce((result,num)=>{
+             return result.concat(Array.isArray(num)?flatten(num):num)
+         },[])
+         }
+         console.log(flatten(arr1));
+         //快速排序
+         let arr2=[2,5,3,7,1,20,8]
+         function  Quick_arr(arr) {
+             let base_arr=arr[0]
+             let left_arr=[]
+             let right_arr=[]
+              for (let index = 1; index < arr.length; index++) {
+                let data = arr[index];
+                if(data>base_arr){
+                    //放右边
+                    right_arr.push(data)
+                }else{
+                    left_arr.push(data)
+                }
+               }
+               if (left_arr.length>2 )
+                {
+                    left_arr=Quick_arr(left_arr)
+                }
+                if(right_arr.length>2){
+                    right_arr=Quick_arr(right_arr)
+                }
+                return left_arr.concat(base_arr,right_arr)
+           }
+           console.log("快速排序数据",Quick_arr(arr2));
+           
+         
+     </script>
 </body>
 </html>

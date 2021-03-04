@@ -33,9 +33,9 @@ function Son({name,children}){
        console.log("他来了，小红来了");
        return name+",小红走来来了来"
      }
-     //const actionXiaohong=changXiaohong(name)
+    // const actionXiaohong=changXiaohong(name)
      //满足小红的名字匹配的时候才执行，
-     const actionXiaohong=useMemo(()=>changXiaohong(name),[name])
+      const actionXiaohong=useMemo(()=>changXiaohong(name),[name])
      return (
        <div>
          <div>{actionXiaohong}</div>

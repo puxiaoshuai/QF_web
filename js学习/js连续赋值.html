@@ -14,7 +14,13 @@
             let  b=c=d=f=1001
           }
           a()
-          console.log("数据",c);
+          console.log("b",b);//在函数外部访问 b,b是局部函数，所有不能访问到 使用了let 未被定义
+          console.log("c",c);
+          console.log("d",d);
+          console.log("f",f);
+          
+          
+          
           
 
     </script>

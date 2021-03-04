@@ -43,16 +43,18 @@
                   let nowtiem=Date.now()
                   //如果两次时间大于设置的就进行请求，基本是固定的时间间隔，n秒内执行一次
                   if(nowtiem-pretime>=deplay){
-                      fn.apply(this,arguments)
+                     // fn.call(this,arguments)//执行 fn函数
+                     //fn()
+                     fn.apply(this,[...arguments])
                     pretime=Date.now()
                   }
                 }
           }
-          function handle2(){
-              console.log(Math.random(),"节流执行");
+          function handle2(name){
+              console.log(Math.random(),"节流执行"+name);
               
           }
-          window.addEventListener('scroll', jieliu(handle2, 3000));
+          window.addEventListener('scroll', jieliu(handle2.bind(this,"蒲小帅"), 4000));
           
     </script>
 </body>

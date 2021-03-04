@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue初识</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <template id="name">
+        <div>你好,{{number}}</div>
+
+        
+        <button v-on:click="add">点击</button>
+    </template>
+    <div id="app">
+       
+    </div>
+    <script>
+       const app = Vue.createApp({
+           template: '#name',
+           data(){
+               return {
+                  number:0
+               }
+           },
+          methods: {
+              add(){
+                 this.number+=1
+                  
+              }
+          },
+       })
+       app.mount("#app")
+    </script>
+</body>
+</html>

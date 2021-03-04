@@ -9,7 +9,7 @@
     <p>基本数据类型：按值操作，</p>
     <img src="img/2.png" alt="">
     <p>引用类型：操作按堆内存的地址(引用地址操作的)</p>
-    <img src="img/1.png" alt="">
+    <img src="img/1.png" style="width: 800px;" alt="">
     <h3>面试题</h3>
     <pre>
         let a={n:1}
@@ -18,7 +18,7 @@
         console.log(a.x)
         console.log(b)
     </pre>
-    <p>a=b=3,意思就是a=3,b=3</p>
+    <p>一般左右到左赋值，有人说，这里是因为·=同时出现，先执行.属性的操作问题</p>
     <img src="img/3.png" alt="">
     <p>解析:let a={n:1}进栈，创建值存储空间A，为{n:1},然后对应a变量存储空间A，并关联，let b=a进栈,b关联值存储空间A,a.x=a={n:2}，进栈，a.x={n:2},a增加属性x为{n:2}
         a={n:2},a关联到了值存储空间AAAFFF111,所以 a.x就是undefund,结果如图

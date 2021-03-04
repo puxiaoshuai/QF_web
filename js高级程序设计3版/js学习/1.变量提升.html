@@ -18,6 +18,7 @@
          var v1=100
         function foo() {  
             //下面的v1会提升上来，相当于局部作用域，所以是undefined，如果没得var v1=200,那么是能访问外部v1=100的
+            //var  v1;
             console.log("2",v1);
             var v1=200;
             console.log("3",v1);

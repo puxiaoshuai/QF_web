@@ -43,6 +43,8 @@
        let a="1"
     //    把监测的值转换成数字，不是数字就用Number来转化成数字
        console.log(isNaN(a));  //false
+       console.log(isNaN("123"));//false
+       
        console.log(Number({"name":1})); //Nan
        //把引用数据类型转为数字，是先把他基于tostring转成字符串，然后再转换成数字
        //number出现非有效数字，就会判断为 NaN
