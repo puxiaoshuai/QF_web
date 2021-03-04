@@ -11,12 +11,15 @@
 			3、可以在对象之间传递和操作promise，帮助我们处理队列
 		</p>
 		<script type="text/javascript">
-			function hi(){
-				return new Promise((resolve,reject)=>{
-					resolve("成功")
+			let p=new Promise((resolve,reject)=>{
+					//resolve("成功")
+					reject("失败11")
 				})
-			hi()
-			}
+				p.then(v=>{
+                     console.log(v);
+				}).catch(e=>{
+                  console.log(e);
+				})
 		</script>
 	</body>
 </html>

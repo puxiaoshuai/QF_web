@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 自动去重
+        let s=new Set([1,2,1,4,6])
+        console.log(typeof s);
+        console.log(s);
+        // 元素的个数
+        console.log(s.size);
+        // 是否有
+        let hans=s.has(1)
+        console.log(hans);
+        // 新增
+        s.add(7)
+        console.log(s);
+        // 删除
+        s.delete(1)
+        console.log(s);
+        // 变量
+        for (const iterator of s) {
+                    console.log(iterator);
+        }
+         // 清空
+        //  s.clear()
+        //  console.log(s);
+        // =======================
+        //set数组去重
+     let arr=[...new Set([1,2,3,3,4,4,5,9])]
+     console.log(arr);
+     //交集
+     let arr2=[1,2,2,4,5,6]
+     let result=[...new Set(arr)].filter(item=>{
+         let s2=new Set(arr2)
+         if(s2.has(item)){
+            //  返回true就会把当前值返回回去
+             return true
+         }else{
+             return false
+         }
+     })
+     console.log("交际",result);
+     //并集
+     let union=[...new Set([...arr,...arr2])]
+     console.log("并集",union);
+     //差集，在自己有，别人没有
+     let numa=[1,1,2,3,4]
+     let numb=[1,2,5]
+     let data=numa.filter(item=>!new Set(numb).has(item))
+     console.log("arr有，arr2没有",data);
+     
+
+
+    </script>
+</body>
+</html>

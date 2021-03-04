@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[title] {
+            color: red;
+        }
+
+        p[title="css"] {
+            background-color: green;
+        }
+
+        /* 包含单词 "hicss" 的所有元素 */
+        p[title~="hicss"] {
+            color: blue;
+        }
+
+        p[title|="hdxxx"] {
+            color: purple;
+        }
+
+        p[title*="hdcms"] {
+            background-color: purple;
+        }
+
+        p[title^="http"] {
+            color: orange;
+        }
+
+        p[title$="jpg"] {
+            color: orchid;
+        }
+        /* 子子孙子中，span是第一个的span变红色  */
+        article span:first-child {
+            color: red;
+        }
+        /* 儿子中 第一个是span类型,从头下找的第一个 */
+        article>span:first-of-type{
+            color: orchid;
+        }
+    </style>
+</head>
+
+<body>
+    <p title="蒲小帅">有title属性的</p>
+    <p title="css">title等于css的</p>
+    <!-- ~要完全匹配 -->
+    <p title="hicss">title包含hicss的</p>
+    <p title="hdxxx">title属性等于hd或者hd-开头的</p>
+    <p title="hdcmswomen">title属性包含 hdcms的，可能是一段字符串中包含</p>
+    <p title="https_xxx">y以https开头的</p>
+    <p title="puxiaos.jpg">已.jpg结尾的</p>
+    <article>
+        <p>我是p</p>
+        <span>houdunren.com</span>
+        <aside>
+            <span>houdunwang.com，我是article下的 孙中的第一个span</span>
+            <span>hdcms.com</span>
+        </aside>
+    </article>
+</body>
+
+</html>
