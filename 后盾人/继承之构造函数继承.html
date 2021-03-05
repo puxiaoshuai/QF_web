@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>比如，一个网络请求，根据不同模块，传参不同模块不同，但是网络请求版块是相同的，</p>
+    <p>构造函数继承 bind,apply</p>
+    <script>
+        function Request(){
+            this.get=function get(params={}){
+                  console.log(params);
+                  let keys=Object.keys(params) 
+                  let data= keys.map(item=>item+"="+params[item]).join("&")
+                  document.write(this.url+data) 
+                  return this.url+data
+              }
+
+              
+        }
+        function  Article() {
+            this.url="article/lists?"
+            //为 artice对象借用 Request的方法
+            Request.call(this)
+          }
+          function User(){
+              this.url="users/lists?"
+              //为 user对象借用 Request的方法
+              Request.call(this)
+          }
+          let user=new User()
+          let url= user.get({id:"2",role:"admin11"})
+          console.log(url);
+          //构造函数的继承
+          //call,apply没用this.就传 call(null,xx)
+    </script>
+</body>
+</html>

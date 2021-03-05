@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000040;
+            width: 100vw;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+        }
+          div{
+             text-transform: uppercase;
+            font-size: 5em;
+            color: purple;
+              
+          }
+          div>span{
+              position: relative;
+              display: inline-block;
+              margin-left: 20px;
+          }
+          .color{
+              animation-name: color;
+              animation-duration: 0.5s;
+              animation-delay: 0s;
+              
+              animation-timing-function: linear;
+
+          }
+          @keyframes color{
+              50%{
+                  color: #f1c40f;
+                  transform: scale(1.5);
+              }
+              100%{
+                  color: purple;
+              }
+          }
+    </style>
+</head>
+<body>
+    <div class="box">WWW.BAIDU.20210305</div>
+    <script>
+        let div=document.querySelector("div");
+        console.log(div.textContent);
+        
+        [...div.textContent].reduce((prev,curr,index)=>{
+            console.log(prev,curr,index);
+            if(prev===index){
+                div.innerHTML=""
+            }
+            //重新创建元素
+            let span=document.createElement("span")
+            span.innerHTML=curr
+            div.appendChild(span)
+            span.addEventListener("mouseover",function () {
+                  this.classList.add("color")  
+              })
+              span.addEventListener("animationend",function () {
+                  this.classList.remove("color")
+                })
+            
+        },0)
+    </script>
+</body>
+</html>

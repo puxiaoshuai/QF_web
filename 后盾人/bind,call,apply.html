@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击我</button>
+    <button>第二个按钮</button>
+    <script>
+        //构造函数，原来this是空对象，给他添加属性进行建造
+        function User(name){
+               //this是空对象
+               this.name=name
+             //  console.log(this);
+               //console.log(this.__proto__.__proto__.__proto__);//null   
+        }
+        let hd=new User("蒲小帅")
+        let ph={"age":"我爱周周"}
+        //给 this
+        //给ph对象从User借用 name属性
+        User.call(ph,"你好")
+        console.log(ph);
+        
+        User.apply(ph,["111","222"])
+        
+        let buttons=document.querySelectorAll("button")
+        // buttons.forEach(element => {
+        //     //父作用域就是window
+        //     element.addEventListener("click",()=>{
+        //         //箭头函数，this指向父级作用域这个没在方法内还是指向window
+        //         console.log(this);
+                
+        //     })
+        // });
+
+        function show(){
+          alert(this.innerHTML);
+        }
+        for(let i=0;i<buttons.length;i++){
+            console.log(buttons[i]);
+            buttons[i].addEventListener("click",event=>show.call(event.target))
+        }
+        
+        
+    </script>
+</body>
+</html>

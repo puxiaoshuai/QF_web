@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let edt = {
+            site: "p普肖帅",
+            show:function(){
+                console.log("测",this);
+                function  render() {
+                    console.log(this.site);
+                  }
+                  render()
+                return this.site
+            }
+        }
+        console.log("2",edt.show());
+        
+    </script>
+</body>
+
+</html>
