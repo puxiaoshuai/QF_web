@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function move(arr, from, to) {
+            if (from < 0 || to > arr.length) {
+                console.error("输入异常请检查");
+            } else {
+                let fromdata = arr.splice(from - 1, 1)//删除取出制定位置的数字
+                arr.splice(to - 1, 0, ...fromdata)
+                console.log(arr);
+            }
+
+        }
+        let arr = [2, 5, 10, 23]
+        move(arr, 2, 4)//把第一个数，移动到 第三位
+    </script>
+</body>
+
+</html>

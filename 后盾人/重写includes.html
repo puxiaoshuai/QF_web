@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let arr=["偶像OA","测试"]
+    let data=arr.includes("测试")
+    console.log(data);
+    //重写
+    console.log(Array);
+    //for in  for of  foreach用法
+    Array.prototype.includes=function(value){
+        for (const v of this) {
+             
+             if(v===value){
+                 return "不错哦,找到了"
+             }
+        }
+        return "遗憾，没找到"
+    }
+    let data1=arr.includes("测试")
+    console.log(data1);
+
+    //find
+
+    let arr1=['c','b']
+    
+    let a=arr1.find((item)=>{
+        return item=='c'
+    })
+    console.log(a);
+</script>
+</body>
+</html>

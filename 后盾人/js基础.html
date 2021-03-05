@@ -24,6 +24,21 @@
         console.table(Math.ceil(12.1));
         let newarr=Array.of(12,321,123,1,34,5,6)
         console.log(newarr);
+        //解构
+        let [name,...args]=['蒲小帅','www',"nihao"]
+        console.log(name);
+        console.log(args);
+        //添加元素的多种技巧
+        let array=["蒲小帅",'2021',"今天是个好日子"]
+        let hd1=["测试111","打底裤"]
+        array.push("测试","wwww")//追加
+        array.push(...hd1) //用push追加数组       
+        console.table(array)
+        //删除  splice
+        let arr1=["朴硝","23","213"]
+        arr1.splice(arr1.length,0,"测试")
+        console.log(arr1);
+
         
         
         

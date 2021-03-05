@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #3498db;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>函数每次调用都会创建一个新作用域</h1>
+    <script>
+           function Color(ele) {
+             this.colors=["#3498db","#27ae60","#16a085","#e67e22"]
+            //  this.run=function(){
+            //      //这里使用的是 箭头函数，this就指向的是父级的上下文
+            //      setInterval(() => {
+            //           let i=Math.floor(Math.random()*this.colors.length)
+            //           ele.style.backgroundColor=this.colors[i]
+            //      }, 4000);
+            //  }
+            this.run=function(){
+                 //这里不是使用的箭头函数，所以需要进行this的绑定
+                 setInterval(function(){
+                     //console.log(this);指向了window
+                      let i=Math.floor(Math.random()*this.colors.length)
+                      ele.style.backgroundColor=this.colors[i]
+                 }.bind(this), 4000);  //使用bind进行this的绑定，指向了Color
+             }
+
+          }
+          let runcaolor=new Color(document.body)
+          runcaolor.run()
+    </script>
+</body>
+</html>
