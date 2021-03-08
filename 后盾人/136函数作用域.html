@@ -13,9 +13,9 @@
     //    function hd(){
     //        let n=1;
     //        function sum() { 
-    //            console.log(++n);
+    //            console.log(++n); 
     //         }
-    //         sum()
+    //         sum()//进行调用才有打印
     //    }
     //    console.log(typeof hd);
     //    hd()
@@ -23,18 +23,37 @@
        //如果子函数被使用时父级环境将被保留
        function hd(){
            let n=1;
+           //retrun被使用,父级环境被保留
            return function sum() { 
                console.log(++n);
             }
             sum()
        }
        console.log(typeof hd);
+       //函数赋值
        let a=hd()
        a() //2
        a()//3
        a()//4
-       
-       //上面
+    
+       //
+       function HH() {
+           let n=1;
+           // 函数 sum被保留,等价于下面
+        //    this.sum=function(){
+        //        console.log(++n);
+        //    }
+        function sum() {
+            console.log(++n);
+          }
+          return {
+              sum:sum
+          }
+         }
+         //构造函数
+         let b=new HH()
+         b.sum()
+         b.sum()
     </script>
 </body>
 </html>
