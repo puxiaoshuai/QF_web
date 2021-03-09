@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            position: absolute;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>移动22</button>
+    <script>
+        let btns = document.querySelectorAll("button")
+        //每次点击就生成了一个函数的作用域，left每次都是从1开始进行计算，导致会抖动到前面去，把left定义到全局去
+        // btns.forEach(element => {
+
+        //    element.addEventListener("click",function () {
+        //        let left=1;
+        //        setInterval(function () {
+        //            let leftjia=left++
+        //            element.style.left=leftjia +"px"
+        //          },5)
+        //      })
+        // });
+        //优化
+        // btns.forEach(element => {
+        //     //parent 
+        //     let left=1; //不抖了，但是点击会越来越快，因为有 计时器在 每次都创建了，
+        //    element.addEventListener("click",function () {
+
+        //        setInterval(function () {
+        //            let leftjia=left++
+        //            element.style.left=leftjia +"px"
+        //          },5)
+        //      })
+        // });
+        //优化
+        btns.forEach(element => {
+            //parent 
+
+            let bind = false
+            element.addEventListener("click", function () {
+                if (!bind) {
+                    bind = true
+                    let left = 1;
+                    setInterval(function () {
+                        let leftjia = left++
+                        element.style.left = leftjia + "px"
+                    }, 5)
+                }
+
+            })
+        });
+    </script>
+</body>
+
+</html>l
