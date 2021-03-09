@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   let data=[{name:"js",price:131},{name:"mysql",price:212},{name:"vue.js",price:98}]
+   class Lesson{
+       constructor(data) {
+           this.model=data
+       }
+       get price(){
+           return this.model.price
+       }
+       get name(){
+           return this.model.name
+       }
+       //批量生成对象
+       static creatBatch(data){
+            return data.map(item=>new this(item))
+       }
+       static MaxPrice(data){
+           return data.sort((a,b)=>b.price-a.price)[0]
+       }
+   }
+   let lessons=Lesson.creatBatch(data)
+   console.log(lessons);
+   console.log(Lesson.MaxPrice(lessons).name);
+
+    </script>
+</body>
+</html>

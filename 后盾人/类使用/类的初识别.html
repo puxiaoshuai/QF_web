@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>类就是 就是一种语法糖，内部还是 原型等</p>
+    <p>类的方法为什么不能遍历出来</p>
+    <script>
+        class User{
+            constructor(name){
+                this.name=name
+            }
+            getName(){
+                return this.name+"fhhfh"
+            }
+            
+        }
+        console.dir(User);
+        let user=new User("浦小山")
+        console.log(user.getName());
+        for (const key in user) {
+            if (Object.hasOwnProperty.call(user, key)) {
+                console.log(key);
+                const element = user[key];
+                console.log(element);
+                
+            }
+        }
+    </script>
+</body>
+</html>

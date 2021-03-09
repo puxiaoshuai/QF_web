@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>使用 call 或 apply 可以借用其他原型方法完成功能。</p>
+    <p>this 不受原型继承影响，this 指向调用属性时使用的对象。</p>
+    <script>
+        let hd={
+               data:[2,4,5,10]
+         }
+        //我们给他设置原型加个max方法
+        Object.setPrototypeOf(hd,{
+            max:function(){
+                //this指向引用的对象，就是hd下的data
+                return this.data.sort((a,b)=>b - a)[0];
+                //取最大的
+            }
+        })
+        console.log(hd.max());
+        //
+        let ph={
+            lessons:{js:100,php:78,node:99},
+            get data(){
+                return Object.values(this.lessons)
+            }
+        }
+        //为了找到ph中课程的最大值，就借用 hd对象的原型方法
+        console.log(ph.data);
+        console.log(hd.__proto__.max.call(ph));
+        console.log(hd.__proto__.max.apply(ph));
+    </script>
+</body>
+</html>

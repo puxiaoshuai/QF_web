@@ -8,6 +8,8 @@
 <body>
     <p>hasOwnProperty检测对象自身是否包含指定的属性，不检测原型链上继承的属性。</p>
     <p>使用 in 可以在原型对象上检测</p>
+    <hr>
+    <p>函数拥有多个原型,protype，__proto__</p>
     <script>
 
         let arr=["后端人"]
@@ -20,8 +22,24 @@
             }
         })
          console.log(hd);
-         console.log(hd.hasOwnProperty("name"));//自己没有，原型也没有就报错了
-         
+        // console.log(hd.hasOwnProperty("name"));//自己没有，原型也没有就报错了
+         //函数有多个原型,既有 __proto__,也有 prototype，prototype 用于实例对象使用，__proto__用于函数对象使用
+         console.log('====================================');
+         function  User() {  }
+         console.dir(User);
+         User.__proto__.view=function(){
+             console.log('====================================');
+             console.log("__proto__给函数对象使用");
+             console.log('====================================');
+         }
+         User.view()
+         User.prototype.show=function(){
+             console.log('====================================');
+             console.log("prototype定义实例使用");
+             console.log('====================================');
+         }
+         let user=new User()
+         user.show()
          
     </script>
 </body>

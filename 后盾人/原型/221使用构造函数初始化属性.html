@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(name,age) {  
+             
+            this.name=name;
+            this.age=age
+           
+        }
+        User.prototype.show=function(){
+            
+        }
+        //以上给User定义个共享的show方法
+        console.dir(User);
+
+        //定义管理管元
+        function Admin(...args){
+           User.apply(this,args)
+        }
+        Admin.prototype=Object.create(User.prototype)
+        let ph=new Admin("小弟",10)
+         console.log(ph);
+        //定义会员
+        function MemBer(...args) {
+            User.apply(this,args)
+          }
+          MemBer.prototype=Object.create(User.prototype)
+          let m=new MemBer("飞机迪斯科",12)
+          console.log(m);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>使用Object.create创建一个新对象时使用现有对象做为新对象的原型对象</p>
+     <script>
+         let user={
+             show(){
+                 console.log(this.name);
+             }
+         }
+         let data=Object.create(user)
+         console.log(data);// data.__proto__.show()
+         data.name="浦小山"
+         data.show()
+         //create不能定义方法，使用__proto__能定义方法，建议使用 Object.setPrototypeOf 与Object.getProttoeypOf 替代 __proto__
+         let newdata=Object.create(data,{
+              name:{
+                  value:"房价多少"
+              },
+             
+         })
+
+         newdata.name="中国加"
+         newdata.show()
+         console.log(newdata);
+     </script>
+</body>
+</html>
