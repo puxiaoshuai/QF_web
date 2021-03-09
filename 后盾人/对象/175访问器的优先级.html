@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>set 访问器，和 定义的属性哪个优先.访问器的优先级高</p>
+    <script>
+        let user={
+            name:"蒲小帅",
+            set name(v){
+                console.log("访问",v);
+            }   
+        }
+        user.name="展飞"
+        console.log(user);
+        
+
+        
+    </script>
+</body>
+</html>

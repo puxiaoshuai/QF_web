@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            name: "后盾人"
+        };
+        //重新定义了一个空间地址
+        let hd = {};
+        for (const key in obj) {
+            hd[key] = obj[key];
+        }
+
+        hd.name = "hdcms";
+        console.log(hd);
+        console.log(obj);
+    </script>
+</body>
+
+</html>

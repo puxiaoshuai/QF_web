@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>代理（拦截器）是对象的访问控制，setter/getter 是对单个对象属性的控制，而代理是对整个对象的控制。</p>
+    <script>
+        const hd={name:"后盾人"}
+        //语法格式就是如下
+        const proxy=new Proxy(hd,{
+            get(obj,property){
+                return obj[property]
+            },
+            set(obj,property,v){
+              obj[property]=v;
+              return true
+            }
+         })
+         proxy.age=10;
+         console.log(hd);
+
+         //函数的代理方式
+         function add(v) {
+             for(let i=1;i<v;i++){
+            
+             }
+           }
+           let proxyfunc=new Proxy(add,{
+               apply(func,obj,args){
+                   console.time('run');
+                   func.apply(this,args)
+                   console.timeEnd("run");
+               }
+           })
+           proxyfunc.apply({},[100000])
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hasOwnProperty检测对象自身是否包含指定的属性，不检测原型链上继承的属性。</p>
+    <p>使用 in 可以在原型对象上检测</p>
+    <script>
+
+        let arr=["后端人"]
+        //concat是父类的方法，__proto__找到父类
+        console.log(arr.concat(["1"]));
+        //没有原型的情况
+       let hd=  Object.create(null,{
+            name:{
+                value:"后盾人"
+            }
+        })
+         console.log(hd);
+         console.log(hd.hasOwnProperty("name"));//自己没有，原型也没有就报错了
+         
+         
+    </script>
+</body>
+</html>

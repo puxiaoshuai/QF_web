@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" v-model="title">
+    <input type="text" v-model="title">
+    <h1 v-bind="title">数据刷新</h1>
+    <script>
+        function Model() {
+            let proxy = new Proxy({}, {
+                get(obj, property) {
+                    return obj[property]
+                },
+                set(obj, property, v) {
+                    document.querySelectorAll(`[v-model="${property}"]`)
+                    .forEach(item=>{
+                        item.value=v
+                    })
+                    document.querySelectorAll(`[v-bind="${property}"]`)
+                    .forEach(item=>{
+                        item.innerHTML=v
+                    })
+                    return true
+                }
+            })
+            this.init = function () {
+                let eles = document.querySelectorAll("[v-model]")
+                eles.forEach(item => {
+                    item.addEventListener("keyup", function () {
+                        proxy[this.getAttribute("v-model")] = this.value
+                    })
+                })
+            }
+        
+
+        }
+        let modal = new Model()
+        modal.init()
+    </script>
+</body>
+
+</html>

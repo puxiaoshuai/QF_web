@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>自身优先</p>
+    <script>
+        let hd = {
+                show() {
+                    console.log("后端人");
+                },
+                render() {
+                console.log("我是自身方法");
+                }
+            }
+            
+            hd.__proto__.render=function(){
+                console.log("向军");
+            }
+         
+            hd.render()
+            console.dir(hd);
+            
+
+            
+            
+    </script>
+</body>
+
+</html>

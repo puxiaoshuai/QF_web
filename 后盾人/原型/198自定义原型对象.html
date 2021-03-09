@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>setPrototypeOf(a,b)给a设置原型为b</p>
+    <p>getprototypeof(t)查看谁的原型</p>
+    <script>
+        let ph={}
+        let xj={"school":"北大"}
+        Object.setPrototypeOf(ph,xj)
+        console.log(ph.school);
+        
+    </script>
+</body>
+</html>

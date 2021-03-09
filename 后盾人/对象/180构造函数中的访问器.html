@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>构造函数中的访问方法</title>
+    </head>
+    <body>
+        <script>
+            function User(name,age) {
+               let data={name,age}
+               Object.defineProperties(this,{
+                   name:{
+                       get(){
+                           return data.name
+                       },
+                       set(v){
+                         if(v.trim()=="") throw new Error("名字不能为空")
+                         data.name=v
+                       }
+                   },
+                   age:{
+                       get(){
+                           return data.age
+                       },
+                       set(v){
+                         if(isNaN(v)) throw new Error("年龄应该为数字")
+                         data.age=v
+                       }
+                   }
+               })
+              }
+              let user=new User("蒲小","12A")
+              user.age="12"
+              console.log(user.name);
+              console.log(user.age);
+        </script>
+    </body>
+    </html>
+</body>
+</html>

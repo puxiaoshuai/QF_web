@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [{
+            title: "媒体",
+            cate: 'css'
+        },{
+            title: "DIV",
+            cate: 'mysql'
+        },{
+            title: "弹性盒子",
+            cate: 'flex'
+        }]
+        let res= arr.reduce((obj,v,index)=>{
+         
+            obj[`${v["cate"]}-${index}`]=v
+            return obj;
+        },{})
+        console.log(JSON.stringify(res,null,2));
+        
+    </script>
+</body>
+
+</html>

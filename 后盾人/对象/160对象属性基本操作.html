@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字面量定义
+       let user= {
+             name :"蒲小帅",
+             lessons :[{
+                name: "数学",
+                grade: 89
+            }, {
+                name: "英语",
+                grade: 98
+            }],
+            aver(){
+                let total=this.lessons.reduce((total,v)=>total+v.grade,0);
+                return total/this.lessons.length
+            }
+        }
+        console.log(user.aver());
+        
+    </script>
+</body>
+
+</html>

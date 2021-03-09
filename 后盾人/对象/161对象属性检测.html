@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hasOwnProperty检测对象自身是否包含指定的属性，不检测原型链上继承的属性。</p>
+    <p>使用 in 可以在原型对象上检测</p>
+    <script>
+        let obj={name:"后盾人"}
+        //检测是否有name属性
+        console.log(obj.hasOwnProperty("name"));
+        let b={url:"www.baidu.com"}
+        Object.setPrototypeOf(obj,b)//给obj设置一个原型父类叫做b
+        console.log(obj.hasOwnProperty("url")); //false，因为在父级里面
+        //在父级里面需要使用 in
+        console.log("url in obj","url" in obj);
+        
+        
+        console.log(obj.url);
+        
+
+        
+    </script>
+</body>
+</html>

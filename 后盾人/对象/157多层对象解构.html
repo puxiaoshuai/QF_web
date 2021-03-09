@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "后盾人",
+            lesson: {
+                title: "javascript"
+            }
+        }
+        let {
+            name,
+            lesson: {
+                title,
+                age="199"
+            }
+        } = user
+        
+        console.log(title);
+        console.log(name);
+        console.log(age);
+        
+        //函数参数解构
+        function hd(name,{sex,age}){
+            console.log(name,age,sex);
+            
+        }
+        hd("蒲小帅",{sex:"男",age:34})
+        
+        console.log(lesson);//lesson解构之后，不能在进行输出了
+    </script>
+</body>
+
+</html>

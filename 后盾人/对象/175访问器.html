@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>使用访问器保护数据，使用set get</p>
+    <p>批量设置属性，就是在set,get中进行自定义规则就行了，比如逗号分隔之类的</p>
+    <script>
+        let food={
+            data:{name:"猪肉",price:98},
+            set price(v){
+             if(typeof v!=='number'||v<30||v>100){
+                 throw new Error("价格不合适")
+             }
+             this.data.price=v
+            },
+            
+            get price(){
+                 return this.data.price+"元"
+            },
+            //伪造属性
+            get tips(){
+                return this.data.name+"要卖"+this.data.price+"元"
+            }
+        }
+        food.price=67
+        console.log(food.price);
+        console.log(food.tips);
+        
+        
+        
+    </script>
+</body>
+</html>
