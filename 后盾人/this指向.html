@@ -8,16 +8,24 @@
 </head>
 
 <body>
+    <p>箭头函数,哪些场景不能使用</p>
+    <p>1.定义对象方法</p>
+    <p>定义原型方法</p>
+    <p>定义事件回调函数，箭头函数回把this指向父级的作用域，就是window</p>
+    <p>定义构造函数</p>
 
     <script>
         let edt = {
             site: "p普肖帅",
+            //函数为对象的方法时，this指向该对象
             show:function(){
-                console.log("测",this);
-                function  render() {
-                    console.log(this.site);
+                console.log("this指向1",this); //对象
+                  function  render() {
+                    console.log("this指向",this);//window
+                    console.log("h",this.site);
                   }
-                  render()
+                  //使用call进行this的转换绑定，这样，render方法中的this就指向了对象
+                  render.call(this)
                 return this.site
             }
         }

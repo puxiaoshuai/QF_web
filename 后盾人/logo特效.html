@@ -32,7 +32,6 @@
               animation-name: color;
               animation-duration: 0.5s;
               animation-delay: 0s;
-              
               animation-timing-function: linear;
 
           }
@@ -42,6 +41,7 @@
                   transform: scale(1.5);
               }
               100%{
+                  /* background: linear-gradient(to right,purple,red); */
                   color: purple;
               }
           }
@@ -63,6 +63,8 @@
             span.innerHTML=curr
             div.appendChild(span)
             span.addEventListener("mouseover",function () {
+                  console.log(this);
+                  
                   this.classList.add("color")  
               })
               span.addEventListener("animationend",function () {
