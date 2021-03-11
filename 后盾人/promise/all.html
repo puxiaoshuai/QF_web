@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>all全部就是成功，返回数组。一个返回错误,就到catch</p>
+    <p>allSettled 用于处理多个promise ，只关注执行完成，不关注是否全部执行成功</p>
+    <p>race，竞赛，如果参数不是promise，内部将自动转为promise</p>
+    <script>
+        let ph1=new Promise((resolve,reject)=>{
+            setTimeout(function () {
+                console.log("第一任务");
+                    reject("发生了异常")
+              },2000)
+        })
+        let ph2=new Promise((resolve,reject)=>{
+            setTimeout(function () {
+                console.log("第二任务");
+                    resolve("第二个")
+              })
+        })
+        let zong=Promise.allSettled([ph1,ph2])
+        .then(res=>{
+            console.log(res);
+            
+        }).catch(err=>{
+            console.log(err);
+            
+        })
+    </script>
+</body>
+</html>

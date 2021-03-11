@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>同步>微任务>宏任务</p>
+    <script>
+        setTimeout(function () {
+            console.log("我是settime宏任务");
+        }, 0)
+        new Promise((resolve, reject) => {
+            resolve()
+            console.log("我是promise,同步呢");
+
+        }).then(res => {
+            console.log("我是微任务");
+
+        })
+        console.log("蒲小帅"); //同步立刻执行的
+
+        async function async1() {
+            console.log('async1 start 同步')//同步任务
+            await async2()
+            console.log('async1 end 微任务')//在 awit之后就是微任务
+        }
+        async function async2() {
+            console.log('async2 end同步') //同步任务
+        }
+        async1()
+        //promise同步， 蒲小帅，微任务，setttime
+
+        //具体情况具体分析，  反正promise下是同步的，then是微任务
+        //同步 >微任务>宏任务
+
+
+        // test();
+
+        // function test() {
+        //     console.log(1)
+        // }
+        // var test = 0;
+        // test();
+        // test = function () {
+        //     console.log(2)
+        // }
+        // test()
+    </script>
+</body>
+
+</html>
