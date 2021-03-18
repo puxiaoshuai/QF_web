@@ -1,4 +1,4 @@
-import {BrowserRouter as Router ,Link,Route} from 'react-router-dom'
+import {BrowserRouter as Router ,Link,Route,Switch} from 'react-router-dom'
 import React, { Component } from 'react'
 import AppPage from './app'
 import AdminPage from './admin'
@@ -19,6 +19,7 @@ export default class IRouter extends Component {
                     {/* render 返回子路由，不用{}包裹 */}
                     <Route path='/admin'  render={()=>
                     <AdminPage>
+                           <Switch>
                            <Route path="/admin/ui/buttons" component={Buttons}></Route>
                            <Route path="/admin/ui/modals" component={ModalDemo}></Route>
                            <Route path="/admin/ui/spin" component={Spins}></Route>
@@ -28,6 +29,7 @@ export default class IRouter extends Component {
                            {/* 表单 */}
                            <Route path="/admin/form/login" component={Login}></Route>
                            <Route  component={Page404}></Route>
+                           </Switch>
                     </AdminPage>
                     }/>
                 </AppPage>

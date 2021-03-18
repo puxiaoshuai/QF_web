@@ -19,12 +19,12 @@
             site: "p普肖帅",
             //函数为对象的方法时，this指向该对象
             show:function(){
-                console.log("this指向1",this); //对象
+                console.log("this指向1",this.site); //对象
                   function  render() {
                     console.log("this指向",this);//window
                     console.log("h",this.site);
                   }
-                  //使用call进行this的转换绑定，这样，render方法中的this就指向了对象
+                  //使用call进行this的转换绑定，这样，render方法中的this就指向了对象,
                   render.call(this)
                 return this.site
             }

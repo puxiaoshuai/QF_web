@@ -39,6 +39,7 @@
         //2引入vue.js  
         //3 可以使用vue语法做功能
         //4吧vue提供的数据放到标签里
+       
         var vm = new Vue({
             // el元素的挂载位置，可以是css选择器，也可以是DOM元素
             el: "#app",
@@ -47,6 +48,8 @@
                 msg: "你好,vue"
             },	
         })
+        console.log(vm);
+        
         var vm1=new Vue({
             el:"#app1",
             data:{

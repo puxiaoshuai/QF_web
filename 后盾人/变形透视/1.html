@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+            box-sizing: border-box;
+            border: 20px solid tomato;
+            position: absolute;
+            margin-left: -200px;
+            margin-top: -200px;
+            top: 50%;
+            left: 50%;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            position: absolute;
+            margin-left: -50px;
+            margin-top: -50px;
+            top: 50%;
+            left: 50%;
+        }
+
+        div:nth-of-type(1) {
+            background-color: red;
+        }
+
+        div:nth-of-type(2) {
+            background-color: green;
+            transition: 2s;
+            
+        }
+
+        main:hover div:nth-of-type(2) {
+            transform: translateX(50%);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -9,12 +9,18 @@
 		<p>prop传递的对象有很多</p>
 		<p>父传子，驼峰标识有问题。props使用驼峰的话，对应  v-bind:a-xxx</p>
 		<p>子传父，this.$emit("itemclick",item)发送，在子组件绑定@ itemclick="sonadd", 在父方中进行获取</p>
+
+
+		
 		<!-- app中定义了一个 son组件 -->
 		<div id="app">
 			<!-- 从app中获取到books的值，然后传递给子组件，使用v-bind:xx进行传递在子组件中使用props进行接收 -->
 			<!-- fatherclick在父类中的方法进行关联，sendlick就是一个发射接收的中间键 -->
 			<son @sendlick="fatherclick" v-bind:sbooks="books" title="我是标题" ></son>
 		</div>
+
+
+
 	    <!-- son的模板 ，sbooks就是从son组件中定义的sbooks中进行传递的,-->
 		<template id="son">
 			<div style="border-width: 1px;border-color: red;border: solid;">

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        span {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        body,
+        html,
+        .parent {
+            height: 100%;
+        }
+        
+        .middle {
+            height: calc(100% - 100px);
+        }
+        
+        .middle-container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+        
+        .left {
+            width: 100px;
+            height: 100%;
+        }
+        
+        .right {
+            width: calc(100% - 100px);
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .right-in {
+            height: 1000px;
+        }
+        
+        .top {
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent" id="parent" style="background-color: lightgrey;">
+        <div class="top" style="background-color: lightblue;">
+            <span>top</span>
+        </div>
+        <div class="middle" style="background-color: pink;">
+            <div class="middle-container">
+                <div class="left" style="background-color: orange;">
+                    <span>left</span>
+                </div>
+                <div class="right" style="background-color: lightsalmon;">
+                    <div class="right-in">
+                        <span>right</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
