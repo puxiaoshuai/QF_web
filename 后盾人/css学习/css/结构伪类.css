@@ -1,0 +1,13 @@
+article div:first-of-type {
+  color: orange;
+}
+article :only-child {
+  color: purple;
+  font-size: 20px;
+}
+article span:only-of-type {
+  color: red;
+}
+article div:nth-child(1) {
+  color: blue;
+}

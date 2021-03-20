@@ -1,0 +1,30 @@
+//选择元素中span 标签并且是第一个，重点子子孙孙中排第一个的,span可不写
+//就直接找子孙中的第一个了
+// article  span:first-child{
+//     color: red;
+// }
+
+//first-of-type规定类型，子子孙孙 第一个div
+article  div:first-of-type{
+    color: orange;
+}
+
+//:only-child选择 唯一子元素,就是只有一个元素，没得同级元素，可在前面定义 标签类型，比如span:only-child
+article :only-child{
+    color: purple;
+    font-size: 20px;
+}
+
+
+//可以有多个元素，但是span只有一个才行
+article span:only-of-type {
+    color: red;
+}
+//第一个元素，如果限制了div类型，那么就是子子孙孙中的第一个div
+
+article  div:nth-child(1){
+    color: blue;
+}
+//span:nth-of-type(1),//选择第二个span 元素，不管中间的其他元素
+
+//:nth-last-child(),//从最后开始获取

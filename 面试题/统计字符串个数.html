@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let a="PAF1FB";
+         let b="AFVA"
+         function count(a,b) {
+             let data=Array.from(a).concat(Array.from(b))
+             let map=new Map()
+             for(let i=0;i<data.length;i++)
+             {
+                
+                 let num=1;
+                 let chardata=data[i]
+                 if(map.has(chardata)){
+                     num=map.get(chardata)+1
+                 }
+                 map.set(chardata,num)
+             }
+             return map
+           }
+           let map1=count(a,b)
+           console.log(map1);
+           map1.forEach(function (index,v) {
+               console.log(index,v);
+               
+             })
+             for (let  iterator of map1) {
+                 console.log("==",iterator);
+             }
+             
+           //console.log(map1);
+    </script>
+</body>
+</html>

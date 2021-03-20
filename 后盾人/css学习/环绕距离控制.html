@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+        }
+
+        span {
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+            margin: 20px;
+            padding: 40px;
+            background-color:gray;
+            box-sizing: border-box;
+            shape-outside: circle();
+            /* 圆形 */
+            clip-path: circle();
+        }
+        img{
+            /* visibility: hidden; */
+            margin: 10px;
+            float: left;
+            clip-path: circle();
+            shape-outside: circle() margin-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- <span></span> -->
+        <img src="../../images/1.jpg" style="width: 100px; height: 100px; " alt="">
+        Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting
+        Context（一个决定如何渲染文档的容器），因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子
+        版权声明：本文为CSDN博主「Leon_94」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+        
+    </div>
+    <div>
+        margin-box 外边距环绕
+        padding-box 内边距环绕
+        border-box 边线环绕
+        content-box 内容环绕
+    </div>
+</body>
+
+</html>
