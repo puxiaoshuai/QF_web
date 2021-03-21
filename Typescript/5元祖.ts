@@ -5,3 +5,4 @@ console.log(xiaojiejie5);
 const xiaojiejie51: [string, string, number] = ["11", "teacher", 28];
 console.log(xiaojiejie51);
 
+
