@@ -1,10 +1,10 @@
 
-// function show(name:string):number{
-//     console.log("name==",name);
-//     return 213
-// }
-// let fn=show("小帅")
-// console.log(fn);
+function show(name:string):number{
+    console.log("name==",name);
+    return 213
+}
+let fn=show("小帅")
+console.log(fn);
 
 //匿名函数
 

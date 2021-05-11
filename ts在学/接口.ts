@@ -9,7 +9,7 @@
 // 属性接口
 
 function printTv(){
-     console.log("打印机打印");
+     console.log("打印机打印1");
      
 }
 printTv()

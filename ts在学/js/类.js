@@ -62,7 +62,7 @@ var Cat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Cat.prototype.eat = function () {
-        console.log("我是猫哈哈哈哈");
+        console.log("我是猫哈哈哈哈11");
     };
     return Cat;
 }(Animal));

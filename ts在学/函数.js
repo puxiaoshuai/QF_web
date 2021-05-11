@@ -1,10 +1,9 @@
-"use strict";
-// function show(name:string):number{
-//     console.log("name==",name);
-//     return 213
-// }
-// let fn=show("小帅")
-// console.log(fn);
+function show(name) {
+    console.log("name==", name);
+    return 213;
+}
+var fn = show("小帅");
+console.log(fn);
 //匿名函数
 // let show=function (name:string):string{
 //     console.log("name is ",name);

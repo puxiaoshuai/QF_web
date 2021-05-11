@@ -47,7 +47,7 @@ t.run()
 }
 class Cat extends Animal{
        eat(){
-           console.log("我是猫哈哈哈哈");
+           console.log("我是猫哈哈哈哈11");
            
        }
 }
