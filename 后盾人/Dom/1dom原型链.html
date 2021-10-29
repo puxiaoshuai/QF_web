@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>在浏览器渲染过程中会将文档内容生成为不同的对象，我伙来对下例中的h1标签进行讨论，其他节点情况相似</p>
+  <h1 id="ph">PH</h1>
+  <p>即然DOM与我们其他JS创建的对象特征相仿，所以也可以为DOM对象添加属性或方法。</p>
+  <a href="https://doc.houdunren.com/js/18%20DOM.html#%E5%8E%9F%E5%9E%8B%E9%93%BE">连接</a>
+  <script>
+    function protoType(el) {
+      console.log(el.__proto__);
+      el.__proto__?protoType(el.__proto__):""
+    }
+    const h1=document.getElementById("ph")
+    protoType(h1)
+  </script>
+
+</body>
+</html>
