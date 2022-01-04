@@ -1,0 +1,6 @@
+@startuml
+scale 2
+actor 用户
+用户1  -> 界面 : 数据
+界面 --> 用户 : 数据2
+@enduml
