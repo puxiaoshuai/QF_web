@@ -1,0 +1,25 @@
+@startuml
+scale 1
+!pragma teoz true
+用户 -> 认证中心: 登录操作
+ref over 用户
+  引用信息
+end ref
+note left: 注释信息
+{start} 认证中心 -> 缓存: 存放(key=token)
+note over 认证中心 #e74c3c: 备注 
+用户 <- 认证中心: 成功返回token
+用户 -> 认证中心: 下次访问携带token
+{end} 认证中心 <- 缓存: 获取缓存
+{start} <-> {end} :链接
+note right: 右侧注释哈哈
+group 标题
+    用户 -> 缓存: 内容步骤
+    loop 1000次
+       认证中心 -> 缓存: 数据获取
+    end
+    用户 <- 缓存: 数据获取
+end
+... 五分钟后 ...
+||100||
+@enduml
