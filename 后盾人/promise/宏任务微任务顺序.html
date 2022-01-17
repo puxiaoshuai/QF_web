@@ -13,9 +13,9 @@
             console.log("我是settime宏任务");
         }, 0)
         new Promise((resolve, reject) => {
-            console.log("我是promise,第一步");
+            console.log("我是promise,第一步"); //同步任务
             resolve()
-            console.log("我是promise,第二步");
+            console.log("我是promise,第二步"); //同步任务
         }).then(res => {
             console.log("我是微任务");
         })
@@ -29,19 +29,19 @@
             console.log('async2 end同步我也是同步任务') //awit就是同步任务
         }
         async1()
-        //promise同步， 蒲小帅，微任务，setttime
+        //promise 中是 同步， 蒲小帅，微任务，setttime
         //具体情况具体分析，  反正promise下是同步的，then是微任务
         //同步 >微任务>宏任务
-        // test();
-        // function test() {
-        //     console.log(1)
-        // }
-        // var test = 0;
-        // test();
-        // test = function () {
-        //     console.log(2)
-        // }
-        // test()
+
+
+// 我是promise,第一步
+// 我是promise,第二步
+// 蒲小帅
+// async1 start 同步
+// async2 end同步我也是同步任务
+// 我是微任务
+// async1 end 微任务
+// 我是settime宏任务
     </script>
 </body>
 

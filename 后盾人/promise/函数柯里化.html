@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>函数柯里化</title>
+  </head>
+  <body>
+    <script>
+      console.log(window);
+      window.document.body.style.background = "red";
+      //把接收多个参数的函数变换成接收一个单一参数（最初函数的第一个参数）的函数，并返回接受剩余的参数而且返回结果的新函数的技术
+      //案例一
+      const sub = function (x, y, z) {
+        return x * y * z;
+      };
+      const data = sub(1, 2, 3);
+      console.log("data", data);
+
+      //转换成柯里化
+      const ph1 = function (x) {
+        return function (y) {
+          //箭头函数也行
+          return function (z) {
+            return x * y * z;
+          };
+        };
+      };
+      const data1 = ph1(1);
+      console.log("data1", data1);
+      console.log("数据", data1(2)(3));
+      //案例2 ,你有一家商店，然后你想给你的优惠顾客10%的折扣,后面也有可能是 20%
+      // 当一个顾客消费了500元
+      const price1 = discount(500, 0.1); // $50
+
+      // 从长远看，你的每一笔生意都要计算10%的折扣
+      const price2 = discount(1500, 0.1); // $150
+      const price3 = discount(2000, 0.1); // $200
+      const price4 = discount(50, 0.1); // $5
+      const price5 = discount(300, 0.1); // $30
+
+      // 将这个函数柯里化，然后我们就不用每次都写那0.1了
+      function discount(discount) {
+        return (price) => {
+          return price * discount;
+        };
+      }
+      const tenPercentDiscount = discount(0.1);
+
+      // 现在，我们只需用商品价格来计算就可以了：
+      tenPercentDiscount(500); // $50
+
+      // 接下来，有些优惠顾客越来越重要，让我们称为vip顾客，然后我们要给20%的折扣，我们这样来使用柯里化了的discount函数：
+      const twentyPercentDiscount = discount(0.2);
+
+      // 我们为vip顾客使用0.2调用柯里化discount函数来配置了一个新的函数。这个twentyPercentDiscount函数会被用来计算vip顾客的折扣：
+      twentyPercentDiscount(500); // $100
+      twentyPercentDiscount(3000); // $600
+      twentyPercentDiscount(80000); // $16000
+      const p = { name: "111" };
+      const h = p;
+      console.log("哈哈哈", h == p);
+      
+    </script>
+  </body>
+</html>

@@ -1,11 +1,19 @@
-几个问题？
+`几个问题？为什么需要webpack`
 作用域问题怎么解决？ IIFE 立即调用,大数量无用代码 
-代码拆分问题 ，按需加载模块的问题  commom.js能解决
+代码拆分问题,node.js中的common.js ,按需加载模块的问题  commom.js能解决。但是浏览器不支持模块
 如何让浏览器支持，es6module能解决但是完整  ，但是es5.6兼容问题，
-所以需要webpack。
+所以需要webpack。 为资源处理，代码分割而生
 
 一个问题，传统的js调用，有顺序，有依赖，顺序不对就会出现问题，项目大了，手动调整很难
 
+```
+
+构建一个简单的应用并让它快速运行起来？使用 Parcel。
+构建一个类库只需要导入很少第三方库？使用 Rollup。
+构建一个复杂的应用，需要集成很多第三方库？需要代码分拆，使用静态资源文件，
+还有 CommonJS 依赖？使用 webpack。
+
+```
  
 本地安装 
 cd 目录下
@@ -21,7 +29,7 @@ npm install webpack webpack-cli --save-dev
 webpack --stats 查看状态
 ### 2.打包完成，自动引入资源（插件）
 ![alt 属性文本](./imgs/img1.png)
-"build": "webpack --watch", 表示今天js文件的变化
+"build": "webpack --watch", 表示监听js文件的变化
 这个还得手动刷新，有没有自动刷新呢？
 npm install --save-dev webpack-dev-server
 ### 3资源模块
