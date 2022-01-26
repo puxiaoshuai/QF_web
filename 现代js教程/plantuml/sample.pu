@@ -1,7 +1,7 @@
 @startuml
 scale 1
 !pragma teoz true
-用户 -> 认证中心: 登录操作
+用户 --> 认证中心: 登录操作
 ref over 用户
   引用信息
 end ref

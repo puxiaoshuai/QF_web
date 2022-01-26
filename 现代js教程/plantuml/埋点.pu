@@ -1,0 +1,12 @@
+@startuml
+scale 1
+actor MaterialRD
+MaterialRD --> Material: 开启埋点
+||100||
+actor PageRD
+PageRD --> NeroPage:填写埋点
+Material --> NeroPage: 拖拽使用物料
+NeroPage --> NeroEngine : 怎么保存
+NeroEngine --> NeroEngine :组件包裹
+Material --> Preview
+@enduml
