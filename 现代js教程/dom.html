@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>我是好</h1>
+  <div>测试市场第三方</div>
+  <div>
+    <div>孩纸div</div>
+  </div>
+  <div>测试</div>
+  <script>
+    const nodes = document.body.childNodes
+    console.log("nodes", nodes);
+    const childs=document.body.children
+    console.log("child",childs);
+    const fristchilds=document.body.firstChild
+    console.log("child",fristchilds);
+    const fristElechilds=document.body.firstElementChild
+    console.log("child",fristElechilds.innerHTML);
+    const query =document.querySelector("div")
+    query.style.backgroundColor='red'
+    console.log("query",query);
+  </script>
+</body>
+
+</html>

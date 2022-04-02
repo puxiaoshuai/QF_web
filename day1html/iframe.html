@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <iframe 
-    src="https://www.baidu.com"  
-    width="900" height="600">
-</iframe>
+    <iframe src="https://www.baidu.com" width="900" height="600">
+    </iframe>
+    <script>
+        const iframe1 = document.querySelector("iframe")
+        console.log("iframe", iframe1);
+        iframe.onload = function () {
+            let iframeWindow = iframe.contentWindow;
+            console.log("iframeWindow",iframeWindow);
+        }
+    </script>
 
 </body>
+
 </html>

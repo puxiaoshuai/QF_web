@@ -11,11 +11,11 @@
             margin: 0;
             padding: 0;
         }
-        
+
         span {
             color: red;
         }
-        
+
         .box1 {
             /* 父亲 */
             position: relative;
@@ -23,12 +23,13 @@
             height: 200px;
             background-color: chocolate;
         }
-        
+
         .box2 {
             width: 100px;
             height: 100px;
             background-color: rebeccapurple;
             margin: 20px;
+            float: left;
         }
     </style>
 </head>
@@ -53,10 +54,27 @@
 
         </div>
     </div>
+    <hr>
+    <div style="color:hotpink;">
+        <a href="https://zh.javascript.info/size-and-scroll#clienttopleft">参考链接</a>
+        <br>
+        元素具有以下几何属性：
+
+        offsetParent — 是最接近的 CSS 定位的祖先，或者是 td，th，table，body。<br>
+        offsetLeft/offsetTop — 是相对于 offsetParent 的左上角边缘的坐标。<br>
+        offsetWidth/offsetHeight — 元素的“外部” width/height，边框（border）尺寸计算在内。<br>
+        clientLeft/clientTop — 从元素左上角外角到左上角内角的距离。对于从左到右显示内容的操作系统来说，它们始终是左侧/顶部 border 的宽度。而对于从右到左显示内容的操作系统来说，垂直滚动条在左边，所以
+        clientLeft 也包括滚动条的宽度。<br>
+        clientWidth/clientHeight — 内容的 width/height，包括 padding，但不包括滚动条（scrollbar）。<br>
+        scrollWidth/scrollHeight — 内容的 width/height，就像 clientWidth/clientHeight 一样，但还包括元素的滚动出的不可见的部分。<br>
+        scrollLeft/scrollTop — 从元素的左上角开始，滚动出元素的上半部分的 width/height。<br>
+        除了 scrollLeft/scrollTop 外，所有属性都是只读的。如果我们修改 scrollLeft/scrollTop，浏览器会滚动对应的元素。<br>
+    </div>
     <script>
         let box1 = document.querySelector(".box1")
         let box2 = document.querySelector(".box2")
         console.log(box2.offsetTop);
+        console.log("offsetWidth", box2.offsetWidth);
         console.log(box2.offsetParent); //返回父亲，父没有定位的话，就返回body
         console.log(box2.parentNode); //返回父亲，最近一级，不管父级有没有定位
     </script>

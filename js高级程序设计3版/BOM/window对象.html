@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<body style="height: 100vh;">
     <p>全局作用域</p>
     <p>定义全局变量与在 window 对象上直接定义属性还
         是有一点差别：全局变量不能通过 delete 操作符删除，而直接在 window 对象上的定义的属性可以</p>
+    最新课程 <q>HTML开启WEB征途</q> 已经发布了
     <script>
         //let age=10 是 undefund
-        var age=10;
+        var age = 10;
         console.log(window.age);
-        window.color="red"
+        window.color = "red"
         //删不掉
         delete window.age
-        console.log("全局age",window.age);
+        console.log("全局age", window.age);
         delete window.color
-        console.log("全局color",window.color);   
+        console.log("全局color", window.color);
+        console.log(window.origin);
+        console.log("=======浏览器宽度");
+        console.log("outwidth", window.outerWidth);
+        console.log("outHeahgt", window.outerHeight);
+        //视口宽高
+        console.log("innerWidth", window.innerWidth);
+        console.log("innerHeight", window.innerHeight);
+        //
+        console.log("innerWidth", document.documentElement.clientWidth);
+        console.log("innerHeight", window.innerHeight);
+        //视口 移动
+        window.scrollBy(0, 100)
+        window.resizeTo(100, 100)
     </script>
 </body>
+
 </html>
