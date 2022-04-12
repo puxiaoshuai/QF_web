@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let name="i'm is puxiaoshuai"
-        let p=/pu/g;
-        let matches=p.exec(name)
-        console.log(matches);
-        
+        // \b分词  m换行也能匹配 \s（空格符号：包括空格，制表符 \t，换行符 \n 和其他少数稀有字符，例如 \v，\f 和 \r。
+        let name = "i'm 11is22 puxiaoshuaipu"
+        let p = /\d/g;
+        //字符串开始 ^ 和末尾 $ 在test适用，match中不用
+        //match 匹配是 数组
+        console.log(name.match(p));
+        let p1 = /x[a-z]{2}/g
+        console.log(name.match(p1));
+        //1.[a-z]意思是 在方括号 […] 中的几个字符或者字符类意味着“搜索给定的字符中的任意一个”。
+        let p3 = "Breakfast at 09:00. Dinner at 21-30"
+        let reg = /[\d]{2}[:-][\d]{2}/g;
+        console.log(p3.match(reg).join(","))
+        //"Breakfast at 09:00. Dinner at 21-30".match(reg); // 09:00, 21-30
+        /** 2
+         *  {3}确定的位数
+         *  {3,5} 3到5位
+         *   + 一个或者多个
+         *  * 零个或者多个
+         *  ？零个或1个
+         * **/
+        //练习 创建一个正则表达式来查找省略号：连续 3（或更多）个点。
+        let p4 = 'Hello!... How goes?.....'
+        console.log(p4.match(/\.+/g));
+        //练习 创建一个正则表达式来搜寻格式为 #ABCDEF 的 HTML 颜色值：首个字符 # 以及接下来的六位十六进制字符。
+        let p5 = "color:#121212; background-color:#AA00ef bad-colors:f#fddee #fd2 #12345678";
+        console.log(p5.match(/#[\w]{6}\b/g));
+        //贪婪 非贪婪 /".+"/g。这个表达式的意思是：我们要查找这样一个句子，一个引号后跟一个或多个字符，然后以另一个引号结尾
+        //通过在量词后添加问号 ? 来启用。在每次重复量词之前，引擎会尝试去匹配模式的剩余部分
+        let p6 = 'a "witch" and her "broom" is one';
+        console.log(p6.match(/".+"/g));//贪婪查找
+        console.log(p6.match(/".+?"/g));
+        console.log(p6.match(/".*?"/g));
+        //练习 找出文本中的所有注释：
+
+        let p7 = `... <!-- My -- comment
+ test --> ..  <!----> ..
+`;
+        console.log(p7.match(/<!--[\s\S]+?-->/gm));
+        let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
+        console.log(Array.from(results));
     </script>
 </body>
+
 </html>
