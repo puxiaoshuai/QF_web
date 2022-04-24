@@ -31,45 +31,45 @@
   </div>
 </template>
 <script>
-import Home from "./views/Home.vue";
-export default {
-  name: "app",
+  import Home from "./views/Home.vue";
+  export default {
+    name: "app",
 
-  components: {
-    hello: Home
-  },
-  data() {
-    return {
-      message: 0
-    };
-  },
-  methods: {
-    add: function() {
+    components: {
+      hello: Home
+    },
+    data() {
+      return {
+        message: 0
+      };
+    },
+    methods: {
+      add: function () {
 
-      this.message++, 
-      //数据的改变最好在mutation中去修改
-      // 触发 mutation第一种方式,第二种使用使用...mapmutations
-      this.$store.commit("add1");
-    },
-    del: function() {
-      this.message--;
-      this.$store.commit("del1");
-    },
-    modify: function() {
-      this.$store.commit("name_up");
-    },
-    modify1: function() {
-      //异步就需要 用dispatch，第二种方式第二种使用使用...mapactions
-      this.$store.dispatch("name_up_1", { age: 27 });
-    },
-    modifyA: function() {
-      this.$store.commit("modifyschool", { name: "你好啊" });
-    },
-    mofifyAtime: function() {
-      this.$store.dispatch("mofi", { name: "延时数据" });
+        this.message++,
+          //数据的改变最好在mutation中去修改
+          // 触发 mutation第一种方式,第二种使用使用...mapmutations
+          this.$store.commit("add1");
+      },
+      del: function () {
+        this.message--;
+        this.$store.commit("del1");
+      },
+      modify: function () {
+        this.$store.commit("name_up");
+      },
+      modify1: function () {
+        //异步就需要 用dispatch，第二种方式第二种使用使用...mapactions
+        this.$store.dispatch("name_up_1", { age: 27 });
+      },
+      modifyA: function () {
+        this.$store.commit("modifyschool", { name: "你好啊" });
+      },
+      mofifyAtime: function () {
+        this.$store.dispatch("mofi", { name: "延时数据" });
+      }
     }
-  }
-};
+  };
 </script>
 
 <style>

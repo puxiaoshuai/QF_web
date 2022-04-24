@@ -13,7 +13,7 @@ export default {
   name: 'Home',
   created() {
     request({
-     url:"banners"
+     url:"/post2s"
     }).then(res=>{
       console.log("数据111111",res);
       
