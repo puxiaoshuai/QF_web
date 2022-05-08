@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>let const 临时性死区,就是定义了变量他没赋值之前，你都不能使用他，否则会报错</p>
+    <script>
+      // 临时性死区
+      var web = "蒲小帅";
+      function test() {
+        //函数 内什么的变量是 私人花园的，先找，找不到到外面去找
+        const web = "2022.2.25";
+        console.log("web", web);
+      }
+      test();
+      //全局污染
+      web1 = "全局污染";
+      console.log(web1);
+      const ph = ["测试", "测试2"];
+      for (const iterator of ph) {
+        console.log("xx", iterator);
+      }
+      for (const key in ph) {
+        console.log("key", key);
+        console.log("key", ph[key]);
+      }
+      //标准声明优先级高于赋值声明
+      //赋值函数没得提升
+      console.log(hd2(3)); //4
+
+      function hd2(num) {
+        return ++num;
+      }
+      //这是赋值申明
+      var hd2 = function () {
+        return "hd";
+      };
+      //字面量
+      //下例中的hd函数不属于对象方法所以指向window
+      //show属于对象方法执向 obj对象
+      let obj = {
+        site: "后盾人",
+        show() {
+          console.log(this.site); //后盾人
+          console.log(`this in show method: ${this}`); //this in show method: [object Object]
+          function hd() {
+            console.log(typeof this.site); //undefined
+            console.log(`this in hd function: ${this}`); //this in hd function: [object Window]
+          }
+          hd();
+        }
+      };
+      obj.show();
+      //使用箭头函数后 this 为定义该函数的上下文，也可以理解为定义时父作用域中的this
+      var name = "hdcms";
+      var obj1 = {
+        name: "后盾人",
+        getName: function () {
+          console.log("哈哈", this.name);
+          return () => {
+            return this.name; //后蹲人
+          };
+        }
+      };
+      console.log(obj1.getName()()); //后盾人
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          console.log(i);
+        }, 500);
+      }
+    </script>
+  </body>
+</html>

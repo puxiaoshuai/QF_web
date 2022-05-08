@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function hd() {
+      //   let count = 1;
+      //   function sum() {
+      //     console.log(++count);
+      //   }
+      //   sum();
+      // }
+      // hd();
+      // hd();
+      // hd();
+      // function Person(){
+      //   let count =1
+      //   this.sum = function (){
+      //     console.log(++count)
+      //   }
+      // }
+      // let a =new Person()
+      // //sum函数被引用，没有进行销毁
+      // a.sum()
+      // a.sum()
+      //使用闭包获取 不同区间的商品
+      const goods = [
+        {
+          name: "鼠标",
+          price: 212
+        },
+        {
+          name: "电脑",
+          price: 2002
+        },
+        {
+          name: "键盘",
+          price: 300
+        },
+        {
+          name: "摄像头",
+          price: 50
+        }
+      ];
+      function bettwen(x, y) {
+        return function (v) {
+          //函数内部能访问外部的x,y
+          return v.price > x && v.price < y;
+        };
+      }
+      const data = goods.filter(bettwen(200, 500));
+      console.table(data);
+    </script>
+  </body>
+</html>

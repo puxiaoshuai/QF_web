@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // //函数多个父辈
+      // function User() {}
+      // //User既可看做 User对象，也可看做 构造函数>实例化对象.
+      // const user =new User()
+      // console.dir(user.constructor === User);
+      // console.log(2)
+      // <------------<
+      // const user={
+      //   name:"蒲小帅"
+      // }
+      // const p1 = Object.create(user)
+      // // console.log(p1)
+      // function User(name){
+      //   this.name=name;
+      //   this.say=function(){
+      //     console.log(this.name);
+      //   }
+      // }
+      // const user = new User("蒲小帅")
+      // user.get
+      // console.log(user);
+      // function createObject(obj,...args){
+      //   //获取obj的原型对象的构造函数
+      //  const constructor = Object.getPrototypeOf(obj).constructor
+      //  return new constructor(...args)
+      // }
+      // const person = createObject(user,"张大大")
+      // console.log(person);
+      // person.say()
+      // let arr=[]
+      // console.log(Array.prototype);
+      // console.log(arr.__proto__.__proto__ === Object.prototype);
+      // console.log(2)
+      // console.log(Object.getPrototypeOf(Object.getPrototypeOf(arr)) === Object.prototype);
+      //  let a={}
+      //  console.log(a.__proto__.isPrototypeOf(a))
+      //  let ph={
+      //    data:[23,432,12,42]
+      //  }
+      //  //跟 Math 借用 max方法,null应该没有this的引用，可不传
+      //  console.log(Math.max.apply(null,ph.data));
+      //  console.log(Math.max.call(null,...ph.data));
+      function Father(name) {
+        this.name = name;
+        this.friends = ["老王", "老李"];
+      }
+      Father.prototype.sing = function () {
+        console.log("妹妹你坐船头");
+      };
+      function Son(name) {
+        Father.call(this,name)
+        this.score = 100;
+      }
+      Son.prototype =Object.create(Father.prototype)
+      let xiaoming = new Son("小明")
+      xiaoming.sing()
+      console.log(xiaoming.name);//名字还是老爸
+      let dongdong = new Son("东东")
+      //东东交往新朋友
+      xiaoming.friends.push("小美")
+      console.log(xiaoming.friends);
+      //发现小明的新盆友也有小美了
+      console.log(dongdong.friends);
+
+    </script>
+  </body>
+</html>

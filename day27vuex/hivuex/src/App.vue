@@ -28,15 +28,21 @@
     <p>action文件,mutations文件,getters文件, moduls文件夹</p>
     <p>==========</p>
     <hello></hello>
+    <hr>
+    <myhello>
+       <div>111</div>
+    </myhello>
   </div>
 </template>
 <script>
 import Home from "./views/Home.vue";
+import Hello from './views/HelloSolt.vue'
 export default {
   name: "app",
 
   components: {
-    hello: Home
+    hello: Home,
+    myhello:Hello
   },
   data() {
     return {
