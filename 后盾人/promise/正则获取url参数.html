@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>发</p>
+    <script>
+      let baseUrlStr ="https://www.baidu.com/?taskId=xx0082711193811100006371658258&applicationNo=xxxx043450959360&applicantName=李港&idNo=xxxx26199703180911&serno=eg4ns2p&roomNo=null&appid=xxxxx16237&appkey=xxxx56ada93f832e63e0257cfee2b6c5df55b4ff254d19f458b034826a1e3&housekeeperPageUrl=https://www.baidu.com";
+      function mapUrl(url) {
+        if (!url) {
+          return {};
+        }
+        let reg = /([^&?]+)=([^&?]+)/g;
+        const data = url.match(reg);
+        return data.map(item=>{
+          const params =item.split('=')
+          const key=params[0]
+          return {
+            [key]:params[1]
+          }
+        })
+        
+      }
+      const b= mapUrl(baseUrlStr);
+      console.log(b);
+    </script>
+  </body>
+</html>
