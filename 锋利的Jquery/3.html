@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div style="height: 200px; background-color: red">框框</div>
+      <div style="padding-top: 100px; background-color: brown">
+        <img
+          src="https://c-ssl.dtstatic.com/uploads/blog/201312/06/20131206111149_rZsBf.thumb.1000_0.jpeg"
+        />
+      </div>
+      <div style="height: 200px; background-color: red">框框</div>
+      <div style="padding-top: 100px; background-color: brown">
+        <img
+          src="https://img.meituan.net/bmmallpublicimg/cca9590a810c300f4e69c998b9d89996111360.jpg?type=venusV2"
+        />
+      </div>
+      <div style="height: 200px; background-color: red">框框</div>
+      <img style="padding-top: 100px; background-color: brown">
+        <img
+          src="https://img.meituan.net/bmmallpublicimg/cca9590a810c300f4e69c998b9d89996111360.jpg?type=venusV2"
+        ></img>
+      </div>
+      <p>商品详情描述</p><p><img src="http://msstest-corp.sankuai.com/v1/mss_0071017fa33e48379069430056233820/mall-goods-picture/4c07f146-ec70-4495-a9f1-302de9dffc6a_1605015689982"></p><p>ffjsakfjaskfjsafj</p><p><img src="https://img.meituan.net/bmmallpublicimg/32b45ba4d2f092982d9ed9bf0588f92c740344.png?type=venusV2"></p>
+    </div>
+    <script>
+      // window.onload = function () {
+      //   window.addEventListener("message", () => {
+      //     var imgs = document.getElementsByTagName("img");
+      //     imgs[1].src =
+      //       "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201912%2F28%2F20191228105602_4Wm5z.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1655450343&t=c6f5cf0a00b64d81cee24c6990ad10ed";
+      //   });
+      // };
+      const data ='<p>商品详情描述</p><p><img src="http://msstest-corp.sankuai.com/v1/mss_0071017fa33e48379069430056233820/mall-goods-picture/4c07f146-ec70-4495-a9f1-302de9dffc6a_1605015689982"/></p><p>ffjsakfjaskfjsafj</p><p><img src="https://img.meituan.net/bmmallpublicimg/32b45ba4d2f092982d9ed9bf0588f92c740344.png?type=venusV2"></p>'
+      const regexpImgs = /(<img.*?src=.*?\>)/g;
+      const regexpSrc =/<img.*?src=[\'\"]?([^\'\"]*)[\'\"]/;
+      const imgs =data.match(regexpImgs)
+      const realSrc= imgs?.map(item=>{
+        //匹配src
+        return item.match(regexpSrc)[1]
+      })
+      console.log("xxx",realSrc);
+
+
+
+
+
+      
+     // console.log( data.match(reg));
+      // console.log( data.match(reg1));
+      // console.log("分割线==========");
+    //   const data1= data.replace(reg,'<img src="asfdsf"/>')
+    //   console.log("data1",data1);
+    //   // console.log( data1.match(reg1));
+    //  setTimeout(() => {
+       
+    //  }, 1000);
+    //  const imgs= document.getElementsByTagName("img")
+    //  console.log('img',imgs);
+    </script>
+  </body>
+</html>
